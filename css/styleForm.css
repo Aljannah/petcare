@@ -1,0 +1,82 @@
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic);
+@import url(//fonts.googleapis.com/css?family=Kaushan+Script);
+/*! 
+ *   AdminLTE v1.2
+ *   Author: AlmsaeedStudio.com
+ *   License: Open source - MIT
+ *           Please visit http://opensource.org/licenses/MIT for more information
+!*/
+/*
+    Core: General style
+----------------------------
+*/
+
+.fform{
+  padding: 20px;
+}
+
+.fcontrol {
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important;
+  box-shadow: none;
+  font-size: 14px;
+  height: 30px;
+  width: 400px;
+  padding-left: 5px;
+  margin: 5px 0;
+}
+
+.fcontrol-pendek {
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important;
+  box-shadow: none;
+  font-size: 14px;
+  height: 30px;
+  width: 130px;
+  padding-left: 5px;
+  margin: 5px 0;
+}
+
+.fcontrol-medium{
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important;
+  box-shadow: none;
+  font-size: 14px;
+  height: 30px;
+  width: 230px;
+  padding-left: 5px;
+  margin: 5px 0;
+}
+
+.fcontrol-area {
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important;
+  box-shadow: none;
+  font-size: 14px;
+  height: 100px;
+  width: 400px;
+  padding-left: 5px;
+  margin: 5px 0;
+}
+
+.flabel {
+  padding-right: 20px;
+  cellspacing=4;
+  margin: 5px 0 5px 0;
+}
+
+.flabel-fix {
+  padding-right: 20px;
+  width: 250px;
+  cellspacing=4;
+  margin: 5px 0 5px 0;
+}
+
+.fbutton {
+  cellspacing=4;
+  margin: 10px 0;
+}

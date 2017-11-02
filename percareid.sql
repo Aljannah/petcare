@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 02, 2017 at 05:46 AM
+-- Generation Time: Nov 02, 2017 at 10:04 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -84,9 +84,8 @@ CREATE TABLE `customer` (
   `name` varchar(30) NOT NULL,
   `email` varchar(20) NOT NULL,
   `hp` varchar(12) NOT NULL,
-  `brithdate` date NOT NULL,
-  `sex` varchar(10) NOT NULL,
-  `location` varchar(30) NOT NULL
+  `location` varchar(30) NOT NULL,
+  `password` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
