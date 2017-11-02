@@ -176,8 +176,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                <ul id="menu" >
                                         <li><a href="#"><i class="lnr lnr-pencil"></i> <span>Pet Grooming</span><span class="fa fa-angle-right" style="float: right"></span></a>
 											  <ul id="menu-academico-sub" >
-														<li id="menu-academico-avaliacoes" ><a href="index.php?menu=pengajuancuti">Anjing</a></li>
-														<li id="menu-academico-boletim" ><a href="index.php?menu=lihatcuti">Kucing</a></li>
+														<li id="menu-academico-avaliacoes" ><a href="index.php?menu=groomanjing">Anjing</a></li>
+														<li id="menu-academico-boletim" ><a href="index.php?menu=groomkucing">Kucing</a></li>
 												</ul>
 										</li>
                                         
