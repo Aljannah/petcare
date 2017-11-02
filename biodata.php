@@ -12,22 +12,10 @@ if(empty($_SESSION))
 	<input type = "hidden" name="action" value="biodata">
 	<table class="table table-striped table-bordered table-hover" id="dataTables-example" width=100% cellpadding=0 cellspacing=0 border=0 valign=top>
 		<thead>
-			<tr>
-				<th colspan=3></th>
-			</tr>
+			
 		</thead>
 		<tbody>
-			<tr> 
-                
-				<td style="width:80px;padding-top:0.5px;padding-bottom:0.5px;" rowspan=5><img src=
-				<?php 
-				if($row['foto']=="")
-				{
-					echo "assets/img/find_user.png";
-				}
-				else
-				{	echo "images/".$row['foto']; }?>></td>
-				
+			<tr>
                 <td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Username</label></td>
 				<td style="padding-top=2px;padding-bottom=2px;"><?php echo $row['username'];?></td>
 			</tr>

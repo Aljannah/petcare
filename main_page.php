@@ -14,7 +14,7 @@
 		include "halamanutamaadmin.php";
 	}
 	if (getParam("menu")=="biodata"){
-		echo "<h1 style='color:red;padding-left:20px;'>Biodata</h1><br><br>";
+		echo "<h1 style='color:red;padding-left:20px;'>My Account</h1><br><br>";
 		include "biodata.php";
 	}
     if (getParam("menu")=="editbiodata"){

@@ -9,8 +9,8 @@
             $alamat=$_POST['alamat'];
             $password=$_POST['password'];
             
-            mysqli_query($conn,"INSERT INTO customer (username, password, name, email, hp, location) VALUES ('".$username."','".$namalengkap."','".$email."','".$notelp."','".$alamat."','".$password."') ");
-            echo "<script>alert('Data berhasil diubah'); window.location='index.php'</script>";
+            mysqli_query($conn,"INSERT INTO customer (username,name,email,hp,location,password) VALUES ('".$username."','".$namalengkap."','".$email."','".$notelp."','".$alamat."','".$password."') ");
+            echo "<script>alert('Data berhasil dimasukkan'); window.location='index.php'</script>";
   
         }
 ?>
