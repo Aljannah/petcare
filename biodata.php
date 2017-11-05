@@ -30,14 +30,21 @@ if(empty($_SESSION))
 				<td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Email</label></td>
 				<td style="padding-top=2px;padding-bottom=2px;"><?php echo $row['email'];?></td>
 			</tr>
-            
+            <tr>
+				<td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Alamat</label></td>
+				<td><?php echo $row['address'];?></td>
+			</tr>
+			<tr>
+				<td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Kota</label></td>
+				<td><?php echo $row['city'];?></td>
+			</tr>
+			<tr>
+				<td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Kode Pos</label></td>
+				<td><?php echo $row['postal_code'];?></td>
+			</tr>
 			<tr>
 				<td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Nomor Telepon</label></td>
 				<td><?php echo $row['hp'];?></td>
-			</tr>
-            <tr>
-				<td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Alamat</label></td>
-				<td><?php echo $row['location'];?></td>
 			</tr>
             <tr>
 				<td style="width=150px;padding-top=2px;padding-bottom=2px;" colspan=2>

@@ -3,7 +3,7 @@
 
 	if (getParam("menu")=="" || getParam("menu")==null){
 		echo "<h1 style='color:red;padding-left:20px;'>Dashboard</h1><br><br>";
-		echo "<h4 style='padding-left:20px;'>Selamat datang ".$_SESSION['nama']."</h4>";
+		echo "<h4 style='padding-left:20px;'>Selamat datang ".$_SESSION['name']."</h4>";
 	}
 	if (getParam("menu")=="upload"){
 		echo "<h1 style='color:red;padding-left:20px;'>Upload/Unggah Foto</h1><br><br>";

@@ -135,7 +135,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				  </div>
 									 <!--footer section start-->
 										<footer>
-										<p>&copy 2017 - Ghaziah Ahwas . All Rights Reserved | Design by </span></p>
+										<p>&copy 2017 - Ghaziah Ahwas. </span></p>
 										</footer>
 									<!--footer section end-->
 								</div>
@@ -160,12 +160,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										  ?>
 									  		<img style="width:100px;height:100px;" src=<?php echo "images/".$row['foto'];?>></a>
 									  <?php }else{ ?>
-									  		<img style="width:70px;height:70px;" src="images/empty.jpg"></a>
+									  		<img style="width:70px;height:70px;" src="images/Nanang.jpg"></a>
 									  <?php } ?>
-									 
-									 <p><?php echo $_SESSION['username'];?></p>
-                                     <p><?php echo $_SESSION['nama'];?></p>
-                                     <p><?php echo $_SESSION['alamat'];?></p>
+                                     <p><?php echo $_SESSION['name'];?></p>
 									<ul>
 										<li><a class="tooltips" href="logout.php"><span>Log out</span><i class="lnr lnr-power-switch"></i></a></li>
 									</ul>
@@ -233,7 +230,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </html>
 <?php
 }else{
-	header("Location:login_page.php");
+	header("Location:index.html");
 }
 
 function indonesian_date ($timestamp = '', $date_format = 'l, j F Y ') {

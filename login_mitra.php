@@ -28,7 +28,7 @@
 		<div class="error-top">
 			<center><img style="width:250px;height:130px;" src="images/pecareid.png"/><br><br> </center>
 			<div class="login">
-				<form action="validasilogincustomer.php" method="post">
+				<form action="validasi.php" method="post">
 					<input type="text" name="username" class="text" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" >
 					<input type="password" name="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
 					<div class="submit">

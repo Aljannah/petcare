@@ -10,8 +10,8 @@
 		$postal_code=$_POST['postal_code'];
 		$hp=$_POST['hp'];
 
-		mysqli_query($conn,"INSERT INTO customer (username, password, name, email, address, city, postal_code, hp) 
+		mysqli_query($conn,"INSERT INTO partners (username, password, name, email, address, city, postal_code, hp) 
 					VALUES ('".$username."','".$password."','".$name."','".$email."','".$address."','".$city."','".$postal_code."','".$hp."')" );
-		echo "<script>alert('Data berhasil dimasukkan'); window.location='login_customer.php'</script>";
+		echo "<script>alert('Data berhasil dimasukkan'); window.location='index.php'</script>";
         }
 ?>
