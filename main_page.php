@@ -15,7 +15,7 @@
 	}
     if (getParam("menu")=="editbiodata"){
 		echo "<h1 style='color:red;padding-left:20px;'>Edit Biodata</h1><br><br>";
-		include "editbiodata.php";
+		include "editbiodata2.php";
 	}
     if (getParam("menu")=="groomanjing"){
 		echo "<h1 style='color:red;padding-left:20px;'>Edit Biodata</h1><br><br>";

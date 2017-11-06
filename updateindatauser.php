@@ -3,20 +3,22 @@
     if(isset($_POST['tekan'])){
 	        
             $username=$_POST['username'];
-            $nama=$_POST['nama'];
-            $password=$_POST['password'];
-            $alamat=$_POST['alamat'];
+			$password=$_POST['password'];
+            $name=$_POST['name'];
             $email=$_POST['email'];
+            $address=$_POST['address'];
+			$city=$_POST['city'];
+			$postal_code=$_POST['postal_code'];
             $hp=$_POST['hp'];
             
-            
-            mysqli_query($conn,"UPDATE customer SET         password='$password',
-                                                            name='$nama',
-                                                            email='$email',
+            mysqli_query($conn,"UPDATE customer SET         password	='$password',
+                                                            name		='$name',
+                                                            email		='$email',
+															address		='$address',
+															city		='$city',
+															postal_code	='$postal_code',
                                                             hp='$hp',
-                                                            location='$alamat'
                                                             where username= '$username' ");
-            echo "<script>alert('Data berhasil diubah'); window.location='index.php'</script>";
-  
+            echo "<script>alert('Data berhasil diubah'); window.location='biodata.php'</script>";
         }
 ?>

@@ -6,6 +6,7 @@ if(empty($_SESSION))
     include_once "config.php";
 	$query = "SELECT * FROM customer WHERE username='".$_SESSION['username']."'";
     $row = mysqli_fetch_array(mysqli_query($conn,$query));
+    
 ?>
 
 <!DOCTYPE html>
@@ -649,7 +650,7 @@ if(empty($_SESSION))
 <article id="post-3902" class="post-3902 page type-page status-publish hentry">
 
 	<div class="entry-content">
-		<div class="vc_row wpb_row vc_row-fluid vc_custom_1497351138971"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner vc_custom_1496911267002"><div class="wpb_wrapper"><style type="text/css" scoped>
+		<div class="vc_row wpb_row vc_row-fluid vc_custom_1497351138971" style="height: 700px;"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner vc_custom_1496911267002"><div class="wpb_wrapper"><style type="text/css" scoped>
         .masonry_banner.masonry_banner.default-skin {
             background-color: #9e6e3b!important;
         }
@@ -723,10 +724,71 @@ if(empty($_SESSION))
         jQuery( 'body' ).prepend( popup_div );
     }
 </script></div>
-
-
-				
 			</ul>
+
+<form action = "?action=editbiodata&id=<?php echo $row['username'];?>" method="post">
+	<?php
+        $que = mysqli_query($conn, "SELECT * FROM customer WHERE username='".$_SESSION['username']."'");
+        while($row=mysqli_fetch_array($que)){
+            $username	=$row['username'];
+            $password	=$row['password'];
+            $name		=$row['name'];
+            $email		=$row['email'];
+			$address	=$row['address'];
+			$city		=$row['city'];
+			$postal_code=$row['postal_code'];
+            $hp=$row['hp'];
+        }
+	?>
+	<input type = "hidden" name="action" value="biodata">
+	
+	<table class="table table-striped table-bordered table-hover" id="dataTables-example" width=100% cellpadding=0 cellspacing=0 border=0 style="margin-top: 30px;margin-left: 40px;">
+		<thead>
+			
+		</thead>
+		<tbody>
+			<tr>
+				<h2 align="center" style="margin-top: 70px;">Profil Saya</h2>
+			</tr>
+			<tr>
+                <td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Username</label></td>
+				<td style="padding-top=2px;padding-bottom=2px;"><?php echo $row['username'];?></td>
+			</tr>
+                <td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Nama Lengkap</label></td>
+				<td style="padding-top=2px;padding-bottom=2px;"><?php echo $row['name'];?></td>
+			</tr>
+            <tr>
+				<td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Password</label></td>
+				<td style="padding-top=2px;padding-bottom=2px;"><?php echo $row['password'];?></td>
+			</tr>
+            <tr>
+				<td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Email</label></td>
+				<td style="padding-top=2px;padding-bottom=2px;"><?php echo $row['email'];?></td>
+			</tr>
+            <tr>
+				<td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Alamat</label></td>
+				<td><?php echo $row['address'];?></td>
+			</tr>
+			<tr>
+				<td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Kota</label></td>
+				<td><?php echo $row['city'];?></td>
+			</tr>
+			<tr>
+				<td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Kode Pos</label></td>
+				<td><?php echo $row['postal_code'];?></td>
+			</tr>
+			<tr>
+				<td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Nomor Telepon</label></td>
+				<td><?php echo $row['hp'];?></td>
+			</tr>
+            <tr>
+				<td style="width=150px;padding-top=2px;padding-bottom=2px;" colspan=2>
+					<a id="editbiodata" href="index2.php?menu=editbiodata&id=pegawai" type="submit" class="btn btn-primary btn-lg" style="display:inline-block">Ubah Biodata</a>
+				</td>
+			</tr>
+			</tbody>
+			</table>
+			</form>
 
 <!-- ############################ -->
 <!--      END OF THE GRID         -->
@@ -789,10 +851,7 @@ jQuery(document).ready(function() {
 </script>
 </div></div></div></div>
 			</div><!-- .entry-content -->
-<p style="margin-left: 30px;margin-top: 100px;">Sekarang ini, banyak para pemilik hewan peliharaan yang harus merawat hewan peliharaannya dengan mendatangi tempat-tempat khusus untuk perawatan hewan peliharaan. Namun dibelakang itu, banyak waktu dan biaya yang terkadang terbuang sia-sia hanya karena perjalanan yang jauh ataupun terkena macet, belum lagi jika pemilik sudah sampai toko namun toko tersebut tutup atau sedang penuh dalam memberikan pelayanan. Melihat keadaan seperti itu, mereka butuh adanya pelayanan jasa yang dapat didatangkan ke rumah mereka dan membantu memberi kebutuhan perawatan hewan peliharaan. </p>
-<p style="margin-left: 30px;margin-top: 10px;">Di luar sana telah banyak aplikasi berbasis web yang memberikan jasa untuk kebutuhan hewan peliharaan, namun aplikasi di luar sana memiliki satu fungsi seperti hanya untuk melakukan pet grooming atau hanya untuk pet shop. Karena itulah, untuk mempermudah dalam membantu pemilik hewan peliharaan dalam memelihara dan merawat hewan peliharaannya, dibangunlah PetCare.id.</p>
-<p style="margin-left: 30px;margin-top: 10px;">PetCare.id merupakan sebuah aplikasi berbasis web yang dapat membantu mendatangkan jasa grooming atau petshop untuk membantu memberi perawatan atau  kebutuhan untuk hewan peliharaan sesuai dengan permintaan dari konsumen.
-</p>
+
 	<footer class="entry-footer">
 			</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
@@ -994,3 +1053,4 @@ var mc4wp_forms_config = [];
 
 
 </html>
+

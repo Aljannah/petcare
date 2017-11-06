@@ -61,7 +61,7 @@
 		{
 				?>
 				<script language="JavaScript">alert('Selamat, Login Anda Sukses!!');
-					window.location='index.php'</script>
+					window.location='index2.php'</script>
 				<?php
 		}
 		else 
