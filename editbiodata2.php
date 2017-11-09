@@ -851,7 +851,10 @@ jQuery(document).ready(function() {
 </script>
 </div></div></div></div>
 			</div><!-- .entry-content -->
-
+<p style="margin-left: 30px;margin-top: 100px;">Sekarang ini, banyak para pemilik hewan peliharaan yang harus merawat hewan peliharaannya dengan mendatangi tempat-tempat khusus untuk perawatan hewan peliharaan. Namun dibelakang itu, banyak waktu dan biaya yang terkadang terbuang sia-sia hanya karena perjalanan yang jauh ataupun terkena macet, belum lagi jika pemilik sudah sampai toko namun toko tersebut tutup atau sedang penuh dalam memberikan pelayanan. Melihat keadaan seperti itu, mereka butuh adanya pelayanan jasa yang dapat didatangkan ke rumah mereka dan membantu memberi kebutuhan perawatan hewan peliharaan. </p>
+<p style="margin-left: 30px;margin-top: 10px;">Di luar sana telah banyak aplikasi berbasis web yang memberikan jasa untuk kebutuhan hewan peliharaan, namun aplikasi di luar sana memiliki satu fungsi seperti hanya untuk melakukan pet grooming atau hanya untuk pet shop. Karena itulah, untuk mempermudah dalam membantu pemilik hewan peliharaan dalam memelihara dan merawat hewan peliharaannya, dibangunlah PetCare.id.</p>
+<p style="margin-left: 30px;margin-top: 10px;">PetCare.id merupakan sebuah aplikasi berbasis web yang dapat membantu mendatangkan jasa grooming atau petshop untuk membantu memberi perawatan atau  kebutuhan untuk hewan peliharaan sesuai dengan permintaan dari konsumen.
+</p>
 	<footer class="entry-footer">
 			</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
