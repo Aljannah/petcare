@@ -1,9 +1,5 @@
-<?php
-session_start();
-include "config.php";
-include_once "/controller/main_petcare.php"; 
-if (isset($_SESSION['username'])){
-?>
+
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -18,9 +14,11 @@ if (isset($_SESSION['username'])){
 	<style>.wishlist_table .add_to_cart, a.add_to_wishlist.button.alt { border-radius: 16px; -moz-border-radius: 16px; -webkit-border-radius: 16px; }</style>
 	<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
 	<link rel='dns-prefetch' href='http://s.w.org/' />
+    <!-- Custom Css -->
+	<link rel="stylesheet" type="text/css" href="css/style2.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 	<link rel="alternate" type="application/rss+xml" title="Numbat &raquo; Feed" href="feed/index.html" />
 	<link rel="alternate" type="application/rss+xml" title="Numbat &raquo; Comments Feed" href="comments/feed/index.html" />
-	<link href="css/style2.css" rel='stylesheet' type='text/css' />
 	<script type="text/javascript">
 		window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/modeltheme.com\/mt_numbat\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.2"}};
 		!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
@@ -466,7 +464,7 @@ if (isset($_SESSION['username'])){
 					</div>
 					<div class="col-md-5 col-sm-12 account-urls">
 						<a href="index2.php?menu=biodata"><i class="fa fa-user"></i>My account</a>
-						<a class="shop_cart" href="#"><i class="fa fa-shopping-basket"></i>My bag</a>
+						<a  class="shop_cart" href="#"><i class="fa fa-shopping-basket"></i>My bag</a>
 						<a href="logout.php">LOGOUT</a>
 					</div>
 				</div>
@@ -740,8 +738,14 @@ if (isset($_SESSION['username'])){
 
 				
 			</ul>
-<img width=1600 height=1200 src='images/Kucing_dan_anjing.jpg' />
-			
+
+<!-- ############################ -->
+<!--      END OF THE GRID         -->
+<!-- ############################ -->
+    </div><!-- END OF THE GRID -->
+
+</article>
+<!-- END OF THE GRID WRAPPER -->
 
 <div class="clear"></div>
 <script type="text/javascript">
@@ -796,10 +800,90 @@ jQuery(document).ready(function() {
 </script>
 </div></div></div></div>
 			</div><!-- .entry-content -->
+ <section class="featured-product">
+		        <div class="container">
 
+		            <div class="theme_title center">
+		                <h3>Cari Produk</h3>
+		            </div>
+
+		            <!--Filter-->
+		            <div class="filters text-center">
+		                <ul class="filter-tabs filter-btns clearfix">
+		                    <li class="filter active" data-role="button" data-filter="all"><span class="txt">Semua Produk</span></li>
+		                    <li class="filter" data-role="button" data-filter=".Agro"><span class="txt">Food</span></li>
+		                    <li class="filter" data-role="button" data-filter=".Marine"><span class="txt">Vitamin</span></li>
+		                    <li class="filter" data-role="button" data-filter=".FB"><span class="txt">Accesesoris</span></li>
+                            <li class="filter" data-role="button" data-filter=".FB"><span class="txt">Tools</span></li>
+		                </ul>
+		            </div>
+					
+					
+		            <div class="row filter-list clearfix" id="MixItUp717B05">
+					
+					<?php
+						$product_array = mysqli_query($conn, "SELECT * FROM petshop, pet_category WHERE petshop.id_petcategory=pet_category.id_petcategory");
+                        ?>
+ <?php
+      $i=1;
+     
+      while($d=mysqli_fetch_array($product_array)){
+          
+?>	         
+					
+			           <!--Default Item-->
+			            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mix mix_all default-item all <?php echo $d['product_name']; ?> " style="display: inline-block;">
+			                <div class="inner-box">
+			                    <div class="single-item center">
+								<div class="product-item">
+								<form method="post" action="index2.php?action=add&id=<?php echo $d["id_petshop"]; ?>">
+								<div class="product-image"><figure class="image-box"><img src="images/makanan/<?php echo $d["file_gambar"]; ?>" alt=""></figure></div>
+			                        <div class="content">
+										<div><strong><h3><a href="shop-single.html">
+										<?php echo $d["product_name"]; ?></strong></div></a></h3>
+										
+										<input type="text" value="01"  hidden>
+			                            <div class="rating"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></div>
+			                            <div class=" price product-price"><?php echo "Rp.". $d["price"]; ?></div>
+			                        </div>
+			                        <div class="overlay-box">
+			                        	<div class="inner">
+				                        	<div class="top-content">
+				                        		<ul>
+				                        			<!--<li><a href="#"><span class="fa fa-eye"></span></a></li>-->
+													<div>
+													<input type="text" name="quantity" value="1" size="2" hidden />
+													<li class="tultip-op"><span class="tultip"><i class=""></i>Lihat detail</span><a href="lihatdetail.php?id=<?php echo $d["id_petshop"]?>"><span class="fa fa-eye"></span></a>
+				                        			<li class="tultip-op"><input type="submit" class="btn fa-opencart" value="&#xf23d;"><span class="tultip">
+													Taruh di keranjang</span><span class=" btnAddAction"></span>
+				                        			<!--<li class="tultip-op "><input type='submit' value=""><span class="tultip"><i class="fa fa-sort-desc"></i>
+													Taruh di keranjang</span><span class=" btnAddAction">
+													-->
+													</li>
+													</div>
+				                        			<!--<li><a href="#"><span class="fa fa-heart-o"></span></a></li>-->
+				                        		</ul>
+				                        	</div>
+				                        	<div class="bottom-content">
+												
+				                        		<p><?php echo "Ayoo Beli" ?></p>
+				                        	</div>
+			                        	</div>
+			                        </div>
+								</form>
+								</div>	
+				                </div>
+			                </div>
+			            </div>
+                        
+						<?php } ?>
+		    </section><!-- End of section -->
 	<footer class="entry-footer">
-	</footer><!-- .entry-footer -->
+			</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
+
+                    
+                            </main>
         </div>
     </div>
 
@@ -815,6 +899,7 @@ jQuery(document).ready(function() {
                 
 
     <footer>
+
  <div class="footer">
         <div class="container">
                 <div class="row">
@@ -994,6 +1079,3 @@ var mc4wp_forms_config = [];
 
 
 </html>
-<?php
-}
-?>

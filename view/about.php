@@ -1,9 +1,4 @@
-<?php
-session_start();
-include "config.php";
-include_once "/controller/main_petcare.php"; 
-if (isset($_SESSION['username'])){
-?>
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -20,7 +15,6 @@ if (isset($_SESSION['username'])){
 	<link rel='dns-prefetch' href='http://s.w.org/' />
 	<link rel="alternate" type="application/rss+xml" title="Numbat &raquo; Feed" href="feed/index.html" />
 	<link rel="alternate" type="application/rss+xml" title="Numbat &raquo; Comments Feed" href="comments/feed/index.html" />
-	<link href="css/style2.css" rel='stylesheet' type='text/css' />
 	<script type="text/javascript">
 		window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/modeltheme.com\/mt_numbat\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.2"}};
 		!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
@@ -466,7 +460,7 @@ if (isset($_SESSION['username'])){
 					</div>
 					<div class="col-md-5 col-sm-12 account-urls">
 						<a href="index2.php?menu=biodata"><i class="fa fa-user"></i>My account</a>
-						<a class="shop_cart" href="#"><i class="fa fa-shopping-basket"></i>My bag</a>
+						<a  class="shop_cart" href="#"><i class="fa fa-shopping-basket"></i>My bag</a>
 						<a href="logout.php">LOGOUT</a>
 					</div>
 				</div>
@@ -740,8 +734,14 @@ if (isset($_SESSION['username'])){
 
 				
 			</ul>
-<img width=1600 height=1200 src='images/Kucing_dan_anjing.jpg' />
-			
+
+<!-- ############################ -->
+<!--      END OF THE GRID         -->
+<!-- ############################ -->
+    </div><!-- END OF THE GRID -->
+
+</article>
+<!-- END OF THE GRID WRAPPER -->
 
 <div class="clear"></div>
 <script type="text/javascript">
@@ -796,10 +796,16 @@ jQuery(document).ready(function() {
 </script>
 </div></div></div></div>
 			</div><!-- .entry-content -->
-
+<p style="margin-left: 30px;margin-top: 100px;">Sekarang ini, banyak para pemilik hewan peliharaan yang harus merawat hewan peliharaannya dengan mendatangi tempat-tempat khusus untuk perawatan hewan peliharaan. Namun dibelakang itu, banyak waktu dan biaya yang terkadang terbuang sia-sia hanya karena perjalanan yang jauh ataupun terkena macet, belum lagi jika pemilik sudah sampai toko namun toko tersebut tutup atau sedang penuh dalam memberikan pelayanan. Melihat keadaan seperti itu, mereka butuh adanya pelayanan jasa yang dapat didatangkan ke rumah mereka dan membantu memberi kebutuhan perawatan hewan peliharaan. </p>
+<p style="margin-left: 30px;margin-top: 10px;">Di luar sana telah banyak aplikasi berbasis web yang memberikan jasa untuk kebutuhan hewan peliharaan, namun aplikasi di luar sana memiliki satu fungsi seperti hanya untuk melakukan pet grooming atau hanya untuk pet shop. Karena itulah, untuk mempermudah dalam membantu pemilik hewan peliharaan dalam memelihara dan merawat hewan peliharaannya, dibangunlah PetCare.id.</p>
+<p style="margin-left: 30px;margin-top: 10px; height: 320px;">PetCare.id merupakan sebuah aplikasi berbasis web yang dapat membantu mendatangkan jasa grooming atau petshop untuk membantu memberi perawatan atau  kebutuhan untuk hewan peliharaan sesuai dengan permintaan dari konsumen.
+</p>
 	<footer class="entry-footer">
-	</footer><!-- .entry-footer -->
+			</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
+
+                    
+                            </main>
         </div>
     </div>
 
@@ -815,6 +821,7 @@ jQuery(document).ready(function() {
                 
 
     <footer>
+
  <div class="footer">
         <div class="container">
                 <div class="row">
@@ -994,6 +1001,3 @@ var mc4wp_forms_config = [];
 
 
 </html>
-<?php
-}
-?>

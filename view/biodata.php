@@ -1,9 +1,5 @@
-<?php
-session_start();
-include "config.php";
-include_once "/controller/main_petcare.php"; 
-if (isset($_SESSION['username'])){
-?>
+
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -20,7 +16,6 @@ if (isset($_SESSION['username'])){
 	<link rel='dns-prefetch' href='http://s.w.org/' />
 	<link rel="alternate" type="application/rss+xml" title="Numbat &raquo; Feed" href="feed/index.html" />
 	<link rel="alternate" type="application/rss+xml" title="Numbat &raquo; Comments Feed" href="comments/feed/index.html" />
-	<link href="css/style2.css" rel='stylesheet' type='text/css' />
 	<script type="text/javascript">
 		window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/modeltheme.com\/mt_numbat\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.2"}};
 		!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
@@ -466,7 +461,7 @@ if (isset($_SESSION['username'])){
 					</div>
 					<div class="col-md-5 col-sm-12 account-urls">
 						<a href="index2.php?menu=biodata"><i class="fa fa-user"></i>My account</a>
-						<a class="shop_cart" href="#"><i class="fa fa-shopping-basket"></i>My bag</a>
+						<a  class="shop_cart" href="#"><i class="fa fa-shopping-basket"></i>My bag</a>
 						<a href="logout.php">LOGOUT</a>
 					</div>
 				</div>
@@ -662,7 +657,7 @@ if (isset($_SESSION['username'])){
 <article id="post-3902" class="post-3902 page type-page status-publish hentry">
 
 	<div class="entry-content">
-		<div class="vc_row wpb_row vc_row-fluid vc_custom_1497351138971"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner vc_custom_1496911267002"><div class="wpb_wrapper"><style type="text/css" scoped>
+		<div class="vc_row wpb_row vc_row-fluid vc_custom_1497351138971" style="height: 700px;"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner vc_custom_1496911267002"><div class="wpb_wrapper"><style type="text/css" scoped>
         .masonry_banner.masonry_banner.default-skin {
             background-color: #9e6e3b!important;
         }
@@ -736,12 +731,134 @@ if (isset($_SESSION['username'])){
         jQuery( 'body' ).prepend( popup_div );
     }
 </script></div>
-
-
-				
 			</ul>
-<img width=1600 height=1200 src='images/Kucing_dan_anjing.jpg' />
+<?php
+    include_once "config.php";
+	
+    if ($_SESSION['jenis']=='customer'){
+    $query = "SELECT * FROM customer WHERE username='".$_SESSION['username']."'";
+    $row = mysqli_fetch_array(mysqli_query($conn,$query));       
+    
+?>
+<form action = "?action=editbiodata&id=<?php echo $row['username'];?>" method="post">
+	<input type = "hidden" name="action" value="biodata">
+	
+	<table class="table table-striped table-bordered table-hover" id="dataTables-example" width=100% cellpadding=0 cellspacing=0 border=0 style="margin-top: 30px;margin-left: 40px;">
+		<thead>
 			
+		</thead>
+		<tbody>
+			<tr>
+				<h2 align="center" style="margin-top: 70px;">Profil Saya</h2>
+			</tr>
+			<tr>
+                <td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Username</label></td>
+				<td style="padding-top=2px;padding-bottom=2px;"><?php echo $row['username'];?></td>
+			</tr>
+                <td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Nama Lengkap</label></td>
+				<td style="padding-top=2px;padding-bottom=2px;"><?php echo $row['name'];?></td>
+			</tr>
+            <tr>
+				<td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Password</label></td>
+				<td style="padding-top=2px;padding-bottom=2px;"><?php echo $row['password'];?></td>
+			</tr>
+            <tr>
+				<td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Email</label></td>
+				<td style="padding-top=2px;padding-bottom=2px;"><?php echo $row['email'];?></td>
+			</tr>
+            <tr>
+				<td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Alamat</label></td>
+				<td><?php echo $row['address'];?></td>
+			</tr>
+			<tr>
+				<td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Kota</label></td>
+				<td><?php echo $row['city'];?></td>
+			</tr>
+			<tr>
+				<td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Kode Pos</label></td>
+				<td><?php echo $row['postal_code'];?></td>
+			</tr>
+			<tr>
+				<td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Nomor Telepon</label></td>
+				<td><?php echo $row['hp'];?></td>
+			</tr>
+            <tr>
+				<td style="width=150px;padding-top=2px;padding-bottom=2px;" colspan=2>
+					<a id="editbiodata" href="#" type="submit" class="btn btn-primary btn-lg" style="display:inline-block">Ubah Biodata</a>
+				</td>
+			</tr>
+			</tbody>
+			</table>
+			</form>
+<?php
+}
+    
+    if ($_SESSION['jenis']=='mitra'){
+    $query = "SELECT * FROM partners WHERE user_partners='".$_SESSION['username']."'";
+    $row = mysqli_fetch_array(mysqli_query($conn,$query));       
+    
+?>
+<form action = "?action=editbiodata&id=<?php echo $row['user_partners'];?>" method="post">
+	<input type = "hidden" name="action" value="biodata">
+	
+	<table class="table table-striped table-bordered table-hover" id="dataTables-example" width=100% cellpadding=0 cellspacing=0 border=0 style="margin-top: 30px;margin-left: 40px;">
+		<thead>
+			
+		</thead>
+		<tbody>
+			<tr>
+				<h2 align="center" style="margin-top: 70px;">Profil Saya</h2>
+			</tr>
+			<tr>
+                <td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Username</label></td>
+				<td style="padding-top=2px;padding-bottom=2px;"><?php echo $row['user_partners'];?></td>
+			</tr>
+                <td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Pemilik</label></td>
+				<td style="padding-top=2px;padding-bottom=2px;"><?php echo $row['owner'];?></td>
+			</tr>
+            <tr>
+				<td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Password</label></td>
+				<td style="padding-top=2px;padding-bottom=2px;"><?php echo $row['password'];?></td>
+			</tr>
+            <tr>
+				<td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Email</label></td>
+				<td style="padding-top=2px;padding-bottom=2px;"><?php echo $row['email'];?></td>
+			</tr>
+            <tr>
+				<td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Alamat</label></td>
+				<td><?php echo $row['address'];?></td>
+			</tr>
+			<tr>
+				<td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Kota</label></td>
+				<td><?php echo $row['city'];?></td>
+			</tr>
+			<tr>
+				<td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Kode Pos</label></td>
+				<td><?php echo $row['postal_code'];?></td>
+			</tr>
+			<tr>
+				<td style="width=150px;padding-top=2px;padding-bottom=2px;"><label>Nomor Telepon</label></td>
+				<td><?php echo $row['hp'];?></td>
+			</tr>
+            <tr>
+				<td style="width=150px;padding-top=2px;padding-bottom=2px;" colspan=2>
+					<a id="editbiodata" href="#" type="submit" class="btn btn-primary btn-lg" style="display:inline-block">Ubah Biodata</a>
+				</td>
+			</tr>
+			</tbody>
+			</table>
+			</form>
+<?php
+}
+        ?>
+
+<!-- ############################ -->
+<!--      END OF THE GRID         -->
+<!-- ############################ -->
+    </div><!-- END OF THE GRID -->
+
+</article>
+<!-- END OF THE GRID WRAPPER -->
 
 <div class="clear"></div>
 <script type="text/javascript">
@@ -798,8 +915,11 @@ jQuery(document).ready(function() {
 			</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-	</footer><!-- .entry-footer -->
+			</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
+
+                    
+                            </main>
         </div>
     </div>
 
@@ -815,6 +935,7 @@ jQuery(document).ready(function() {
                 
 
     <footer>
+
  <div class="footer">
         <div class="container">
                 <div class="row">
@@ -994,6 +1115,4 @@ var mc4wp_forms_config = [];
 
 
 </html>
-<?php
-}
-?>
+

@@ -2764,7 +2764,7 @@ ul#menu-comunicacao-sub {
 }
 /*--/404--*/
 .error_page {
-       background: #3c763d;
+       background: #9e6e3b;
     position: relative;
     padding: 11em 0;
     width: 100%
@@ -2849,7 +2849,7 @@ a.read.fourth:hover{
 		padding: 10px 15px;
 		width: 100%;
 		border:2px solid #3c763d;
-		background: #3bc73e;
+		background: #9e6e3b;
 		margin: 0;
 		font-family: 'Roboto', sans-serif;
 		transition: 0.5s all;
@@ -2870,16 +2870,16 @@ a.read.fourth:hover{
 	cursor: pointer;
 	font-weight: bold;
 	font-size: 150%;
-	background: #3bc73e;
+	background: #9e6e3b;
 	color: #fff;
-	border: 2px solid #3c763d;
+	border: 2px solid #848a84;
 	border-radius: 10px;
 	-moz-box-shadow:: 6px 6px 5px #999;
 	-webkit-box-shadow:: 6px 6px 5px #999;
 	box-shadow:: 6px 6px 5px #999;
 	}
 	input.MyButton:hover {
-	color: #ea4c89;
+	color: #848a84;
 	background: none;
 	border: 1px solid #fff;
 }

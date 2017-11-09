@@ -1,9 +1,5 @@
-<?php
-session_start();
-include "config.php";
-include_once "/controller/main_petcare.php"; 
-if (isset($_SESSION['username'])){
-?>
+
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -20,7 +16,6 @@ if (isset($_SESSION['username'])){
 	<link rel='dns-prefetch' href='http://s.w.org/' />
 	<link rel="alternate" type="application/rss+xml" title="Numbat &raquo; Feed" href="feed/index.html" />
 	<link rel="alternate" type="application/rss+xml" title="Numbat &raquo; Comments Feed" href="comments/feed/index.html" />
-	<link href="css/style2.css" rel='stylesheet' type='text/css' />
 	<script type="text/javascript">
 		window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/modeltheme.com\/mt_numbat\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.2"}};
 		!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
@@ -466,7 +461,7 @@ if (isset($_SESSION['username'])){
 					</div>
 					<div class="col-md-5 col-sm-12 account-urls">
 						<a href="index2.php?menu=biodata"><i class="fa fa-user"></i>My account</a>
-						<a class="shop_cart" href="#"><i class="fa fa-shopping-basket"></i>My bag</a>
+						<a  class="shop_cart" href="#"><i class="fa fa-shopping-basket"></i>My bag</a>
 						<a href="logout.php">LOGOUT</a>
 					</div>
 				</div>
@@ -740,8 +735,53 @@ if (isset($_SESSION['username'])){
 
 				
 			</ul>
-<img width=1600 height=1200 src='images/Kucing_dan_anjing.jpg' />
-			
+
+<section class="faq-content-area">
+			    <div class="container">
+			        <div class="row" style="height: 570px;">
+			            <div class="col-md-12">
+			                <div class="about-autocare-faq">
+			                    <div class="accordion-box">
+			                 
+			                        <!--Start single accordion box-->
+			                        <div class="accordion animated out" data-delay="0" data-animation="fadeInUp">
+			                            <div class="acc-btn">
+			                                <div class="left-icon">
+				                            	<span class="fa fa-question-circle"></span>
+				                            </div>
+			                            </div>
+			                            <div class="acc-content">
+												Bagaimana cara menggunakan layanan PetCare.id?
+			                                <p>Untuk dapat melakukan transaksi, kamu harus memiliki akun terlebih dahulu di situs PetCare.id. Jika sudah registrasi dan memiliki akun, lihat layanan PetCare.id yang kamu inginkan dan masukkan ke keranjang. Apabila sudah selesai, masukkan informasi pengiriman dan pembayaran, lalu lakukan checkout. Bayar sesuai total tagihan yang tertera, kemudian konfirmasi pembayaran. Tunggu produk yang dipesan tiba ke alamat pengiriman.</p>
+			                            </div>
+			                        </div>
+			                        <!--End single accordion box-->
+			                        <!--Start single accordion box-->
+			                        <div class="accordion animated out" data-delay="0" data-animation="fadeInUp">
+			                            <div class="acc-btn">
+			                                <div class="left-icon">
+				                            	<span class="fa fa-question-circle"></span>
+				                            </div>
+			                            </div>
+			                            <div class="acc-content">
+			                                Apakah produk PetShop yang sudah dibeli dapat dikembalikan?
+			                                <p>Tidak bisa, kecuali terdapat hal-hal yang tidak diinginkan pada produk. Hal tersebut menjadi tanggung jawab mahasiswa sebagai penjual.</p>
+			                            </div>
+			                        </div>
+			                        <!--End single accordion box-->
+			                    </div>
+			                </div>
+			            </div>    
+			        </div>
+			    </div>
+			</section> 
+<!-- ############################ -->
+<!--      END OF THE GRID         -->
+<!-- ############################ -->
+    </div><!-- END OF THE GRID -->
+
+</article>
+<!-- END OF THE GRID WRAPPER -->
 
 <div class="clear"></div>
 <script type="text/javascript">
@@ -798,8 +838,11 @@ jQuery(document).ready(function() {
 			</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-	</footer><!-- .entry-footer -->
+			</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
+
+                    
+                            </main>
         </div>
     </div>
 
@@ -815,6 +858,7 @@ jQuery(document).ready(function() {
                 
 
     <footer>
+
  <div class="footer">
         <div class="container">
                 <div class="row">
@@ -994,6 +1038,3 @@ var mc4wp_forms_config = [];
 
 
 </html>
-<?php
-}
-?>
