@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2017 at 02:48 PM
+-- Generation Time: Nov 16, 2017 at 01:43 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -134,13 +134,14 @@ CREATE TABLE `partners` (
   `user_partners` varchar(15) NOT NULL DEFAULT '',
   `password` varchar(50) NOT NULL DEFAULT '',
   `email` varchar(30) DEFAULT NULL,
-  `address` varchar(200) DEFAULT NULL,
   `hp` varchar(13) DEFAULT NULL,
   `partners_name` varchar(50) DEFAULT NULL,
-  `wop` varchar(50) DEFAULT NULL,
-  `owner` varchar(50) DEFAULT NULL,
+  `address` varchar(200) DEFAULT NULL,
   `city` varchar(30) DEFAULT NULL,
   `postal_code` char(18) DEFAULT NULL,
+  `wop` varchar(50) DEFAULT NULL,
+  `owner` varchar(50) DEFAULT NULL,
+  `file_gambar` varchar(25) NOT NULL,
   `id_caretype` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -148,14 +149,14 @@ CREATE TABLE `partners` (
 -- Dumping data for table `partners`
 --
 
-INSERT INTO `partners` (`user_partners`, `password`, `email`, `address`, `hp`, `partners_name`, `wop`, `owner`, `city`, `postal_code`, `id_caretype`) VALUES
-('drei', 'drei123', 'drei@gmail.com', 'Jl. Dharma Wangsa, Cipete Utara, Kebayoran Baru, Jakarta Selatan.', '089666555444', 'Nanang Care', 'Senin-Jumat, 09.00-17.00 WIB', 'Nanang', 'Jakarta Selatan', '11540', '2'),
-('eins', 'ein123', 'eins@gmail.com', 'Jl. Damai Raya, Cipete Utara, Kebayoran Baru, Jakarta Selatan.', '089888777666', 'Estu Care', 'Senin-Jumat, 09.00-17.00 WIB', 'Estu', 'Jakarta Selatan', '10250', '3'),
-('funf', 'funf123', 'funf@gmail.com', 'Jl. Kirai, Cipete Utara, Kebayoran Baru, Jakarta Selatan.', '08955544433', 'Trandy Care', 'Senin-Jumat, 09.00-17.00 WIB', 'Trandy', 'Jakarta Selatan', '12810', '3'),
-('jakpetz', 'jakpetz', NULL, 'Jalan Kemang Selatan Raya No. 125, Bangka, Mampang Prapatan, RT11 / RW4, Ciandak Timur', '(021)71791363', 'Jakpetz', '9 AM - 7 PM', NULL, 'Jakarta Selatan', '12730', '2'),
-('oppipet25', 'oppipet1', NULL, 'Jl. Perumahan Green Garden, RT09/RW10, Kedoya Utara, Kebon Jeruk', '087889206888', 'Oppipet Salon & Grooming', '9 AM - 6 PM', NULL, 'Jakarta Barat', '11520', '2'),
-('vier', 'vier123', 'vier@gmail.com', 'Jl. Brawijaya, Cipete Utara, Kebayoran Baru, Jakarta Selatan.', '089555444333', 'Rifqi Care', 'Senin-Jumat, 09.00-17.00 WIB', 'Rifqi', 'Jakarta Selatan', '11560', '1'),
-('zwei', 'zwei123', 'zwei@gmail.com', 'Jl. Sawo Bawah, Cipete Utara, Kebayoran Baru, Jakarta Selatan.', '089777666555', 'Dzikri Care', 'Senin-Jumat, 09.00-17.00 WIB', 'Dzikri', 'Jakarta Selatan', '10550', '1');
+INSERT INTO `partners` (`user_partners`, `password`, `email`, `hp`, `partners_name`, `address`, `city`, `postal_code`, `wop`, `owner`, `file_gambar`, `id_caretype`) VALUES
+('drei', 'drei123', 'drei@gmail.com', '089666555444', 'Nanang Care', 'Jl. Dharma Wangsa, Cipete Utara, Kebayoran Baru, Jakarta Selatan.', 'Jakarta Selatan', '11540', 'Senin-Jumat, 09.00-17.00 WIB', 'Nanang', 'logo1.jpg', '2'),
+('eins', 'ein123', 'eins@gmail.com', '089888777666', 'Estu Care', 'Jl. Damai Raya, Cipete Utara, Kebayoran Baru, Jakarta Selatan.', 'Jakarta Selatan', '10250', 'Senin-Jumat, 09.00-17.00 WIB', 'Estu', 'eurekapetgrooming.png', '3'),
+('funf', 'funf123', 'funf@gmail.com', '08955544433', 'Trandy Care', 'Jl. Kirai, Cipete Utara, Kebayoran Baru, Jakarta Selatan.', 'Jakarta Selatan', '12810', 'Senin-Jumat, 09.00-17.00 WIB', 'Trandy', '', '3'),
+('jakpetz', 'jakpetz', NULL, '(021)71791363', 'Jakpetz', 'Jalan Kemang Selatan Raya No. 125, Bangka, Mampang Prapatan, RT11 / RW4, Ciandak Timur', 'Jakarta Selatan', '12730', '9 AM - 7 PM', NULL, '', '2'),
+('oppipet25', 'oppipet1', NULL, '087889206888', 'Oppipet Salon & Grooming', 'Jl. Perumahan Green Garden, RT09/RW10, Kedoya Utara, Kebon Jeruk', 'Jakarta Barat', '11520', '9 AM - 6 PM', NULL, '', '2'),
+('vier', 'vier123', 'vier@gmail.com', '089555444333', 'Rifqi Care', 'Jl. Brawijaya, Cipete Utara, Kebayoran Baru, Jakarta Selatan.', 'Jakarta Selatan', '11560', 'Senin-Jumat, 09.00-17.00 WIB', 'Rifqi', 'petcareid.png', '1'),
+('zwei', 'zwei123', 'zwei@gmail.com', '089777666555', 'Dzikri Care', 'Jl. Sawo Bawah, Cipete Utara, Kebayoran Baru, Jakarta Selatan.', 'Jakarta Selatan', '10550', 'Senin-Jumat, 09.00-17.00 WIB', 'Dzikri', '', '1');
 
 -- --------------------------------------------------------
 
@@ -168,18 +169,18 @@ CREATE TABLE `petgrooming` (
   `price` int(11) DEFAULT NULL,
   `description` varchar(200) DEFAULT NULL,
   `package_name` varchar(50) DEFAULT NULL,
-  `user_partners` varchar(15) NOT NULL DEFAULT '',
-  `id_petcategory` int(11) DEFAULT NULL
+  `petcategory` varchar(10) NOT NULL,
+  `user_partners` varchar(15) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `petgrooming`
 --
 
-INSERT INTO `petgrooming` (`id_petgrooming`, `price`, `description`, `package_name`, `user_partners`, `id_petcategory`) VALUES
-('z1', 150000, 'Memandikan Anjing untuk menghilangkan kutu', 'Mandi Kutu', 'drei', 2),
-('z2', 100000, 'Memandikan Kucing', 'Mandi Biasa', 'zwei', 1),
-('z3', 300000, 'Mandi dengan menggunakan shampoo khusus untuk menjaga kesehatan bulu dan kulit ', 'Mandi Sehat', 'drei', 3);
+INSERT INTO `petgrooming` (`id_petgrooming`, `price`, `description`, `package_name`, `petcategory`, `user_partners`) VALUES
+('z1', 150000, 'Memandikan Anjing untuk menghilangkan kutu', 'Mandi Kutu', 'Anjing', 'drei'),
+('z2', 100000, 'Memandikan Kucing', 'Mandi Biasa', 'Kucing', 'zwei'),
+('z3', 300000, 'Mandi dengan menggunakan shampoo khusus untuk menjaga kesehatan bulu dan kulit ', 'Mandi Sehat', 'Kucing', 'drei');
 
 -- --------------------------------------------------------
 
@@ -223,8 +224,8 @@ INSERT INTO `petshop` (`id_petshop`, `price`, `availability`, `description`, `pr
 ('D2', 120000, '10', 'Tools', 'Tools A', 2, 'zwei', 't3.jpg', 'TL1'),
 ('E1', 200000, '10', 'Mainan ini dapat melatih peliharaan Anda agar lebih tangkas.', 'Mainan Anjing A', 2, 'zwei', 'm4.jpg', 'TY1'),
 ('E2', 290000, '5', 'Mainan ini dapat mengasah ketajaman kuku peliharaan Anda tanpa harus merusak perabotan di rumah', 'Mainan Kucing A', 1, 'vier', 'm10.jpg', 'TY1'),
-('F1', 175000, '10', 'Shampoo untuk Anjing', 'Shampo Anjing', 2, 'vier', '', 'SP1'),
-('F2', 150000, '10', 'Shampoo untuk Kucing', 'Shampo Kucing', 1, 'vier', '', 'SP1');
+('F1', 175000, '10', 'Shampoo untuk Anjing', 'Shampo Anjing', 2, 'vier', 's4.jpg', 'SP1'),
+('F2', 150000, '10', 'Shampoo untuk Kucing', 'Shampo Kucing', 1, 'vier', 's5.jpg', 'SP1');
 
 -- --------------------------------------------------------
 
@@ -283,21 +284,6 @@ INSERT INTO `shop_category` (`id_shopcategory`, `name_shopcategory`) VALUES
 ('TY1', 'Toys'),
 ('VT1', 'Vitamins');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `user`
---
-
-CREATE TABLE `user` (
-  `id_user` varchar(10) NOT NULL DEFAULT '',
-  `username` varchar(15) DEFAULT NULL,
-  `password` varchar(30) DEFAULT NULL,
-  `role` varchar(20) DEFAULT NULL,
-  `user_customer` varchar(15) DEFAULT NULL,
-  `user_partners` varchar(15) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 --
 -- Indexes for dumped tables
 --
@@ -349,8 +335,7 @@ ALTER TABLE `partners`
 --
 ALTER TABLE `petgrooming`
   ADD PRIMARY KEY (`id_petgrooming`,`user_partners`),
-  ADD KEY `R_2` (`user_partners`),
-  ADD KEY `R_4` (`id_petcategory`);
+  ADD KEY `R_2` (`user_partners`);
 
 --
 -- Indexes for table `petshop`
@@ -379,14 +364,6 @@ ALTER TABLE `review`
 --
 ALTER TABLE `shop_category`
   ADD PRIMARY KEY (`id_shopcategory`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id_user`),
-  ADD KEY `R_7` (`user_customer`),
-  ADD KEY `R_8` (`user_partners`);
 
 --
 -- Constraints for dumped tables
@@ -422,8 +399,7 @@ ALTER TABLE `partners`
 -- Constraints for table `petgrooming`
 --
 ALTER TABLE `petgrooming`
-  ADD CONSTRAINT `R_2` FOREIGN KEY (`user_partners`) REFERENCES `partners` (`user_partners`),
-  ADD CONSTRAINT `R_4` FOREIGN KEY (`id_petcategory`) REFERENCES `pet_category` (`id_petcategory`);
+  ADD CONSTRAINT `R_2` FOREIGN KEY (`user_partners`) REFERENCES `partners` (`user_partners`);
 
 --
 -- Constraints for table `petshop`
@@ -438,13 +414,6 @@ ALTER TABLE `petshop`
 --
 ALTER TABLE `review`
   ADD CONSTRAINT `R_17` FOREIGN KEY (`no_invoice`,`no_orders`) REFERENCES `invoice` (`no_invoice`, `no_orders`);
-
---
--- Constraints for table `user`
---
-ALTER TABLE `user`
-  ADD CONSTRAINT `R_7` FOREIGN KEY (`user_customer`) REFERENCES `customer` (`username`),
-  ADD CONSTRAINT `R_8` FOREIGN KEY (`user_partners`) REFERENCES `partners` (`user_partners`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
