@@ -79,6 +79,10 @@
                             $_SESSION['name'] = $data['name'];
                             $_SESSION['address'] = $data['address'];
                             $_SESSION['jenis'] = $jenis;
+                            $_SESSION['pos'] = $data['postal_code'];
+                            $_SESSION['city'] = $data['city'];
+                            $_SESSION['hp'] = $data['hp'];
+                            $_SESSION['email'] = $data['email'];
                     }
 					
                     

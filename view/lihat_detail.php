@@ -814,10 +814,10 @@ jQuery(document).ready(function() {
 			                <div class="inner-box">
 			                    <div class="single-item center">
 								<div class="product-item">
-								<form method="post" action="index2.php?menu=lihat_paket&id=<?php echo $d["id_petgrooming"]; ?>">
+								<form method="post" action="index2.php?menu=invoice&id=<?php echo $d["id_petgrooming"]; ?>">
 								
 			                        <div class="content">
-										<div><strong><h3><a href="lihatdetail.php?id=<?php echo $d["id_petgrooming"]?>">
+										<div><strong><h3><a href="index2.php?menu=invoice&id=<?php echo $d["id_petgrooming"]?>">
 										<?php echo $d["package_name"]  ; ?></strong></div></a></h3>
 										
 										<input type="text" value="01"  hidden> 

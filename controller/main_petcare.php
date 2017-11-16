@@ -39,6 +39,10 @@
         $query=mysqli_query($conn,"SELECT * from petgrooming where user_partners = '$_GET[id]' AND petcategory='Anjing'");
         include "/view/lihat_paket.php";
 	}
+    if (getParam("menu")=="invoice"){//untuk lihat paket kucing
+        $query=mysqli_query($conn,"SELECT * FROM partners,petgrooming WHERE petgrooming.id_petgrooming='$_GET[id]' AND partners.user_partners=petgrooming.user_partners");
+        include "/view/invoice.php";
+	}
 
 
 ?>

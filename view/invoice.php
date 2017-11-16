@@ -797,7 +797,7 @@ jQuery(document).ready(function() {
 </script>
 </div></div></div></div>
 			</div><!-- .entry-content -->
-<h2>PetGrooming For Cats</h2>
+<h2>Masukkan Data Anda</h2>
 <?php
     $i=1;
      
@@ -805,46 +805,50 @@ jQuery(document).ready(function() {
        
 
     ?>
-    
-         
-         
-					
-			           <!--Default Item-->
-			            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mix mix_all default-item all <?php echo $d['id_petgrooming']; ?> " style="display: inline-block;">
-			                <div class="inner-box">
-			                    <div class="single-item center">
-								<div class="product-item">
-								<form method="post" action="index2.php?menu=invoice&id=<?php echo $d["id_petgrooming"]; ?>">
-								
-			                        <div class="content">
-										<div><strong><h3><a href="index2.php?menu=invoice&id=<?php echo $d["id_petgrooming"]; ?>">
-										<?php echo $d["package_name"]  ; ?></strong></div></a></h3>
-										
-										<input type="text" value="01"  hidden> 
-			                            <div class=" price product-price"><?php echo "Deskripsi Paket:". $d["description"]; ?></div>
-			                        </div>
-			                        <div class="overlay-box">
-			                        	<div class="inner">
-				                        	<div class="top-content">
-				                        		<ul>
-				                        			<!--<li><a href="#"><span class="fa fa-eye"></span></a></li>-->
-													
-				                        			<!--<li><a href="#"><span class="fa fa-heart-o"></span></a></li>-->
-				                        		</ul>
-				                        	</div>
-				                        	<div class="bottom-content">
-												
-				                        		<p><?php echo "Harga :". $d["price"]; ?></p>
-				                        	</div>
-			                        	</div>
-			                        </div>
-								</form>
-								</div>	
-				                </div>
-			                </div>
-			            </div>
-                        
-						<?php } ?>
+<div class="error-top" style="width: 100%; left: 350px;">
+			
+			<div class="invoice">
+			<form name='form' method='POST' action='../model/masuk.php '>
+				<table style="width: 100%;">
+					<tr>
+                        <h5>harga per-paket/hewan : Rp.<?php echo $d['price']; ?>,-</h5>
+                        <input type='hidden' name='billname' value="<?php echo $_SESSION['address']; ?>" >
+						<td>Alamat Lengkap: <input type='text' placeholder="Alamat Lengkap" name='billaddress' value="<?php echo $_SESSION['address']; ?>" ></td>
+                        <td>Kota/Kabupaten: <input type='text' placeholder="Kota/Kabupaten" name='billcity' value="<?php echo $_SESSION['city']; ?>" ></td>
+					</tr>
+					<tr>
+						<td>Nomor telepon:<input type='text' placeholder="Nomor telepon" name='notelp' value="<?php echo $_SESSION['hp']; ?>" ></td>
+						<td>Email: <input type='text' placeholder="Email" name='email' value="<?php echo $_SESSION['email']; ?>" ></td>
+					</tr>
+					<tr>
+						<td>Tanggal Grooming: <input type='date' name='tanggal_grooming'></td>
+                        <td>Jenis Paket: <input type='text' name='paket' value="<?php echo $d['package_name']; ?>" readonly ></td> 
+					</tr>
+                    <tr>
+						<td><?php if( $d['petcategory']=="Anjing"){ ?>
+                            Jumlah Anjing :     
+                            <?php }
+                            else { ?>
+                            Jumlah Kucing :
+                            <?php } ?>
+                            <select name="qty">
+                                                <option value="">Select...</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+
+                            </select></td>
+                        <td>Jenis Paket: <input type='text' name='mitra' value="<?php echo $d['partners_name']; ?>" readonly></td> 
+					</tr>
+					<tr>
+						<td colspan="2"><input type='submit' name='tekan' value='Pesan'/></td>
+					</tr>
+				</table>
+			</form>
+			</div>
+		</div>
 	<footer class="entry-footer">
 			</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
@@ -853,7 +857,9 @@ jQuery(document).ready(function() {
                             </main>
         </div>
     </div>
-
+<?php
+      }
+?>
         <div class="before_footer row">
         <div class="container">
             <div class="row">
