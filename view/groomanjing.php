@@ -798,7 +798,7 @@ jQuery(document).ready(function() {
 </div></div></div></div>
 			</div><!-- .entry-content -->
 <?php
-    $dat = mysqli_query($conn,"select * from partners,petgrooming,pet_category where partners.user_partners=petgrooming.user_partners AND petgrooming.id_petcategory=pet_category.id_petcategory AND pet_category.id_petcategory=2");
+    $dat = mysqli_query($conn,"SELECT partners.partners_name,partners.address,partners.wop,partners.city FROM partners,petgrooming WHERE petgrooming.id_petcategory=1 AND partners.user_partners=petgrooming.user_partners");
     
 
     ?>
@@ -808,11 +808,8 @@ jQuery(document).ready(function() {
     <tr>
 	<td>Mitra</td>
 	<td>Alamat</td>
-	<td>No. Telp</td>
 	<td>Waktu Operasional</td>
-	<td>Paket Grooming</td>
-	<td>Deskripsi Paket</td>
-    <td>Harga</td>
+	<td>Kota</td>
 	<td></td>
       </tr>
       <?php
@@ -822,13 +819,10 @@ jQuery(document).ready(function() {
           
 ?>	         
         <tr>
-            <td><?php echo $d['user_partners']; ?></td>
+            <td><?php echo $d['partners_name']; ?></td>
             <td><?php echo $d['address']; ?></td>
-            <td><?php echo $d['hp']; ?></td>
             <td><?php echo $d['wop'];?></td>
-            <td><?php echo $d['package_name'];?></td>
-            <td><?php echo $d['description'];?></td>
-            <td><?php echo $d['price'];?></td>
+            <td><?php echo $d['city'];?></td>
             
               <td><input class="MyButton" type="button" value="Pilih" onclick="window.location.href='groomanjing.php'"/></a></td>   
             
