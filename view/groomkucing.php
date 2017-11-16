@@ -797,49 +797,66 @@ jQuery(document).ready(function() {
 </script>
 </div></div></div></div>
 			</div><!-- .entry-content -->
+<h2>PetGrooming For Cats</h2>
 <?php
-    $dat = mysqli_query($conn,"select * from partners,petgrooming,pet_category where partners.user_partners=petgrooming.user_partners AND petgrooming.id_petcategory=pet_category.id_petcategory AND pet_category.id_petcategory=1");
-    
-
-    ?>
-    <h2>PetGrooming For Cats</h2>
-    <table class="table table-striped table-bordered table-hover" id="dataTables-example" width=100% cellpadding=0 cellspacing=0 border=0 valign=top style="margin-top: 40px; max-width:100%; margin-bottom: 400px;">
-      
-    <tr>
-	<td>Mitra</td>
-	<td>Alamat</td>
-	<td>No. Telp</td>
-	<td>Waktu Operasional</td>
-	<td>Paket Grooming</td>
-	<td>Deskripsi Paket</td>
-    <td>Harga</td>
-	<td></td>
-      </tr>
-      <?php
-      $i=1;
+    $dat = mysqli_query($conn,"SELECT partners.user_partners,partners.partners_name,partners.address,partners.wop,partners.city,partners.file_gambar FROM partners,petgrooming WHERE petgrooming.petcategory='Kucing' AND partners.user_partners=petgrooming.user_partners");
+    $i=1;
      
       while($d=mysqli_fetch_array($dat)){
-          
-?>	         
-        <tr>
-            <td><?php echo $d['user_partners']; ?></td>
-            <td><?php echo $d['address']; ?></td>
-            <td><?php echo $d['hp']; ?></td>
-            <td><?php echo $d['wop'];?></td>
-            <td><?php echo $d['package_name'];?></td>
-            <td><?php echo $d['description'];?></td>
-            <td><?php echo $d['price'];?></td>
-            
-              <td><input class="MyButton" type="button" value="Pilih" onclick="window.location.href='groomanjing.php'"/></td>   
-            
-            </tr>
-      
-        <?php 
-            
-            $i++;
-        }
-        ?>
-    </table>
+       
+
+    ?>
+    
+         
+         
+					
+			           <!--Default Item-->
+			            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mix mix_all default-item all <?php echo $d['partners_name']; ?> " style="display: inline-block;">
+			                <div class="inner-box">
+			                    <div class="single-item center">
+								<div class="product-item">
+								<form method="post" action="index2.php?menu=lihat_paket&id=<?php echo $d["user_partners"]; ?>">
+								<div class="product-image"><figure class="image-box"><img src="images/mitra/<?php 
+                                
+                                if($d["file_gambar"]==""){
+                                echo "pecareid.png";    
+                                }
+                                else{
+                                echo $d["file_gambar"]; } ?>" alt="" style="width:200px; height:auto; "></figure></div>
+			                        <div class="content">
+										<div><strong><h3><a href="index2.php?menu=lihat_detail&id=<?php echo $d["user_partners"]?>">
+										<?php echo $d["partners_name"]  ; ?></strong></div></a></h3>
+										
+										<input type="text" value="01"  hidden> 
+                                        <div class=" price product-price"><?php echo "Alamat :". $d["address"]; ?></div>
+			                            <div class=" price product-price"><?php echo "<br>Kota/Kabupaten :". $d["city"]; ?></div>
+			                        </div>
+			                        <div class="overlay-box">
+			                        	<div class="inner">
+				                        	<div class="top-content">
+				                        		<ul>
+				                        			<!--<li><a href="#"><span class="fa fa-eye"></span></a></li>-->
+													<div>
+													<input type="text" name="quantity" value="1" size="2" hidden />
+													<li class="tultip-op"><span class="tultip"><i class=""></i>Lihat detail</span><a href="index2.php?menu=lihat_detail&id=<?php echo $d["user_partners"]?>"><span class="fa fa-eye"></span></a>
+				                        			
+													</div>
+				                        			<!--<li><a href="#"><span class="fa fa-heart-o"></span></a></li>-->
+				                        		</ul>
+				                        	</div>
+				                        	<div class="bottom-content">
+												
+				                        		<p><?php echo "Waktu Operasional :". $d["wop"]; ?></p>
+				                        	</div>
+			                        	</div>
+			                        </div>
+								</form>
+								</div>	
+				                </div>
+			                </div>
+			            </div>
+                        
+						<?php } ?>
 	<footer class="entry-footer">
 			</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

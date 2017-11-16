@@ -31,7 +31,14 @@
     if (getParam("menu")=="petshop_kucing"){
 		include "/view/petshopkucing.php";
 	}
-    
+    if (getParam("menu")=="lihat_detail"){//untuk lihat paket kucing
+        $query=mysqli_query($conn,"SELECT * from petgrooming where user_partners = '$_GET[id]' AND petcategory='Kucing'");
+        include "/view/lihat_detail.php";
+	}
+    if (getParam("menu")=="lihat_paket"){//untuk lihat paket kucing
+        $query=mysqli_query($conn,"SELECT * from petgrooming where user_partners = '$_GET[id]' AND petcategory='Anjing'");
+        include "/view/lihat_paket.php";
+	}
 
 
 ?>
