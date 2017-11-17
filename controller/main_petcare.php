@@ -28,6 +28,9 @@
     if (getParam("menu")=="petshop_anjing"){
 		include "/view/petshopanjing.php";
 	}
+    if (getParam("menu")=="tas"){
+		include "/view/tas.php";
+	}
     if (getParam("menu")=="petshop_kucing"){
 		include "/view/petshopkucing.php";
 	}

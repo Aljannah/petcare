@@ -808,11 +808,12 @@ jQuery(document).ready(function() {
 <div class="error-top" style="width: 100%; left: 350px;">
 			
 			<div class="invoice">
-			<form name='form' method='POST' action='../model/masuk.php '>
+			<form name='form' method='POST' action='#'>
 				<table style="width: 100%;">
 					<tr>
                         <h5>harga per-paket/hewan : Rp.<?php echo $d['price']; ?>,-</h5>
-                        <input type='hidden' name='billname' value="<?php echo $_SESSION['address']; ?>" >
+                        <input type='hidden' name='billname' value="<?php echo $_SESSION['name']; ?>" >
+                        <input type='hidden' name='username' value="<?php echo $_SESSION['username']; ?>" >
 						<td>Alamat Lengkap: <input type='text' placeholder="Alamat Lengkap" name='billaddress' value="<?php echo $_SESSION['address']; ?>" ></td>
                         <td>Kota/Kabupaten: <input type='text' placeholder="Kota/Kabupaten" name='billcity' value="<?php echo $_SESSION['city']; ?>" ></td>
 					</tr>
@@ -823,6 +824,9 @@ jQuery(document).ready(function() {
 					<tr>
 						<td>Tanggal Grooming: <input type='date' name='tanggal_grooming'></td>
                         <td>Jenis Paket: <input type='text' name='paket' value="<?php echo $d['package_name']; ?>" readonly ></td> 
+                        <input type='hidden' name='id_package' value="<?php echo $d['id_petgrooming']; ?>" >
+                        <input type='hidden' name='user_partners' value="<?php echo $d['user_partners']; ?>" >
+                        <input type='hidden' name='unit_price' value="<?php echo $d['price']; ?>" >
 					</tr>
                     <tr>
 						<td><?php if( $d['petcategory']=="Anjing"){ ?>
@@ -848,6 +852,7 @@ jQuery(document).ready(function() {
 				</table>
 			</form>
 			</div>
+            <?php include "/model/masuk.php"; ?>
 		</div>
 	<footer class="entry-footer">
 			</footer><!-- .entry-footer -->

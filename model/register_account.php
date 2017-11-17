@@ -12,6 +12,6 @@
 
 		mysqli_query($conn,"INSERT INTO customer (username, password, name, email, address, city, postal_code, hp) 
 					VALUES ('".$username."','".$password."','".$name."','".$email."','".$address."','".$city."','".$postal_code."','".$hp."')" );
-		echo "<script>alert('Data berhasil dimasukkan'); window.location='login_customer.php'</script>";
+		echo "<script>alert('Data berhasil dimasukkan'); window.location='../view/login_customer.php'</script>";
         }
 ?>

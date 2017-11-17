@@ -28,7 +28,7 @@
 		<div class="error-top" style="width: 566px; left: 350px;">
 			<center><img style="width:250px;height:130px;" src="../images/pecareid.png"/><br><br> </center>
 			<div class="login">
-			<form name='form' method='POST' action='/model/register_account.php '>
+			<form name='form' method='POST' action='../model/register_account.php'>
 				<table style="width: 500px;">
 					<tr>
 						<td><input type='text' placeholder="Username" name='username'></td>

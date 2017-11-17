@@ -12,6 +12,6 @@
 
 		mysqli_query($conn,"INSERT INTO partners (user_partners, password, name, email, address, city, postal_code, hp) 
 					VALUES ('".$user_partners."','".$password."','".$name."','".$email."','".$address."','".$city."','".$postal_code."','".$hp."')" );
-		echo "<script>alert('Data berhasil dimasukkan'); window.location='index2.php'</script>";
+		echo "<script>alert('Data berhasil dimasukkan'); window.location='../view/login_mitra.php'</script>";
         }
 ?>
