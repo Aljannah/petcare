@@ -1,4 +1,6 @@
-
+<?php
+	require __DIR__ .'..\config.php';
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -9,17 +11,17 @@
 	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 	 <!-- Bootstrap Core CSS -->
-	<link href="../css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+	<link href="../assets/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
 	<!-- Custom CSS -->
-	<link href="../css/style.css" rel='stylesheet' type='text/css' />
+	<link href="../assets/css/style.css" rel='stylesheet' type='text/css' />
 	<!-- Graph CSS -->
-	<link href="../css/font-awesome.css" rel="stylesheet"> 
+	<link href="../assets/css/font-awesome.css" rel="stylesheet"> 
 	<!-- jQuery -->
 	<link href='..///fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'>
 	<!-- lined-icons -->
-	<link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
+	<link rel="stylesheet" href="../assets/css/icon-font.min.css" type='text/css' />
 	<!-- //lined-icons -->
-	<script src="../js/jquery-1.10.2.min.js"></script>
+	<script src="../assets/js/jquery-1.10.2.min.js"></script>
 	<!--clock init-->
 </head> 
 <body>
@@ -27,9 +29,9 @@
 	<div class="error_page">
 		<!--/login-top-->
 		<div class="error-top" style="width: 566px; left: 350px;">
-			<center><img style="width:250px;height:130px;" src="../images/pecareid.png"/><br><br> </center>
+			<center><img style="width:250px;height:130px;" src="../assets/images/pecareid.png"/><br><br> </center>
 			<div class="login">
-			<form name='form' method='POST' action='/model/register_account_mitra.php '>
+			<form name='form' method='POST' action='register_account_mitra.php '>
 				<table style="width: 500px;">
 					<tr>
 						<td><input type='text' placeholder="Username" name='user_partners'></td>
@@ -52,11 +54,12 @@
 						<td><input type='text' placeholder="Owner" name='owner'></td>
 					</tr>
 					<tr>
-						<td><select name="prodi_en" style="width: 257px;height: 47px;">
+						<td><select name="care_type" style="width: 257px;height: 47px;">
 							<option value='PI'>Care Type</option>
 								<?php
 								$q = mysqli_query($conn, "select * from care_type");
-								while($d = mysql_fetch_array($q)){
+								while($d = mysqli_fetch_array($q)){
+									$aktif = ($data['care_type'] == $d['id_caretype']?'selected':'');
 									echo "<option value='$d[id_caretype]' $aktif>$d[name_caretype]</option>";
 								}
 								?>
@@ -87,9 +90,9 @@
 	<!--footer section end-->
 	<!--/404-->
 	<!--js -->
-	<script src="js/jquery.nicescroll.js"></script>
-	<script src="js/scripts.js"></script>
+	<script src="../assets/js/jquery.nicescroll.js"></script>
+	<script src="../assets/js/scripts.js"></script>
 	<!-- Bootstrap Core JavaScript -->
-	   <script src="js/bootstrap.min.js"></script>
+	   <script src="../assets/js/bootstrap.min.js"></script>
 </body>
 </html>

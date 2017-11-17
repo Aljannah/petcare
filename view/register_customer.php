@@ -8,17 +8,17 @@
 	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 	 <!-- Bootstrap Core CSS -->
-	<link href="../css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+	<link href="../assets/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
 	<!-- Custom CSS -->
-	<link href="../css/style.css" rel='stylesheet' type='text/css' />
+	<link href="../assets/css/style.css" rel='stylesheet' type='text/css' />
 	<!-- Graph CSS -->
-	<link href="../css/font-awesome.css" rel="stylesheet"> 
+	<link href="../assets/css/font-awesome.css" rel="stylesheet"> 
 	<!-- jQuery -->
 	<link href='..///fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'>
 	<!-- lined-icons -->
-	<link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
+	<link rel="stylesheet" href="../assets/css/icon-font.min.css" type='text/css' />
 	<!-- //lined-icons -->
-	<script src="../js/jquery-1.10.2.min.js"></script>
+	<script src="../assets/js/jquery-1.10.2.min.js"></script>
 	<!--clock init-->
 </head> 
 <body>
@@ -26,9 +26,9 @@
 	<div class="error_page">
 		<!--/login-top-->
 		<div class="error-top" style="width: 566px; left: 350px;">
-			<center><img style="width:250px;height:130px;" src="../images/pecareid.png"/><br><br> </center>
+			<center><img style="width:250px;height:130px;" src="../assets/images/pecareid.png"/><br><br> </center>
 			<div class="login">
-			<form name='form' method='POST' action='../model/register_account.php'>
+			<form name='form' method='POST' action='register_account.php '>
 				<table style="width: 500px;">
 					<tr>
 						<td><input type='text' placeholder="Username" name='username'></td>
@@ -70,9 +70,9 @@
 	<!--footer section end-->
 	<!--/404-->
 	<!--js -->
-	<script src="js/jquery.nicescroll.js"></script>
-	<script src="js/scripts.js"></script>
+	<script src="../assets/js/jquery.nicescroll.js"></script>
+	<script src="../assets/js/scripts.js"></script>
 	<!-- Bootstrap Core JavaScript -->
-	   <script src="js/bootstrap.min.js"></script>
+	   <script src="../assets/js/bootstrap.min.js"></script>
 </body>
 </html>
