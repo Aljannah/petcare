@@ -488,7 +488,7 @@ if (isset($_SESSION['username'])){
 					<div class="col-md-7 menu-products">
 						<ul class="menu nav navbar-nav pull-left nav-effect nav-menu">
 							<li id="menu-item-3668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3668"><a href="index2.php">Beranda</a></li>
-							<li id="menu-item-3668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3668"><a href="index2.php?menu=tentang">Tentang</a></li>
+							<li id="menu-item-3668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3668"><a href="menu=tentang">Tentang</a></li>
                             <?php
                             if ($_SESSION['jenis']=='customer'){ ?>
 							<li id="menu-item-3665" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3665"><a href="#">Pet Grooming</a>
@@ -740,7 +740,7 @@ if (isset($_SESSION['username'])){
 
 				
 			</ul>
-<img width=1600 height=1200 src='images/Kucing_dan_anjing.jpg' />
+<img width=1600 height=1200 src='assets/images/Kucing_dan_anjing.jpg' />
 			
 
 <div class="clear"></div>
