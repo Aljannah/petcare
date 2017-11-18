@@ -491,12 +491,6 @@
 									<li id="menu-item-4175" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4175"><a href="index2.php?menu=groomkucing">Cats</a></li>
 								</ul>
 							</li>
-                            <li id="menu-item-3665" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3665"><a href="#">Pet Shop</a>
-								<ul  class="sub-menu">
-									<li id="menu-item-4519" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4519"><a href="index2.php?menu=petshop_anjing">Dogs</a></li>
-									<li id="menu-item-4175" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4175"><a href="index2.php?menu=petshop_kucing">Cats</a></li>
-								</ul>
-							</li>
                             <?php
                             }
                             ?>

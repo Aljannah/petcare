@@ -487,19 +487,13 @@ if (isset($_SESSION['username'])){
 					<div class="col-md-7 menu-products">
 						<ul class="menu nav navbar-nav pull-left nav-effect nav-menu">
 							<li id="menu-item-3668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3668"><a href="index2.php">Beranda</a></li>
-							<li id="menu-item-3668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3668"><a href="menu=tentang">Tentang</a></li>
+							<li id="menu-item-3668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3668"><a href="index2.php?menu=tentang">Tentang</a></li>
                             <?php
                             if ($_SESSION['jenis']=='customer'){ ?>
 							<li id="menu-item-3665" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3665"><a href="#">Pet Grooming</a>
 								<ul  class="sub-menu">
 									<li id="menu-item-4519" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4519"><a href="index2.php?menu=groomanjing">Dogs</a></li>
 									<li id="menu-item-4175" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4175"><a href="index2.php?menu=groomkucing">Cats</a></li>
-								</ul>
-							</li>
-                            <li id="menu-item-3665" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3665"><a href="#">Pet Shop</a>
-								<ul  class="sub-menu">
-									<li id="menu-item-4519" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4519"><a href="index2.php?menu=petshop_anjing">Dogs</a></li>
-									<li id="menu-item-4175" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4175"><a href="index2.php?menu=petshop_kucing">Cats</a></li>
 								</ul>
 							</li>
                             <?php
