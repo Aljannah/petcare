@@ -35,11 +35,11 @@
 		include "/view/petshopkucing.php";
 	}
     if (getParam("menu")=="lihat_detail"){//untuk lihat paket kucing
-        $query=mysqli_query($conn,"SELECT * from petgrooming where user_partners = '$_GET[id]' AND petcategory='Kucing'");
+        $query=mysqli_query($conn,"SELECT * from petgrooming,partners where petgrooming.user_partners = '$_GET[id]' AND petcategory='Kucing' AND petgrooming.user_partners=partners.user_partners");
         include "/view/lihat_detail.php";
 	}
-    if (getParam("menu")=="lihat_paket"){//untuk lihat paket kucing
-        $query=mysqli_query($conn,"SELECT * from petgrooming where user_partners = '$_GET[id]' AND petcategory='Anjing'");
+    if (getParam("menu")=="lihat_paket"){//untuk lihat paket anjing
+        $query=mysqli_query($conn,"SELECT * from petgrooming,partners where petgrooming.user_partners = '$_GET[id]' AND petcategory='Anjing' AND petgrooming.user_partners=partners.user_partners");
         include "/view/lihat_paket.php";
 	}
     if (getParam("menu")=="invoice"){//untuk lihat paket kucing
