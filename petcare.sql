@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2017 at 03:09 PM
+-- Generation Time: Nov 18, 2017 at 03:20 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -257,7 +257,8 @@ INSERT INTO `pet_category` (`id_petcategory`, `name_petcategory`) VALUES
 CREATE TABLE `review` (
   `id_review` varchar(10) NOT NULL DEFAULT '',
   `review` varchar(300) DEFAULT NULL,
-  `rating` int(11) DEFAULT NULL
+  `rating` int(11) DEFAULT NULL,
+  `no_invoice` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -356,7 +357,8 @@ ALTER TABLE `pet_category`
 -- Indexes for table `review`
 --
 ALTER TABLE `review`
-  ADD PRIMARY KEY (`id_review`);
+  ADD PRIMARY KEY (`id_review`),
+  ADD KEY `no_invoice` (`no_invoice`);
 
 --
 -- Indexes for table `shop_category`
@@ -427,6 +429,12 @@ ALTER TABLE `petshop`
   ADD CONSTRAINT `R_13` FOREIGN KEY (`id_petcategory`) REFERENCES `pet_category` (`id_petcategory`),
   ADD CONSTRAINT `R_14` FOREIGN KEY (`user_partners`) REFERENCES `partners` (`user_partners`),
   ADD CONSTRAINT `R_16` FOREIGN KEY (`id_shopcategory`) REFERENCES `shop_category` (`id_shopcategory`);
+
+--
+-- Constraints for table `review`
+--
+ALTER TABLE `review`
+  ADD CONSTRAINT `review_ibfk_1` FOREIGN KEY (`no_invoice`) REFERENCES `invoice` (`no_invoice`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
