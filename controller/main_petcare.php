@@ -1,10 +1,10 @@
 <?php
 	include_once "/../function.php";
 
-	/*if (getParam("menu")=="" || getParam("menu")==null){
-		echo "<h1 style='color:red;padding-left:20px;'>Dashboard</h1><br><br>";
-		echo "<h4 style='padding-left:20px;'>Selamat datang ".$_SESSION['name']."</h4>";
-	}*/
+	if (getParam("menu")=="" || getParam("menu")==null){
+	//	echo "<h1 style='color:red;padding-left:20px;'>Dashboard</h1><br><br>";
+		echo "<img width=1600 height=1200 src='assets/images/Kucing_dan_anjing.jpg' />";
+	}
     if (getParam("menu")=="tentang"){
 		include "/view/about.php";
 	}

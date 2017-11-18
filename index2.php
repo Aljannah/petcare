@@ -733,7 +733,7 @@ if (isset($_SESSION['username'])){
 
 				
 			</ul>
-<img width=1600 height=1200 src='assets/images/Kucing_dan_anjing.jpg' />
+
 			
 
 <div class="clear"></div>
