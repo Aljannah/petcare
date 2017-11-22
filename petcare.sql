@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2017 at 03:20 PM
+-- Generation Time: Nov 22, 2017 at 11:56 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -80,6 +80,7 @@ INSERT INTO `customer` (`username`, `password`, `name`, `email`, `address`, `cit
 
 CREATE TABLE `invoice` (
   `no_invoice` int(10) NOT NULL,
+  `payment_date` date NOT NULL,
   `billname` varchar(50) DEFAULT NULL,
   `billaddress` varchar(100) DEFAULT NULL,
   `billcity` varchar(50) DEFAULT NULL,
@@ -91,8 +92,22 @@ CREATE TABLE `invoice` (
   `shipnotes` varchar(50) DEFAULT NULL,
   `payment_stat` char(18) DEFAULT NULL,
   `information` varchar(100) DEFAULT NULL,
-  `no_orders` int(10) NOT NULL,
-  `no_orderdetail` int(10) NOT NULL
+  `no_invoicedetail` int(10) NOT NULL,
+  `no_orders` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `invoice_det`
+--
+
+CREATE TABLE `invoice_det` (
+  `no_invoicedetail` int(10) NOT NULL,
+  `caretype` varchar(30) NOT NULL,
+  `quantity` int(5) NOT NULL,
+  `unit_price` int(30) NOT NULL,
+  `description` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -104,10 +119,11 @@ CREATE TABLE `invoice` (
 CREATE TABLE `orders` (
   `no_orders` int(10) NOT NULL,
   `no_orderdetail` int(10) NOT NULL,
-  `total` char(18) DEFAULT NULL,
-  `order_date` char(18) DEFAULT NULL,
-  `shipping_fee` char(18) DEFAULT NULL,
-  `user_customer` varchar(15) DEFAULT NULL
+  `total` int(30) DEFAULT NULL,
+  `order_date` date DEFAULT NULL,
+  `shipping_fee` int(30) DEFAULT NULL,
+  `user_customer` varchar(15) DEFAULT NULL,
+  `information` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -120,6 +136,7 @@ CREATE TABLE `order_det` (
   `no_orderdetail` int(10) NOT NULL,
   `quantity` char(18) DEFAULT NULL,
   `unit_price` char(18) DEFAULT NULL,
+  `category` varchar(20) NOT NULL,
   `id_petgrooming` varchar(10) DEFAULT NULL,
   `user_partners` varchar(15) DEFAULT NULL,
   `id_petshop` varchar(10) DEFAULT NULL
@@ -284,6 +301,19 @@ INSERT INTO `shop_category` (`id_shopcategory`, `name_shopcategory`) VALUES
 ('TY1', 'Toys'),
 ('VT1', 'Vitamins');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(10) NOT NULL,
+  `username` varchar(15) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  `role` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Indexes for dumped tables
 --
@@ -306,7 +336,13 @@ ALTER TABLE `customer`
 ALTER TABLE `invoice`
   ADD PRIMARY KEY (`no_invoice`),
   ADD KEY `no_orders` (`no_orders`),
-  ADD KEY `no_orderdetail` (`no_orderdetail`);
+  ADD KEY `no_invoicedetail` (`no_invoicedetail`);
+
+--
+-- Indexes for table `invoice_det`
+--
+ALTER TABLE `invoice_det`
+  ADD PRIMARY KEY (`no_invoicedetail`);
 
 --
 -- Indexes for table `orders`
@@ -367,6 +403,12 @@ ALTER TABLE `shop_category`
   ADD PRIMARY KEY (`id_shopcategory`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -375,6 +417,11 @@ ALTER TABLE `shop_category`
 --
 ALTER TABLE `invoice`
   MODIFY `no_invoice` int(10) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `invoice_det`
+--
+ALTER TABLE `invoice_det`
+  MODIFY `no_invoicedetail` int(10) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `orders`
 --
@@ -386,6 +433,11 @@ ALTER TABLE `orders`
 ALTER TABLE `order_det`
   MODIFY `no_orderdetail` int(10) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+--
 -- Constraints for dumped tables
 --
 
@@ -394,7 +446,7 @@ ALTER TABLE `order_det`
 --
 ALTER TABLE `invoice`
   ADD CONSTRAINT `invoice_ibfk_1` FOREIGN KEY (`no_orders`) REFERENCES `orders` (`no_orders`),
-  ADD CONSTRAINT `invoice_ibfk_2` FOREIGN KEY (`no_orderdetail`) REFERENCES `order_det` (`no_orderdetail`);
+  ADD CONSTRAINT `invoice_ibfk_2` FOREIGN KEY (`no_invoicedetail`) REFERENCES `invoice_det` (`no_invoicedetail`);
 
 --
 -- Constraints for table `orders`
