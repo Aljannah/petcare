@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2017 at 11:56 PM
+-- Generation Time: Nov 27, 2017 at 04:41 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `petcare-`
+-- Database: `carepet`
 --
 
 -- --------------------------------------------------------
@@ -188,7 +188,7 @@ CREATE TABLE `petgrooming` (
   `description` varchar(200) DEFAULT NULL,
   `package_name` varchar(50) DEFAULT NULL,
   `petcategory` varchar(10) NOT NULL,
-  `user_partners` varchar(15) NOT NULL DEFAULT ''
+  `user_partners` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -371,8 +371,7 @@ ALTER TABLE `partners`
 -- Indexes for table `petgrooming`
 --
 ALTER TABLE `petgrooming`
-  ADD PRIMARY KEY (`id_petgrooming`,`user_partners`),
-  ADD KEY `R_2` (`user_partners`);
+  ADD PRIMARY KEY (`id_petgrooming`);
 
 --
 -- Indexes for table `petshop`
@@ -437,57 +436,6 @@ ALTER TABLE `order_det`
 --
 ALTER TABLE `user`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `invoice`
---
-ALTER TABLE `invoice`
-  ADD CONSTRAINT `invoice_ibfk_1` FOREIGN KEY (`no_orders`) REFERENCES `orders` (`no_orders`),
-  ADD CONSTRAINT `invoice_ibfk_2` FOREIGN KEY (`no_invoicedetail`) REFERENCES `invoice_det` (`no_invoicedetail`);
-
---
--- Constraints for table `orders`
---
-ALTER TABLE `orders`
-  ADD CONSTRAINT `R_9` FOREIGN KEY (`user_customer`) REFERENCES `customer` (`username`),
-  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`no_orderdetail`) REFERENCES `order_det` (`no_orderdetail`);
-
---
--- Constraints for table `order_det`
---
-ALTER TABLE `order_det`
-  ADD CONSTRAINT `R_11` FOREIGN KEY (`id_petgrooming`,`user_partners`) REFERENCES `petgrooming` (`id_petgrooming`, `user_partners`),
-  ADD CONSTRAINT `R_12` FOREIGN KEY (`id_petshop`,`user_partners`) REFERENCES `petshop` (`id_petshop`, `user_partners`);
-
---
--- Constraints for table `partners`
---
-ALTER TABLE `partners`
-  ADD CONSTRAINT `R_18` FOREIGN KEY (`id_caretype`) REFERENCES `care_type` (`id_caretype`);
-
---
--- Constraints for table `petgrooming`
---
-ALTER TABLE `petgrooming`
-  ADD CONSTRAINT `R_2` FOREIGN KEY (`user_partners`) REFERENCES `partners` (`user_partners`);
-
---
--- Constraints for table `petshop`
---
-ALTER TABLE `petshop`
-  ADD CONSTRAINT `R_13` FOREIGN KEY (`id_petcategory`) REFERENCES `pet_category` (`id_petcategory`),
-  ADD CONSTRAINT `R_14` FOREIGN KEY (`user_partners`) REFERENCES `partners` (`user_partners`),
-  ADD CONSTRAINT `R_16` FOREIGN KEY (`id_shopcategory`) REFERENCES `shop_category` (`id_shopcategory`);
-
---
--- Constraints for table `review`
---
-ALTER TABLE `review`
-  ADD CONSTRAINT `review_ibfk_1` FOREIGN KEY (`no_invoice`) REFERENCES `invoice` (`no_invoice`);
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
