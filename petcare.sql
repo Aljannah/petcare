@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2017 at 04:41 AM
+-- Generation Time: Nov 27, 2017 at 05:01 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -188,17 +188,18 @@ CREATE TABLE `petgrooming` (
   `description` varchar(200) DEFAULT NULL,
   `package_name` varchar(50) DEFAULT NULL,
   `petcategory` varchar(10) NOT NULL,
-  `user_partners` varchar(15) NOT NULL
+  `user_partners` varchar(15) NOT NULL,
+  `status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `petgrooming`
 --
 
-INSERT INTO `petgrooming` (`id_petgrooming`, `price`, `description`, `package_name`, `petcategory`, `user_partners`) VALUES
-('z1', 150000, 'Memandikan Anjing untuk menghilangkan kutu', 'Mandi Kutu', 'Anjing', 'drei'),
-('z2', 100000, 'Memandikan Kucing', 'Mandi Biasa', 'Kucing', 'zwei'),
-('z3', 300000, 'Mandi dengan menggunakan shampoo khusus untuk menjaga kesehatan bulu dan kulit ', 'Mandi Sehat', 'Kucing', 'drei');
+INSERT INTO `petgrooming` (`id_petgrooming`, `price`, `description`, `package_name`, `petcategory`, `user_partners`, `status`) VALUES
+('z1', 150000, 'Memandikan Anjing untuk menghilangkan kutu', 'Mandi Kutu', 'Anjing', 'drei', ''),
+('z2', 100000, 'Memandikan Kucing', 'Mandi Biasa', 'Kucing', 'zwei', ''),
+('z3', 300000, 'Mandi dengan menggunakan shampoo khusus untuk menjaga kesehatan bulu dan kulit ', 'Mandi Sehat', 'Kucing', 'drei', '');
 
 -- --------------------------------------------------------
 
