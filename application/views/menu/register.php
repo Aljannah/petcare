@@ -36,8 +36,6 @@
 						<?php echo form_error('name'); ?>
 						<span>Nama Lengkap</span>
 						<input type="text" placeholder="Masukkan Nama Lengkap" name="name" value="<?php echo set_value('name', '') ?>">
-					</div>
-					<div class="address">
 						<?php echo form_error('username'); ?>
 						<span>Username</span>
 						<input type="text" placeholder="Masukkan username" name="username" value="<?php echo set_value('username', '') ?>">
