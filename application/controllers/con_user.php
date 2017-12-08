@@ -39,4 +39,18 @@ class Con_user extends CI_Controller {
 			$this->load->view('menu/login');
 		}		
 	}	
+
+	public function daftar_paket()
+	{	
+		
+		redirect('user/event');
+		
+	}
+
+	public function biodata()
+	{	
+		
+		redirect('user/biodata');
+		
+	}
 }

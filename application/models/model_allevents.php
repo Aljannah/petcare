@@ -14,6 +14,14 @@ class Model_allevents extends CI_Model {
         $query = $this->db->get('petgrooming');
         return $query->result();      
      }
+     public function paket_mitra(){ 
+        $this->load->library('session');
+        $session_id = $this->session->userdata('username');
+        $this->db->where('user_partners', $session_id);//buat nongolin usernya
+        $query = $this->db->get('petgrooming');
+        return $query->result();      
+
+     }
 
      public function edit($kode_event,$data_event){
             $this->db->where('id_petgrooming',$kode_event)->update('petgrooming',$data_event);

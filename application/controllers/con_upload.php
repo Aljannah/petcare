@@ -31,16 +31,17 @@ class Con_upload extends CI_Controller {
 		$price = $this->input->post('price');
 		$description = $this->input->post('description');
 		$petcategory = $this->input->post('petcategory');
+		$status_konfirm = $this->input->post('status_konfirm');
 		//$deskripsi = $this->input->post('deskripsi');
 		//$poster = $this->input->post('poster');
 		//$tanggal = $this->input->post('tanggal');
 		//$username = $this->input->post('username');
 		//$status_konfirm = $this->input->post('status_konfirm');
 
-		$this->form_validation->set_rules('package_name','Nama Acara','required');
-		$this->form_validation->set_rules('price', 'Lokasi Acara', 'required');
-		$this->form_validation->set_rules('description', 'Universitas', 'required');
-		$this->form_validation->set_rules('petcategory', 'Kategori Acara', 'required');
+		$this->form_validation->set_rules('package_name','Nama Paket','required');
+		$this->form_validation->set_rules('price', 'Harga', 'required');
+		$this->form_validation->set_rules('description', 'Deskripsi', 'required');
+		$this->form_validation->set_rules('petcategory', 'Kategori untuk Hewan Peliharaan', 'required');
 		/*$this->form_validation->set_rules('deskripsi', 'Deskripsi Acara', 'required|min_length[30]');
 		//$this->form_validation->set_rules('poster', 'Poster Acara', 'required');
 		$this->form_validation->set_rules('tanggal', 'Tanggal Acara', 'required');
@@ -74,11 +75,12 @@ class Con_upload extends CI_Controller {
 				'petcategory' => $petcategory,
 				/*'poster' => $gambar['file_name'],
 				'kategori' => $kategori,
-				'tanggal' => $tanggal,
-				'status_konfirm' => $status_konfirm*/
+				'tanggal' => $tanggal,*/
+				'status' => $status_konfirm
 				);
 			$this->model_event->create($data_event);
 			redirect('con_user');
+
             }
         }   
 	//}

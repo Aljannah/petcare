@@ -79,7 +79,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<input type="file" name="poster">-->
 							
 							<div class="send">
-							<input type="submit" value="Upload" name="submit">
+							<input type="submit" value="Simpan" name="submit">
 							<?=  anchor('con_user','Back',['class'=>'btn btn-danger']) ?>
 							</div>
 							</form>

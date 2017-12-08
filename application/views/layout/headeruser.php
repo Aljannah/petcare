@@ -17,7 +17,7 @@
             <div class="navbar-inner">
                 <div class="container">
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
-                        <i class="icon-reorder shaded"></i></a><a class="brand" href="index.html"><?php echo "Selamat datang, $username "; ?> </a>
+                        <i class="icon-reorder shaded"></i></a><a class="brand" href="index.html"><?php echo "Selamat datang di PetCare "; ?> </a>
                     <div class="nav-collapse collapse navbar-inverse-collapse">
                         <ul class="nav nav-icons">
                             <li class="active"><a href="#"><i class="icon-envelope"></i></a></li>
@@ -36,6 +36,7 @@
                                 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li class="divider"></li>
+                                    <li><a href="<?php echo site_url('con_user/biodata'); ?>">Profile</a></li>
                                     <li><a href="<?php echo site_url('con_user/logout'); ?>">Logout</a></li>
                                 </ul>
                             </li>
@@ -55,14 +56,13 @@
                             <ul class="widget widget-menu unstyled">
                                 <li><a class="collapsed" data-toggle="collapse" href="#togglePages"><i class="menu-icon icon-cog">
                                 </i><i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right">
-                                </i>Masukkan Paket yang Ditawarkan</a>
+                                </i>Paket yang Ditawarkan</a>
                                     <ul id="togglePages" class="collapse unstyled">
                                         <li><a href="<?php echo base_url();?>index.php/con_upload"><i class="icon-inbox"></i>Masukkan Paket Pet Grooming</a></li>
-                                        <li><a href="<?php echo base_url();?>index.php/con_upload"><i class="icon-inbox"></i>Masukkan Paket Pet Shop
-
-                                        </a></li>
+                                        <li><a href="<?php echo base_url();?>index.php/con_user/daftar_paket"><i class="icon-inbox"></i>Lihat Paket</a></li>
                                     </ul>
                                 </li>
+                                <li class="active"><a href="<?php echo base_url();?>index.php/"><i class="menu-icon icon-inbox"></i>Lihat Transaksi</a></li>
                                 <li><a href="<?php echo site_url('con_user/logout'); ?>"><i class="menu-icon icon-signout"></i>Logout </a></li>
                             </ul>
                         </div>

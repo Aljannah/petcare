@@ -1,4 +1,4 @@
-﻿ <?php $this->load->view('layout/headeradmin')?> 
+ <?php $this->load->view('layout/headeruser')?> 
                     <!--/.span3-->
                     <div class="span9">
                         <div class="content">
@@ -22,10 +22,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="module" style="width: 2000px">
+                            <div class="module" style="width: fit-content">
                                 <div class="module-head">
-                                    <h2 align = "center">Selamat Datang di Halaman Administrator Website</h2>
-                                    <h5>Daftar Seluruh Event - Event</h5>
+                                    <h2 align = "center">Paket Grooming</h2>
+                                    <h5>Daftar Seluruh Paket Anda</h5>
                                 </div>
                                 <div class="module-body table">
                                     <table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped  display"
@@ -38,6 +38,7 @@
                                                     <th>Nama Paket</th>
                                                     <th>Deskripsi</th>
                                                     <th>Kategori</th>
+                                                    <th>Harga</th>
                                                     <th>Status Konfirmasi</th>
                                                     <th>Action</th>
                                             </tr>
@@ -51,14 +52,15 @@
                                                 <td align="center"><?=  $events->package_name ?></td>
                                                 <td align="center"><textarea rows="10" disabled><?=  $events->description  ?></textarea></td>
                                                 <td align="center"><?=  $events->petcategory ?></td>
+                                                <td align="center"><?=  $events->price ?></td>
                                                 <td align="center"><?=  $events->status ?></td>
                                                 
                                                         <td>
-                                                            <?=  anchor('admin/event/edit/'.$events->id_petgrooming,'Edit',['class'=>'btn btn-success btn-xs']) ?>
-                                                            <?php  if($this->session->userdata('level')   ==  '1'  ): ?>
-                                                            <?=  anchor('admin/event/delete/'.$events->id_petgrooming,'Delete',['class'=>'btn btn-danger btn-xs','onclick'=>'return confirm(\'Anda yakin ? \')']) ?>
+                                                            <?=  anchor('user/event/edit/'.$events->id_petgrooming,'Edit',['class'=>'btn btn-success btn-xs']) ?>
+                                                            <?php  if($this->session->userdata('level')   ==  '2'  ): ?>
+                                                            <?=  anchor('user/event/delete/'.$events->id_petgrooming,'Delete',['class'=>'btn btn-danger btn-xs','onclick'=>'return confirm(\'Anda yakin ? \')']) ?>
                                                             <?php else:?>
-                                                            <?=  anchor('admin/event/delete/'.$events->id_petgrooming,'Delete',['class'=>'btn btn-danger btn-xs','data-toggle'=>'button','onclick'=>'return confirm(\'Anda Yakin Menghapus Paket ? \')']) ?>
+                                                            <?=  anchor('user/event/delete/'.$events->id_petgrooming,'Delete',['class'=>'btn btn-danger btn-xs','data-toggle'=>'button','onclick'=>'return confirm(\'Anda Yakin Menghapus Event ? \')']) ?>
                                                             <?php endif;?>
                                             
                                                         </td>
