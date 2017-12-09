@@ -57,7 +57,7 @@
                                                 
                                                         <td>
                                                             <?=  anchor('user/event/edit/'.$events->id_petgrooming,'Edit',['class'=>'btn btn-success btn-xs']) ?>
-                                                            <?php  if($this->session->userdata('level')   ==  '2'  ): ?>
+                                                            <?php  if($this->session->userdata('level')   ==  '1'  ): ?>
                                                             <?=  anchor('user/event/delete/'.$events->id_petgrooming,'Delete',['class'=>'btn btn-danger btn-xs','onclick'=>'return confirm(\'Anda yakin ? \')']) ?>
                                                             <?php else:?>
                                                             <?=  anchor('user/event/delete/'.$events->id_petgrooming,'Delete',['class'=>'btn btn-danger btn-xs','data-toggle'=>'button','onclick'=>'return confirm(\'Anda Yakin Menghapus Event ? \')']) ?>

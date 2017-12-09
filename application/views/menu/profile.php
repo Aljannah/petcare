@@ -15,8 +15,9 @@ class Event extends CI_Controller {
 		
 		//$user='username';
 		//$data['tampiluser'] = $this->model_login->datauser($user,$data['username']);
-		$data['event'] = $this->model_allevents->paket_mitra();	
-		$this->load->view('menu/lihat_paket_mitra',$data);
+		$data['profile'] = $this->model_allpenggunas>edit_biodata();	
+		$this->load->view('menu/update_profile',$data);
+		//redirect('user/profile/edit_biodata');
 	}
 	
 /*
@@ -52,7 +53,7 @@ class Event extends CI_Controller {
 	}*/
 
 
-	public function edit($kode_event){
+	public function edit_biodata($kode_event){
 		$this->form_validation->set_rules('username','Username','required|max_length[25]');
 		$this->form_validation->set_rules('package_name','Nama Paket','required|max_length[50]');
 		$this->form_validation->set_rules('description','Deskripsi','required|max_length[50]');
@@ -60,26 +61,26 @@ class Event extends CI_Controller {
 		$this->form_validation->set_rules('status','Status','required|max_length[5000]');
 		
 		if ($this->form_validation->run() == FALSE)	{
-				$data['events'] = $this->model_allevents->find($kode_event);
-				$this->load->view('menu/update_event',$data);
+				$data['profile'] = $this->model_allpenggunas->find($user_partners);
+				$this->load->view('menu/update_profile',$data);
 			} else {
 				if($_FILES['userfile']['name'] != ''){
 						
-						$this->load->view('menu/update_events',$data);
+						$this->load->view('menu/update_profile',$data);
 						
-							$data_event = array(
+							$data_user = array(
 								'user_partners'              => set_value('username'),
                                 'package_name'          => set_value('package_name'),
                                 'description'           => set_value('description'),
                                 'petcategory'           => set_value('petcategory'),
                                 'status'                => set_value('status')
 							);
-							$this->model_allevents->edit($kode_event,$data_event);
+							$this->model_allpenggunas->edit_biodata($user_partners,$data_user);
 							redirect('user/event');
 				}
 				else{
 						
-						$data_event = array(
+						$data_user = array(
 								'user_partners'              => set_value('username'),
                                 'package_name'          => set_value('package_name'),
                                 'description'           => set_value('description'),
@@ -87,7 +88,7 @@ class Event extends CI_Controller {
                                 'status'                => set_value('status')
 
 						);
-						$this->model_allevents->edit($kode_event,$data_event);
+						$this->model_allpenggunas->edit_biodata($user_partners,$data_user);
 						redirect('user/event');						
 				}				
 			}		

@@ -35,7 +35,7 @@
 					<div class="address">
 						<?php echo form_error('nama_depan'); ?>
 						<span>Nama Pemilik</span>
-						<input type="text" placeholder="Masukkan nama depan" name="nama_depan" value="<?php echo set_value('nama_depan', '') ?>">
+						<input type="text" placeholder="Masukkan nama Pemilik" name="nama_depan" value="<?php echo set_value('nama_depan', '') ?>">
 					</div>
 					<div class="address">
 						<?php echo form_error('nama_petcare'); ?>
@@ -102,13 +102,13 @@
 					<div class="address">
 						<?php echo form_error('wop'); ?>
 						<span>Waktu Operasional</span>
-						<input type="checkbox" name="wop[]" value="Senin"><label>Senin</label><br/>
-						<input type="checkbox" name="wop[]" value="Selasa"><label>Selasa</label><br/>
-						<input type="checkbox" name="wop[]" value="Rabu"><label>Rabu</label><br/>
-						<input type="checkbox" name="wop[]" value="Kamis"><label>Kamis</label><br/>
-						<input type="checkbox" name="wop[]" value="Jumat"><label>Jumat</label><br/>
-						<input type="checkbox" name="wop[]" value="Sabtu"><label>Sabtu</label><br/>
-						<input type="checkbox" name="wop[]" value="Minggu"><label>Minggu</label><br/>
+						<input type="checkbox" name="wopsenin" value="Senin"><label>Senin</label><br/>
+						<input type="checkbox" name="wopselasa" value="Selasa"><label>Selasa</label><br/>
+						<input type="checkbox" name="woprabu" value="Rabu"><label>Rabu</label><br/>
+						<input type="checkbox" name="wopkamis" value="Kamis"><label>Kamis</label><br/>
+						<input type="checkbox" name="wopjumat" value="Jumat"><label>Jumat</label><br/>
+						<input type="checkbox" name="wopsabtu" value="Sabtu"><label>Sabtu</label><br/>
+						<input type="checkbox" name="wopminggu" value="Minggu"><label>Minggu</label><br/>
 						<!--<input type="text" placeholder="Masukkan waktu operasional perusahaan" name="wop[]" value="<?php echo set_value('wop', '') ?>">-->			
 					</div>
 					<div class="address" >
@@ -175,11 +175,11 @@
 								  <option value="PM">PM</option>
 						</select>
 					</div>
-					<div class="address">
+					<!--<div class="address">
 						 	<?php echo form_error('foto_mitra'); ?>
 							<p class="your-para">Gambar Paket :</p>
 							<input type="file" name="foto_mitra">
-					</div>
+					</div>-->
 					<!--<div class="address">
 						<?php echo form_error('id_caretype'); ?>
 						<span>Tipe Perusahaan</span>
@@ -192,7 +192,8 @@
 					</div>-->
 					<input type="hidden" name="role" value="<?php echo set_value('role', '3') ?>">
 					<div class="address new">
-						<input type="submit" name="submit" value="Register">
+						<input type="submit" name="submit" value="Register"  >
+
 					</div>
 					</form>
 				</div> 

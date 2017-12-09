@@ -47,7 +47,7 @@ if($this->input->post('is_submitted'))
                             </div>
                             <div class="module" style="width: 700px">
                                 <div class="module-head">
-                                    <h2 align = "center">Selamat Datang di Halaman Administrator Website</h2>
+                                    <h2 align = "center">Paket Anda</h2>
                                     <h5>Update Paket</h5>
                                 </div>
                                 
@@ -59,12 +59,12 @@ if($this->input->post('is_submitted'))
                             
                             <?php echo form_error('id_petgrooming'); ?>
                             <p class="your-para">Kode Paket:</p>
-                            <input type="text" name="id_petgrooming" value="<?= $id_petgrooming ?>"  >
+                            <input type="text" name="id_petgrooming" value="<?= $id_petgrooming ?>"  readonly>
                             
 
                             <?php echo form_error('username'); ?>
                             <p class="your-para">Username :</p>
-                            <input type="text" name="username" value="<?= $username ?>">
+                            <input type="text" name="username" value="<?= $username ?>" readonly>
 
                             <?php echo form_error('package_name'); ?>
                             <p class="your-para">Nama Paket :</p>
@@ -106,7 +106,7 @@ if($this->input->post('is_submitted'))
                                     <input type="hidden" name="is_submitted" value="1">
                                     <button type="submit" class="btn btn-success">Update</button>
                                                                  
-                                    <?=  anchor('admin/event/sudah_konfirm','Cancel',['class'=>'btn btn-danger']) ?>
+                                    <?=  anchor('user/event','Cancel',['class'=>'btn btn-danger']) ?>
                                 </div>
                                 </br></br>
                             </div>    

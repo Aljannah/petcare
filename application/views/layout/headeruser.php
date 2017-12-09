@@ -36,7 +36,7 @@
                                 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li class="divider"></li>
-                                    <li><a href="<?php echo site_url('con_user/biodata'); ?>">Profile</a></li>
+                                    <li><a href="<?php echo site_url('con_user/profile'); ?>">Profile</a></li>
                                     <li><a href="<?php echo site_url('con_user/logout'); ?>">Logout</a></li>
                                 </ul>
                             </li>

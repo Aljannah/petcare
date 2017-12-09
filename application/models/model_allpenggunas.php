@@ -11,9 +11,18 @@ class Model_allpenggunas extends CI_Model {
         $query = $this->db->get('');
         return $query->result();      
      }
+     public function lihat_profile(){ 
+        $this->load->library('session');
+        $session_id = $this->session->userdata('username');
+        $this->db->where('user_partners', $session_id);//buat nongolin usernya
+        $query = $this->db->get('partners');
+        return $query->result();      
+
+     }
      public function find($user_partners){ 
-            
-            $code = $this->db->where('username',$id_pengguna)->limit(1)->get('user');
+            $this->load->library('session');
+            $user_partners = $this->session->userdata('username');
+            $code = $this->db->where('username',$user_partners)->limit(1)->get('user');
             if ($code->num_rows() > 0 )
                 {
                     return $code->row();
@@ -21,8 +30,23 @@ class Model_allpenggunas extends CI_Model {
                     return array();
                 }           
         }
-        
+
+     public function find_user($user_partners){ 
+            $this->load->library('session');
+            $user_partners = $this->session->userdata('username');
+            $code = $this->db->where('user_partners',$user_partners)->limit(1)->get('partners');
+            if ($code->num_rows() > 0 )
+                {
+                    return $code->row();
+                }else {
+                    return array();
+                }           
+        }
+        public function edit_biodata($user_partners,$data_user){
+            
+            $this->db->where('user_partners', $user_partners)->update('partners',$data_user);
+        }
         public function delete($id_pengguna){
-            $this->db->where('username',$id_pengguna)->delete('user');
+            $this->db->where('user_partners',$id_pengguna)->delete('user');
         }
 }

@@ -20,7 +20,22 @@ class Con_registvalid_mitra extends CI_Controller {
 		$city = $this->input->post('city');
 		$postal_code = $this->input->post('postal_code');
 		$wop = $this->input->post('wop');
-		$id_caretype = $this->input->post('id_caretype');
+		$wop_time_open_hour = $this->input->post('$wop_time_open_hour');
+		$wopnya = 
+			$this->input->post('wopsenin')." ".
+			$this->input->post('wopselasa')." ".
+			$this->input->post('woprabu')." ".
+			$this->input->post('wopkamis')." ".
+			$this->input->post('wopjumat')." ".
+			$this->input->post('wopsabtu')." ".
+			$this->input->post('wopminggu')."pukul ".
+			$this->input->post('wop_time_open_hour').":".
+			$this->input->post('wop_time_open_mnt')." ".
+			$this->input->post('wop_time_open_day')." sampai ".
+			$this->input->post('wop_time_close_hour').":".
+			$this->input->post('wop_time_close_mnt')." ".
+			$this->input->post('wop_time_close_day');
+		echo $wopnya;
 		$role = $this->input->post('role');
 		$hp = $this->input->post('hp');
 
@@ -33,8 +48,13 @@ class Con_registvalid_mitra extends CI_Controller {
 		$this->form_validation->set_rules('alamat', 'Alamat', 'required|min_length[4]|max_length[100]');
 		$this->form_validation->set_rules('city', 'Kabupaten/Kota', 'required|min_length[2]|max_length[50]');
 		$this->form_validation->set_rules('postal_code', 'Kode Pos', 'required|min_length[4]|max_length[7]');
-		$this->form_validation->set_rules('wop', 'Waktu Operasional', 'required|min_length[3]|max_length[100]');
-		$this->form_validation->set_rules('id_caretype', 'Tipe Perusahaan', 'required|min_length[1]|max_length[2]');
+		$this->form_validation->set_rules('wop_time_open_hour', 'Waktu Operasional', 'required');
+		$this->form_validation->set_rules('wop_time_open_mnt', 'Waktu Operasional', 'required');
+		$this->form_validation->set_rules('wop_time_open_day', 'Waktu Operasional', 'required');
+		$this->form_validation->set_rules('wop_time_close_hour', 'Waktu Operasional', 'required');
+		$this->form_validation->set_rules('wop_time_close_mnt', 'Waktu Operasional', 'required');
+		$this->form_validation->set_rules('wop_time_close_day', 'Waktu Operasional', 'required');
+		
 		$this->form_validation->set_rules('hp', 'Nomor Telepon/Handphone', 'required|min_length[9]|max_length[15]');
 		
 
@@ -59,10 +79,11 @@ class Con_registvalid_mitra extends CI_Controller {
 				'address' => set_value('alamat'),
 				'city' => set_value('city'),
 				'postal_code' => set_value('postal_code'),
-				'wop' => set_value('wop'),
-				'id_caretype' => set_value('id_caretype'),	
+				'wop' => $wopnya,
+					
 				);
 			$this->model_mitra->create('partners',$data_partner);
+			$this->session->set_flashdata('msg', '<div class="alert alert-success alert-dismissable">Data Tersimpan</div>');
 			redirect('con_home');
 		}
 				

@@ -12,7 +12,7 @@ class Con_home extends CI_Controller {
 
 	public function index()
 	{	
-		
+		echo $this->session->flashdata('msg'); 		
 		$isi['data']= $this->model_home->tampilsemuadata();
 		$this->load->view('menu/home',$isi);
 		

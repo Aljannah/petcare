@@ -47,10 +47,10 @@ class Con_user extends CI_Controller {
 		
 	}
 
-	public function biodata()
+	public function profile()
 	{	
 		
-		redirect('user/biodata');
+		redirect('user/profile');
 		
 	}
 }
