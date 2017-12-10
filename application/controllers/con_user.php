@@ -53,4 +53,12 @@ class Con_user extends CI_Controller {
 		redirect('user/profile');
 		
 	}
+	
+	public function lihat_pesanan()
+	{	
+		
+		redirect('user/pesanan');
+		
+	}
+
 }

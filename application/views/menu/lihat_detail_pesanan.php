@@ -24,59 +24,91 @@
                             </div>
                             <div class="module" style="width: fit-content">
                                 <div class="module-head">
-                                    <h2 align = "center">your Profile</h2>
+                                    <h2 align = "center">your pesanan</h2>
                                     <h5></h5>
                                 </div>
                                 <div class="module-body table">
                                     <table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped  display"
                                         width="100%">
                                         <tbody>
-                                        <?php $no=0; foreach($profile as $profile ): $no++;?>
+                                        <?php $no=0; foreach($pesanan as $pesanan ): $no++;?>
                                         
 
                                         <tr>
-                                                   <th>Username</th>                                            
-                                                   <td align="center"><?=  $profile->user_partners ?></td>
+                                                   <th>Nomor Pesanan</th>                                            
+                                                   <td align="center"><?=  $pesanan->no_orders ?></td>
                                         </tr>
                                         <tr>
-                                                   <th>Nama Pemilik</th>
-                                                   <td align="center"><?=  $profile->owner ?></td>
+                                                   <th>Nama Pemesan</th>
+                                                   <td align="center"><?=  $pesanan->name ?></td>
                                         </tr>
                                         <tr>
-                                                   <th>Nama PetShop</th>
-                                                   <td align="center"><?=  $profile->partners_name ?></td>
+                                                   <th>Nomor Telepon Pemesan</th>
+                                                   <td align="center"><?=  $pesanan->hp ?></td>
                                         </tr>
                                         <tr>
                                                    <th>Alamat</th>
-                                                    <td align="center"><textarea rows="10" disabled><?=  $profile->address  ?></textarea></td>
+                                                    <td align="center"><textarea rows="10" disabled><?=  $pesanan->address  ?></textarea></td>
                                         </tr>
                                         <tr>
                                                    <th>kabupaten/kota</th>
-                                                   <td align="center"><?=  $profile->city ?></td>
+                                                   <td align="center"><?=  $pesanan->city ?></td>
                                         </tr>
                                         <tr>
                                                    <th>email</th>
-                                                   <td align="center"><?=  $profile->email ?></td>
+                                                   <td align="center"><?=  $pesanan->email ?></td>
                                         </tr>
                                         <tr>
                                                    <th>No. Telp/ Hp</th>
-                                                   <td align="center"><?=  $profile->hp ?></td>
+                                                   <td align="center"><?=  $pesanan->hp ?></td>
                                         </tr>
                                         <tr>
                                                    <th>Kodepos</th>
-                                                   <td align="center"><?=  $profile->postal_code ?></td>
+                                                   <td align="center"><?=  $pesanan->postal_code ?></td>
                                         </tr>
                                         <tr>
-                                                   <th>Waktu Operasional</th>
-                                                   <td align="center"><textarea rows="10" disabled><?=  $profile->wop ?></textarea></td>
+                                                   <th>id paket yang disimpan</th>
+                                                   <td align="center"><?=  $pesanan->id_petgrooming ?></td>
                                         </tr>
                                         <tr>
-                                                   <th>Foto Perusahaan</th>
-                                                   <td align="center"><?=  $profile->file_gambar ?></td>
+                                                   <th>Nama Paket yang dipesan</th>
+                                                   <td align="center"><?=  $pesanan->package_name ?></td>
+                                        </tr>
+                                        <tr>
+                                                   <th>Deskripsi</th>
+                                                    <td align="center"><textarea rows="10" disabled><?=  $pesanan->description  ?></textarea></td>
+                                        </tr>
+                                        <tr>
+                                                   <th>Untuk Hewan</th>
+                                                   <td align="center"><?=  $pesanan->petcategory ?></td>
+                                        </tr>
+                                        <tr>
+                                                   <th>Harga Paket per-Hewan</th>
+                                                   <td align="center"><?=  $pesanan->unit_price ?></td>
+                                        </tr>
+                                        <tr>
+                                                   <th>Jumlah Hewan</th>
+                                                   <td align="center"><?=  $pesanan->quantity ?></td>
+                                        </tr>
+                                        <tr>
+                                                   <th>Jumlah Total yang dibayar</th>
+                                                   <td align="center"><?=  $pesanan->total ?></td>
+                                        </tr>
+                                        <tr>
+                                                   <th>Status Order</th>
+                                                   <td align="center"><?=  $pesanan->status_order ?></td>
+                                        </tr>
+                                        <tr>
+                                                   <th>Feedback Anda</th>
+                                                   <td align="center"><textarea rows="10" disabled><?=  $pesanan->feedback_mitra  ?></textarea></td>
+                                        </tr>
+                                        <tr>
+                                                   <th>Customer</th>
+                                                   <td align="center"><?=  $pesanan->feedback_user  ?></td>
                                         </tr>
                                         <tr>
                                                    <td>
-                                                            <?=  anchor('user/profile/edit_biodata/'.$profile->user_partners,'Edit',['class'=>'btn btn-success btn-xs']) ?>
+                                                            <?=  anchor('user/pesanan/edit/'.$pesanan->no_orders,'Ganti Ketersediaan',['class'=>'btn btn-success btn-xs']) ?>
                                                             
                                                     </td>
                                         </tr>

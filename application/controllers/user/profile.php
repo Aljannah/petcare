@@ -84,9 +84,10 @@ class Profile extends CI_Controller {
                                 'wop'                        => set_value('wop'),
                                 'owner'                      => set_value('owner')
 							);}else{
+								$password = $this->input->post('password');
 								$data_user = array(
 								'user_partners'              => set_value('user_partners'),
-                                'password'                   => set_value('password'),
+                                'password'                   => md5($password),
                                 'email'                      => set_value('email'),
                                 'hp'                         => set_value('hp'),
                                 'partners_name'              => set_value('partners_name'),
@@ -95,7 +96,11 @@ class Profile extends CI_Controller {
                                 'postal_code'                => set_value('postal_code'),
                                 'wop'                        => set_value('wop'),
                                 'owner'                      => set_value('owner')
-							);}
+							);
+								$data_diuser = array(
+									'password'                   => md5($password));
+								$this->model_allpenggunas->edit_password($user_partners,$data_diuser);
+							}
 
 							$this->model_allpenggunas->edit_biodata($user_partners,$data_user);
 							redirect('user/profile');
@@ -114,9 +119,10 @@ class Profile extends CI_Controller {
                                 'wop'                        => set_value('wop'),
                                 'owner'                      => set_value('owner')
 							);}else{
+								$password = $this->input->post('password');
 								$data_user = array(
 								'user_partners'              => set_value('user_partners'),
-                                'password'                   => set_value('password'),
+                                'password'                   => md5($password),
                                 'email'                      => set_value('email'),
                                 'hp'                         => set_value('hp'),
                                 'partners_name'              => set_value('partners_name'),
@@ -125,10 +131,16 @@ class Profile extends CI_Controller {
                                 'postal_code'                => set_value('postal_code'),
                                 'wop'                        => set_value('wop'),
                                 'owner'                      => set_value('owner')
-							);}
+							);
+								$data_diuser = array(
+									'password'                   => md5($password));
+								$this->model_allpenggunas->edit_password($user_partners,$data_diuser);
+							}
 
 
 						$this->model_allpenggunas->edit_biodata($user_partners,$data_user);
+						
+						
 						$this->session->set_flashdata('msg', '<div class="alert alert-success alert-dismissable">Data Berhasil Diubah</div>');
 						redirect('user/profile');						
 				}				

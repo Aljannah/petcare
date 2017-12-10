@@ -61,6 +61,7 @@ class Con_registvalid_mitra extends CI_Controller {
 		if($this->form_validation->run()==false){
 			$this->load->view('menu/register_mitra');
 		}else{
+			
 			$this->load->model('model_mitra');
 			$data_pengguna = array(
 				'username' => set_value('username'),

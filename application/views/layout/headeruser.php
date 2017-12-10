@@ -62,7 +62,7 @@
                                         <li><a href="<?php echo base_url();?>index.php/con_user/daftar_paket"><i class="icon-inbox"></i>Lihat Paket</a></li>
                                     </ul>
                                 </li>
-                                <li class="active"><a href="<?php echo base_url();?>index.php/"><i class="menu-icon icon-inbox"></i>Lihat Transaksi</a></li>
+                                <li class="active"><a href="<?php echo site_url('con_user/lihat_pesanan'); ?>"><i class="menu-icon icon-inbox"></i>Lihat Transaksi</a></li>
                                 <li><a href="<?php echo site_url('con_user/logout'); ?>"><i class="menu-icon icon-signout"></i>Logout </a></li>
                             </ul>
                         </div>

@@ -46,6 +46,11 @@ class Model_allpenggunas extends CI_Model {
             
             $this->db->where('user_partners', $user_partners)->update('partners',$data_user);
         }
+
+        public function edit_password($user_partners,$data_diuser){
+            
+            $this->db->where('username', $user_partners)->update('user',$data_diuser);
+        }
         public function delete($id_pengguna){
             $this->db->where('user_partners',$id_pengguna)->delete('user');
         }
