@@ -1,10 +1,9 @@
-   <?php $this->load->view('layout/headeruser')?> 
+   <?php $this->load->view('layout/headeruser_customer')?> 
                     <!--/.span3-->
                     <div class="span9">
                         <div class="content" style="width: 1010px;">
                             
                             <!--/.module-->
-                            
                             <div class="module" style="width: 1250px" align="center">
                                 <div class="module-head">
                                     <h3>

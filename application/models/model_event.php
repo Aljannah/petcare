@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Model_event extends CI_Model {
 	public function create($data_event){
-		$this->db->insert('petgroomings',$data_event);
+		$this->db->insert('petgrooming',$data_event);
 	}
 	public function getkodeunik($table) { 
         $q = $this->db->query("SELECT MAX(RIGHT(id_petgrooming ,1)) AS idmax FROM ".$table);

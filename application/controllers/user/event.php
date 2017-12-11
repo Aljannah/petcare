@@ -12,7 +12,7 @@ class Event extends CI_Controller {
 	
 	public function index()
 	{	
-		
+		echo $this->session->flashdata('msg');
 		//$user='username';
 		//$data['tampiluser'] = $this->model_login->datauser($user,$data['username']);
 		$data['event'] = $this->model_allevents->paket_mitra();	
@@ -88,6 +88,7 @@ class Event extends CI_Controller {
 
 						);
 						$this->model_allevents->edit($kode_event,$data_event);
+						$this->session->set_flashdata('msg', '<div class="alert alert-success alert-dismissable">Data Tersimpan</div>');
 						redirect('user/event');						
 				}				
 			}		
@@ -96,6 +97,7 @@ class Event extends CI_Controller {
 	}
 	public function delete($kode_event)	{
 		$this->model_allevents->delete($kode_event);
+		$this->session->set_flashdata('msg', '<div class="alert alert-success alert-dismissable">Data Terhapus</div>');
 		redirect('user/event');
 	}	
 }

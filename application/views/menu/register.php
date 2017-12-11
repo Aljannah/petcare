@@ -20,12 +20,11 @@
    <div class="account">
 	  <div class="container"> 
 	       <div class="account-bottom">
-				<div class="col-md-6 account-left">
+				<div class="col-md-6 contact-grid">
 					<form method="post" action="<?php echo site_url('con_registvalid') ?>">
 					<div class="account-top heading">
-						<h3>Daftar Member Baru</h3>
+						<h3>Daftar Sebagai Member Baru</h3>
 						<input type="hidden" name="role" value="2">
-						<input type="hidden" name="status" value="Belum Dikonfirmasi">
 					</div>
 					<!--<div class="address">
 						<?php echo form_error('id_pengguna'); ?>
@@ -36,6 +35,8 @@
 						<?php echo form_error('name'); ?>
 						<span>Nama Lengkap</span>
 						<input type="text" placeholder="Masukkan Nama Lengkap" name="name" value="<?php echo set_value('name', '') ?>">
+					</div>
+					<div class="address">
 						<?php echo form_error('username'); ?>
 						<span>Username</span>
 						<input type="text" placeholder="Masukkan username" name="username" value="<?php echo set_value('username', '') ?>">
@@ -62,9 +63,20 @@
 					</div>
 					<div class="address">
 						<?php echo form_error('city'); ?>
-						<span>Kota</span>
-						<input type="text" placeholder="Masukkan Kota" name="city" value="<?php echo set_value('city', '') ?>">	
-					</div>
+						<span>Kabupaten/Kota</span>
+						<select name="city">
+								  <option value="">Pilih Kabupaten/Kota yang tersedia</option>
+								  <option value="Jakarta Selatan">Jakarta Selatan</option>
+								  <option value="Jakarta Pusat">Jakarta Pusat</option>
+								  <option value="Jakarta Timur">Jakarta Timur</option>
+								  <option value="Jakarta Barat">Jakarta Barat</option>
+								  <option value="Jakarta Utara">Jakarta Utara</option>
+								  <option value="Depok">Depok</option>
+								  <option value="Tangerang">Tangerang</option>
+								  <option value="Bekasi">Bekasi</option>
+								  <option value="Bogor">Bogor</option>
+						</select>
+					</div>	
 					<div class="address">
 						<?php echo form_error('postal_code'); ?>
 						<span>Kode Pos</span>

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Pesanan extends CI_Controller {
+class Pesanan_customer extends CI_Controller {
 
 	public function __construct ()
 	{
@@ -14,16 +14,16 @@ class Pesanan extends CI_Controller {
 		echo $this->session->flashdata('msg');
 		//$user='username';
 		//$data['tampiluser'] = $this->model_login->datauser($user,$data['username']);
-		$data['pesanan'] = $this->model_allevents->lihat_pesanan();	
-		$this->load->view('menu/lihat_pesanan',$data);
+		$data['pesanan'] = $this->model_allevents->lihat_pesanan_customer();	
+		$this->load->view('customer/lihat_pesanan',$data);
 	}
 	public function lihat()
 	{	
 		
 		//$user='username';
 		//$data['tampiluser'] = $this->model_login->datauser($user,$data['username']);
-		$data['pesanan'] = $this->model_allevents->lihat_pesanan();	
-		$this->load->view('menu/lihat_detail_pesanan',$data);
+		$data['pesanan'] = $this->model_allevents->lihat_pesanan_customer();	
+		$this->load->view('customer/lihat_detail_pesanan',$data);
 	}
 		
 /*
@@ -60,35 +60,32 @@ class Pesanan extends CI_Controller {
 
 
 	public function edit($no_orders){
-		$this->form_validation->set_rules('status_order','Status Pesanan','required');
-		$this->form_validation->set_rules('feedback_mitra','Balasan Anda','required');
+		$this->form_validation->set_rules('feedback_user','Ketersediaan Anda','required');
 		
 		if ($this->form_validation->run() == FALSE)	{
 				$data['pesanan'] = $this->model_allevents->finding($no_orders);
-				$this->load->view('menu/update_status',$data);
+				$this->load->view('customer/update_status',$data);
 			} else {
 				if($_FILES['userfile']['name'] != ''){
 						
-						$this->load->view('menu/update_status',$data);
+						$this->load->view('customer/update_status',$data);
 						
 							$data_pesanan = array(
 								'no_orders'              => set_value('no_orders'),
-                                'status_order'           => set_value('status_order'),
-                                'feedback_mitra'         => set_value('feedback_mitra')
+                                'feedback_user'           => set_value('feedback_user')
 							);
 							$this->model_allevents->edit_status($no_orders,$data_pesanan);
-							redirect('user/pesanan');
+							redirect('customer/pesanan_customer');
 				}
 				else{
 						
 						$data_pesanan = array(
 								'no_orders'              => set_value('no_orders'),
-                                'status_order'           => set_value('status_order'),
-                                'feedback_mitra'         => set_value('feedback_mitra')
+                                'feedback_user'           => set_value('feedback_user')
 							);
 						$this->model_allevents->edit_status($no_orders,$data_pesanan);
 						$this->session->set_flashdata('msg', '<div class="alert alert-success alert-dismissable">Data Tersimpan</div>');
-						redirect('user/pesanan');
+						redirect('customer/pesanan_customer');
 				}				
 			}		
 
@@ -96,6 +93,6 @@ class Pesanan extends CI_Controller {
 	}
 	public function delete($kode_event)	{
 		$this->model_allevents->delete($kode_event);
-		redirect('user/event');
+		redirect('customer/event');
 	}	
 }

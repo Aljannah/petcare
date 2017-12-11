@@ -14,6 +14,7 @@ class Con_user extends CI_Controller {
 	}
 	public function index()
 	{
+		echo $this->session->flashdata('msg');
 		$data['username'] = $this->session->userdata('username');
 		//$this->db->where('username',$data['username']);
 		//$data['tampiluser'] = $this->db->get('event');
@@ -31,11 +32,13 @@ class Con_user extends CI_Controller {
 	
 	public function is_logged_in()
 	{
+
 		$data['is_logged_in'] = $this->session->userdata('is_logged_in');
 		if(!isset($data['is_logged_in']) || $data['is_logged_in'] != true)
 		{
 			echo "Maaf anda diharuskan login untuk mengakses halaman ini.";	
 			die();		
+
 			$this->load->view('menu/login');
 		}		
 	}	

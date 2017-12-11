@@ -1,4 +1,4 @@
- <?php $this->load->view('layout/headeruser')?> 
+ <?php $this->load->view('layout/headeruser_customer')?> 
                     <!--/.span3-->
                     <div class="span9">
                         <div class="content">
@@ -39,12 +39,8 @@
                                                    <td align="center"><?=  $pesanan->no_orders ?></td>
                                         </tr>
                                         <tr>
-                                                   <th>Nama Pemesan</th>
-                                                   <td align="center"><?=  $pesanan->name ?></td>
-                                        </tr>
-                                        <tr>
-                                                   <th>Nomor Telepon Pemesan</th>
-                                                   <td align="center"><?=  $pesanan->hp ?></td>
+                                                   <th>Nama PetShop</th>
+                                                   <td align="center"><?=  $pesanan->partners_name ?></td>
                                         </tr>
                                         <tr>
                                                    <th>Alamat</th>
@@ -57,10 +53,6 @@
                                         <tr>
                                                    <th>email</th>
                                                    <td align="center"><?=  $pesanan->email ?></td>
-                                        </tr>
-                                        <tr>
-                                                   <th>No. Telp/ Hp</th>
-                                                   <td align="center"><?=  $pesanan->hp ?></td>
                                         </tr>
                                         <tr>
                                                    <th>Kodepos</th>
@@ -103,12 +95,12 @@
                                                    <td align="center"><textarea rows="10" disabled><?=  $pesanan->feedback_mitra  ?></textarea></td>
                                         </tr>
                                         <tr>
-                                                   <th>Customer</th>
+                                                   <th>Status yang diberikan Customer</th>
                                                    <td align="center"><?=  $pesanan->feedback_user  ?></td>
                                         </tr>
                                         <tr>
                                                    <td>
-                                                            <?=  anchor('user/pesanan/edit/'.$pesanan->no_orders,'Ganti Ketersediaan',['class'=>'btn btn-success btn-xs']) ?>
+                                                            <?=  anchor('customer/pesanan_customer/edit/'.$pesanan->no_orders,'Ganti Ketersediaan',['class'=>'btn btn-success btn-xs']) ?>
                                                             
                                                     </td>
                                         </tr>

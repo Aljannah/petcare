@@ -38,7 +38,7 @@ class Con_login extends CI_Controller {
 				redirect('con_admin');
 			}
 			elseif ($this->session->userdata('role')=='2') {
-				redirect('con_user');
+				redirect('con_customer');
 			}
 			elseif ($this->session->userdata('role')=='3') {
 				redirect('con_user');

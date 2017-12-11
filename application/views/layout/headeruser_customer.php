@@ -36,7 +36,7 @@
                                 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li class="divider"></li>
-                                    <li><a href="<?php echo site_url('con_user/profile'); ?>">Profile</a></li>
+                                    <li><a href="<?php echo site_url('con_customer/profile'); ?>">Profile</a></li>
                                     <li><a href="<?php echo site_url('con_user/logout'); ?>">Logout</a></li>
                                 </ul>
                             </li>
@@ -54,14 +54,8 @@
                     <div class="span3">
                         <div class="sidebar">                           
                             <ul class="widget widget-menu unstyled">
-                                <li><a class="collapsed" data-toggle="collapse" href="#togglePages"><i class="menu-icon icon-cog">
-                                </i><i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right">
-                                </i>Paket yang Ditawarkan</a>
-                                    <ul id="togglePages" class="collapse unstyled">
-                                        <li><a href="<?php echo base_url();?>index.php/con_upload"><i class="icon-inbox"></i>Masukkan Paket Pet Grooming</a></li>
-                                    </ul>
-                                </li>
-                                <li class="active"><a href="<?php echo site_url('con_user/lihat_pesanan'); ?>"><i class="menu-icon icon-inbox"></i>Lihat Transaksi</a></li>
+                                <li class="active"><a href="<?php echo site_url('con_customer/pesan'); ?>"><i class="menu-icon icon-inbox"></i>Pesan Paket Grooming</a></li>
+                                <li class="active"><a href="<?php echo site_url('con_customer/lihat_pesanan_customer'); ?>"><i class="menu-icon icon-inbox"></i>Lihat Transaksi</a></li>
                                 <li><a href="<?php echo site_url('con_user/logout'); ?>"><i class="menu-icon icon-signout"></i>Logout </a></li>
                             </ul>
                         </div>

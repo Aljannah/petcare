@@ -79,6 +79,7 @@ class Con_upload extends CI_Controller {
 				'status' => $status_konfirm
 				);
 			$this->model_event->create($data_event);
+			$this->session->set_flashdata('msg', '<div class="alert alert-success alert-dismissable">Data Tersimpan</div>');
 			redirect('con_user');
 
             }

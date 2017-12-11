@@ -29,7 +29,7 @@ class Con_registvalid extends CI_Controller {
 		$this->form_validation->set_rules('password', 'Password', 'required|min_length[6]|max_length[20]');
 		$this->form_validation->set_rules('repass', 'Repassword', 'required|min_length[6]|matches[password]');
 		$this->form_validation->set_rules('address', 'Alamat', 'required|min_length[6]|max_length[100]');
-		$this->form_validation->set_rules('city', 'Kota', 'required|min_length[6]|max_length[20]');
+		$this->form_validation->set_rules('city', 'Kabupaten/Kota', 'required|min_length[6]|max_length[20]');
 		$this->form_validation->set_rules('postal_code', 'Kode Pos', 'required|min_length[4]|max_length[7]');
 		$this->form_validation->set_rules('hp', 'No. Handphone', 'required|min_length[9]|max_length[15]');
 		
@@ -46,7 +46,7 @@ class Con_registvalid extends CI_Controller {
 			$this->model_member->create('user', $data_pengguna);
 			$data_member = array(
 				'username' 			=> set_value('username'),
-				'name' 		=> set_value('name'),
+				'name' 				=> set_value('name'),
 				'password' 			=> md5($password),
 				'email' 			=> set_value('email'),
 				'address' 			=> set_value('address'),
@@ -55,6 +55,7 @@ class Con_registvalid extends CI_Controller {
 				'hp' 				=> set_value('hp'),
 			);
 			$this->model_member->create('customer',$data_member);
+			$this->session->set_flashdata('msg', '<div class="alert alert-success alert-dismissable">Data Tersimpan</div>');
 			redirect('con_home');
 		}
 				

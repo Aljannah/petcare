@@ -1,4 +1,4 @@
- <?php $this->load->view('layout/headeruser')?> 
+ <?php $this->load->view('layout/headeruser_customer')?> 
                     <!--/.span3-->
                     <div class="span9">
                         <div class="content">
@@ -25,7 +25,7 @@
                             <div class="module" style="width: fit-content">
                                 <div class="module-head">
                                     <h2 align = "center">List Pesanan Anda</h2>
-                                    <h5>Daftar Seluruh Pemesan Paket Anda</h5>
+                                    <h5>Daftar Seluruh Paket yang Anda pesan</h5>
                                 </div>
                                 <div class="module-body table">
                                     <table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped  display"
@@ -34,11 +34,10 @@
                                             <tr>
                                                     <th>No</th>
                                                     <th>Nomor Pemesanan</th>
-                                                    <th>Nama Pemesan</th>
+                                                    <th>Nama Mitra</th>
                                                     <th>Tanggal Order</th>
                                                     <th>Alamat</th>
                                                     <th>Kabupaten</th>
-                                                    <th>Nomor Telepon Pemesan</th>
                                                     <th>Status Order</th>
                                                     <th>Action</th>
                                             </tr>
@@ -48,15 +47,14 @@
                                             <tr class="odd gradeX">
                                                 <td align="center"><?php echo $no;?></td>
                                                 <td align="center"><?=  $pesanan->no_orders ?></td>
-                                                <td align="center"><?=  $pesanan->name ?></td>
+                                                <td align="center"><?=  $pesanan->partners_name ?></td>
                                                 <td align="center"><?=  $pesanan->order_date ?></td>
                                                 <td align="center"><textarea rows="10" disabled><?=  $pesanan->address  ?></textarea></td>
                                                 <td align="center"><?=  $pesanan->city ?></td>
-                                                <td align="center"><?=  $pesanan->hp ?></td>
                                                 <td align="center"><?=  $pesanan->status_order ?></td>
                                                 
                                                         <td>
-                                                            <?=  anchor('user/pesanan/lihat/'.$pesanan->no_orders,'Lihat Detail',['class'=>'btn btn-success btn-xs']) ?>
+                                                            <?=  anchor('customer/pesanan_customer/lihat/'.$pesanan->no_orders,'Lihat Detail',['class'=>'btn btn-success btn-xs']) ?>
                                             
                                                         </td>
                                             </tr><?php endforeach; ?> 
