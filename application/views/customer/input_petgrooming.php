@@ -2,21 +2,24 @@
     //$username              = $pesan->username;
 if($this->input->post('is_submitted'))
 {
-                                $username                   = set_value('username');
-                                $name                       = set_value('name');
                                 $price                      = set_value('price');
-                                $address                    = set_value('address');
                                 $id_petgrooming             = set_value('id_petgrooming');
-                                $hp                         = set_value('hp');
-                                $email                      = set_value('email');
-                                $postal_code                = set_value('postal_code');
                                 $package_name               = set_value('package_name');
-                                $city                       = set_value('city');
+                                $no_orderdetail             = set_value('no_orderdetail');
                                 $description                = set_value('description');
                                 $petcategory                = set_value('petcategory');
                                 $status_order               = set_value('status_order');
                                 $feedback_mitra             = set_value('feedback_mitra');
                                 $feedback_user              = set_value('feedback_user');
+                                $user_partners              = set_value('user_partners');
+                                $jumlah_hewan               = set_value('jumlah_hewan');
+                                $order_date                 = set_value('order_date');
+                                $grooming_date              = set_value('grooming_date');
+                                $time_hour                  = set_value('time_hour');
+                                $mnt_hour                   = set_value('mnt_hour');
+                                $day_hour                   = set_value('day_hour');
+                                
+                                                          
 }else{
 
                                 //$username                   = $pesan->username;
@@ -37,7 +40,7 @@ if($this->input->post('is_submitted'))
 ?>
 
 
- <?php $this->load->view('layout/headeruser')?> 
+ <?php $this->load->view('layout/headeruser_customer')?> 
                     <!--/.span3-->
                     <div class="span9">
                         <div class="content">
@@ -70,11 +73,17 @@ if($this->input->post('is_submitted'))
 
 
                             <div class="col-md-6 contact-grid" align="center">
-                            <form method="post" action="<?php echo site_url('con_input_pesanan') ?>">
-                            <p class="your-para">Username :</p>
+                            <?php echo form_open_multipart('con_customer/lihat_detail_paket_anjing/'.$id_petgrooming,['class'=>'your-para']);?>
+                            <input type="text" name="no_orderdetail" value="<?=$detor?>" readonly>
+                            
                             <!--<input type="text" name="username" value="<?= $pesan->username ?>" readonly>-->
-                            <input type="hidden" name="id_petgrooming" value="<?= $pesan->id_petgrooming ?>" readonly>
-                            <input type="hidden" name="tanggal_order" value="<?php echo date('Y-m-d'); ?>" />
+                            <!--<input type="text" name="id_petgrooming" value="<?= $pesan->user_partners ?>"-->
+                            <input type="text" name="user_partners" value="<?= $pesan->user_partners ?>" readonly>
+                            <input type="text" name="id_petgrooming" value="<?= $pesan->id_petgrooming ?>" readonly>
+                            <input type="text" name="order_date" value="<?php echo date('Y-m-d'); ?>" />
+                            <input type="text" name="feedback_user" value="Diterima" />
+                            <input type="text" name="feedback_mitra" value="Menunggu Konfirmasi" />
+                            <input type="text" name="status_order" value="Diterima" />
                             <!--<p class="your-para">Nama :</p>
                             <input type="text" name="nama" value="<?= $pesan->name ?>"  readonly>-->
                             
@@ -109,10 +118,41 @@ if($this->input->post('is_submitted'))
                                 </select>
                     
 
-                            <?php echo form_error('tanggal'); ?>
+                            <?php echo form_error('grooming_date'); ?>
                             <p class="your-para">Tanggal :</p>
-                            <input type="date" name="tanggal" value="<?php echo date('Y-m-d'); ?>">
+                            <input type="date" name="grooming_date" value="<?php echo date('Y-m-d'); ?>">
 
+                            <?php echo form_error('time_hour'); ?>
+                                <p class="your-para">Jam :</p>
+                                <select name="time_hour" style="max-width: 20%;">
+                                          <option value="">Pilih Jam</option>
+                                          <option value="00">00</option>
+                                          <option value="01">01</option>
+                                          <option value="02">02</option>
+                                          <option value="03">03</option>
+                                          <option value="04">04</option>
+                                          <option value="05">05</option>
+                                          <option value="06">06</option>
+                                          <option value="07">07</option>
+                                          <option value="08">08</option>
+                                          <option value="09">09</option>
+                                          <option value="10">10</option>
+                                          <option value="11">11</option>
+                                          <option value="12">12</option>
+                                </select>:
+                                <?php echo form_error('mnt_hour'); ?>
+                                <select name="mnt_hour" style="max-width: 20%;">
+                                          <option value="">Pilih Menit</option>
+                                          <option value="00">00</option>
+                                          <option value="30">30</option>
+                                </select>
+                                <?php echo form_error('day_hour'); ?>
+                                <select name="day_hour" style="max-width: 40%;">
+                                          <option value="">Pilih AM/PM</option>
+                                          <option value="AM">AM</option>
+                                          <option value="PM">PM</option>
+                                </select>
+                            </div>
                             <!--<?php echo form_error('postal_code'); ?>
                             <p class="your-para">Kode Pos :</p>
                             <input type="text" name="postal_code" value="<?= $pesan->postal_code ?>">-->
@@ -125,7 +165,7 @@ if($this->input->post('is_submitted'))
                             <div class="col-sm-1">
                             </br>
                                 <div class="input-group">
-                                    <input type="hidden" name="is_submitted" value="1">
+                                    <input type="text" name="is_submitted" value="1">
                                     <button type="submit" class="btn btn-success">Lanjut</button>
                                                                  
                                     <?=  anchor('user/pesan','Cancel',['class'=>'btn btn-danger']) ?>

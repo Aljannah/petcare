@@ -17,12 +17,12 @@ class Pesanan extends CI_Controller {
 		$data['pesanan'] = $this->model_allevents->lihat_pesanan();	
 		$this->load->view('menu/lihat_pesanan',$data);
 	}
-	public function lihat()
+	public function lihat($no_orders)
 	{	
 		
 		//$user='username';
 		//$data['tampiluser'] = $this->model_login->datauser($user,$data['username']);
-		$data['pesanan'] = $this->model_allevents->lihat_pesanan();	
+		$data['pesanan'] = $this->model_allevents->detail_lihat_pesanan($no_orders);	
 		$this->load->view('menu/lihat_detail_pesanan',$data);
 	}
 		

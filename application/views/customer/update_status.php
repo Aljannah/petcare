@@ -41,7 +41,7 @@ if($this->input->post('is_submitted'))
                             <div class="module" style="width: 700px">
                                 <div class="module-head">
                                     <h2 align = "center">Ganti Ketersediaan</h2>
-                                    <h5>Konfirmasi Ketersediaan Anda Mengerjakan Paket</h5>
+                                    <h5>Konfirmasi Ketersediaan Anda Menerima Pengerjaan Paket</h5>
                                 </div>
                                 
 

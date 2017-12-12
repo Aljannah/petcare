@@ -12,7 +12,11 @@ class Con_customer extends CI_Controller {
 		}
 		$this->load->model('model_allevents');
 		$this->load->model('model_allpenggunas');
+		$this->load->model('model_detor');
+		$this->load->model('model_ordet');
 		//$this->load->helper('text');
+		$table = 'order_det';
+        $data['detor'] = $this->model_detor->getdetor($table);
 	}
 	public function index()
 	{
@@ -89,38 +93,51 @@ class Con_customer extends CI_Controller {
 	}
 	public function lihat_detail_paket_anjing($id_petgrooming)
 	{	
-		$this->form_validation->set_rules('jumlah_hewan','jumlah hewan','required');
-		$this->form_validation->set_rules('tanggal','tanggal grooming','required');
+		$table = 'order_det';
+        $data['detor'] = $this->model_detor->getdetor($table);
+		//$this->form_validation->set_rules('jumlah_hewan','jumlah hewan','required');
+		$this->form_validation->set_rules('grooming_date','tanggal grooming','required');
+		
 		
 		if ($this->form_validation->run() == FALSE)	{
 				$data['pesan'] = $this->model_allevents->finding_pesanan($id_petgrooming);
-				//$data['pesan'] = $this->model_allevents->finding_user($session_id);
-				//$data['pesan'] = $this->model_allevents->finding_partner($id_petgrooming);
 				$this->load->view('customer/input_petgrooming',$data);
 			} else {
-				if($_FILES['userfile']['name'] != ''){
-						
-						$this->load->view('customer/input_petgrooming',$data);
-						
-							$data_pesanan = array(
-								'no_orders'              => set_value('no_orders'),
-                                'status_order'           => set_value('status_order'),
-                                'feedback_mitra'         => set_value('feedback_mitra')
+
+							
+							$jumlah_hewan = $this->input->post('jumlah_hewan');
+							$quantity = $this->input->post('price');
+							$total= $quantity * $jumlah_hewan  ;
+							$wopnya = 
+							$this->input->post('time_hour').":".
+							$this->input->post('mnt_hour')." ".
+							$this->input->post('day_hour');
+
+							$data_ordersdet = array(
+								'id_petgrooming'         => set_value('id_petgrooming'),
+                                'quantity'           	 => set_value('jumlah_hewan'),
+                                'unit_price'         	=> set_value('price'),
+                                'user_partners'			=> set_value('user_partners'),
+                                'no_orderdetail'		=> set_value('no_orderdetail')
+
 							);
-							$this->model_allevents->edit_status($no_orders,$data_pesanan);
+							$this->model_ordet->create('order_det',$data_ordersdet);
+							$data_orders = array(
+								'user_customer'         => $this->session->userdata('username'),
+                                'total'           	 	=> $total,
+                                'order_date'         	=> set_value('order_date'),
+                                'grooming_date'			=> set_value('grooming_date'),
+                                'grooming_time'			=> $wopnya,
+                                'status_order'			=> set_value('status_order'),
+                                'feedback_mitra'		=> set_value('feedback_mitra'),
+                                'feedback_user'			=> set_value('feedback_user'),
+                                'no_orderdetail'		=> set_value('no_orderdetail')
+
+							);
+							$this->model_ordet->create('orders',$data_orders);
+							$this->session->set_flashdata('msg', '<div class="alert alert-success alert-dismissable">Pesanan Anda Telah Disimpan</div>');
 							redirect('con_customer');
-				}
-				else{
 						
-						$data_pesanan = array(
-								'no_orders'              => set_value('no_orders'),
-                                'status_order'           => set_value('status_order'),
-                                'feedback_mitra'         => set_value('feedback_mitra')
-							);
-						$this->model_allevents->edit_status($no_orders,$data_pesanan);
-						$this->session->set_flashdata('msg', '<div class="alert alert-success alert-dismissable">Data Tersimpan</div>');
-						redirect('con_customer');
-				}				
 			}		
 
 		

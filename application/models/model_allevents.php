@@ -51,6 +51,36 @@ class Model_allevents extends CI_Model {
         return $query->result();      
 
      }
+     public function detail_lihat_pesanan($no_orders){ 
+        $this->load->library('session');
+        $session_id = $this->session->userdata('username');
+        $this->db->select('*');
+        $this->db->from('orders a');
+        $this->db->join('order_det b','b.no_orderdetail=a.no_orderdetail', 'left');
+        $this->db->join('customer c','c.username=a.user_customer', 'left');
+        $this->db->join('petgrooming d','d.id_petgrooming=b.id_petgrooming', 'left');
+        $this->db->where('b.user_partners', $session_id);//buat nongolin usernya        
+        $this->db->where('a.no_orders', $no_orders);//buat nongolin usernya
+        $this->db->order_by("a.order_date", "asc");
+        $query = $this->db->get();
+        return $query->result();      
+
+     }
+     public function detail_lihat_pesanan_customer($no_orders){ 
+        $this->load->library('session');
+        $session_id = $this->session->userdata('username');
+        $this->db->select('*');
+        $this->db->from('orders a');
+        $this->db->join('order_det b','b.no_orderdetail=a.no_orderdetail', 'left');
+        $this->db->join('partners c','c.user_partners=b.user_partners', 'left');
+        $this->db->join('petgrooming d','d.id_petgrooming=b.id_petgrooming', 'left');
+        $this->db->where('a.user_customer', $session_id);//buat nongolin usernya
+        $this->db->where('a.no_orders', $no_orders);//buat nongolin usernya
+        $this->db->order_by("a.order_date", "asc");
+        $query = $this->db->get();
+        return $query->result();      
+
+     }
      public function paket_anjing(){ 
         //$this->load->library('session');
         //$session_id = $this->session->userdata('username');        

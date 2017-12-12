@@ -59,6 +59,7 @@
                                 </i>Paket yang Ditawarkan</a>
                                     <ul id="togglePages" class="collapse unstyled">
                                         <li><a href="<?php echo base_url();?>index.php/con_upload"><i class="icon-inbox"></i>Masukkan Paket Pet Grooming</a></li>
+                                        <li><a href="<?php echo site_url('con_user/daftar_paket'); ?>"><i class="icon-inbox"></i>Lihat Paket Anda</a></li>
                                     </ul>
                                 </li>
                                 <li class="active"><a href="<?php echo site_url('con_user/lihat_pesanan'); ?>"><i class="menu-icon icon-inbox"></i>Lihat Transaksi</a></li>

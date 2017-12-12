@@ -49,7 +49,7 @@
 
                                         <ul id="profile-page-about-details" class="collection z-depth-1">
                                             <li class="collection-item">
-                                                <button onclick="location.href='<?php echo base_url("index.php/con_customer/lihat_paket/".$pesan -> user_partners"/".$pesan-> username)?>';" type="button" class="btn btn-cart">
+                                                <button onclick="location.href='<?php echo base_url("index.php/con_customer/lihat_paket/".$pesan -> user_partners)?>';" type="button" class="btn btn-cart">
                                                     Pilih
                                                 </button>
                                             </li>

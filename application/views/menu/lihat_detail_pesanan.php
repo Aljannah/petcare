@@ -84,7 +84,7 @@
                                         </tr>
                                         <tr>
                                                    <th>Harga Paket per-Hewan</th>
-                                                   <td align="center"><?=  $pesanan->unit_price ?></td>
+                                                   <td align="center"><?php echo "Rp.".number_format($pesanan -> unit_price,2,',','.')?> </td>
                                         </tr>
                                         <tr>
                                                    <th>Jumlah Hewan</th>
@@ -92,7 +92,7 @@
                                         </tr>
                                         <tr>
                                                    <th>Jumlah Total yang dibayar</th>
-                                                   <td align="center"><?=  $pesanan->total ?></td>
+                                                   <td align="center"><?php echo "Rp.".number_format($pesanan -> total,2,',','.')?> </td>
                                         </tr>
                                         <tr>
                                                    <th>Status Order</th>
@@ -109,6 +109,7 @@
                                         <tr>
                                                    <td>
                                                             <?=  anchor('user/pesanan/edit/'.$pesanan->no_orders,'Ganti Ketersediaan',['class'=>'btn btn-success btn-xs']) ?>
+                                                            <?=  anchor('user/pesanan','back',['class'=>'btn btn-danger']) ?>
                                                             
                                                     </td>
                                         </tr>
