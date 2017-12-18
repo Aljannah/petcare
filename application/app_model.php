@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class app_Model extends CI_Model {
+class App_Model extends CI_Model {
 
 	public function dd_kategori(){
 		$this->db->order_by('kategori','asc');
