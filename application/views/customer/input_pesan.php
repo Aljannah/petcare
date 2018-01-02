@@ -32,7 +32,7 @@
                                         <figcaption>Anjing</figcaption>
                                     </figure>
                                 </a>
-                                <a href="<?php echo site_url('con_customer/mitradog'); ?>">
+                                <a href="<?php echo site_url('con_customer/mitracat'); ?>">
                                     <figure>
                                         <img src="<?php echo base_url("./assets/images/cat.png")?>" width="100px" height="100px" />
                                         <figcaption>Kucing</figcaption>
@@ -76,7 +76,7 @@
                             -o-transition: -o-transform 0.2s;
                         }
                     </style>
-                    <!--Start of Zendesk Chat Script-->
+                    <!--Start of Zendesk Chat Script
                     <script type="text/javascript">
                         window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
                             d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.

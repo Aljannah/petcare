@@ -66,24 +66,24 @@ if($this->input->post('is_submitted'))
                             </div>
                             <div class="module" style="width: 700px">
                                 <div class="module-head">
-                                    <h2 align = "center">Your pesan</h2>
-                                    <h5>Edit Your pesan</h5>
+                                    <h2 align = "center">Detail Pemesanan</h2>
+                                    <h5>Konfirmasi Pesanan Anda</h5>
                                 </div>
                                 
 
 
                             <div class="col-md-6 contact-grid" align="center">
                             <?php echo form_open_multipart('con_customer/lihat_detail_paket_anjing/'.$id_petgrooming,['class'=>'your-para']);?>
-                            <input type="text" name="no_orderdetail" value="<?=$detor?>" readonly>
+                            <input type="hidden" name="no_orderdetail" value="<?=$detor?>" readonly>
                             
                             <!--<input type="text" name="username" value="<?= $pesan->username ?>" readonly>-->
                             <!--<input type="text" name="id_petgrooming" value="<?= $pesan->user_partners ?>"-->
                             <input type="text" name="user_partners" value="<?= $pesan->user_partners ?>" readonly>
-                            <input type="text" name="id_petgrooming" value="<?= $pesan->id_petgrooming ?>" readonly>
-                            <input type="text" name="order_date" value="<?php echo date('Y-m-d'); ?>" />
-                            <input type="text" name="feedback_user" value="Diterima" />
-                            <input type="text" name="feedback_mitra" value="Menunggu Konfirmasi" />
-                            <input type="text" name="status_order" value="Diterima" />
+                            <input type="hidden" name="id_petgrooming" value="<?= $pesan->id_petgrooming ?>" readonly>
+                            <input type="hidden" name="order_date" value="<?php echo date('Y-m-d'); ?>" />
+                            <input type="hidden" name="feedback_user" value="Diterima" />
+                            <input type="hidden" name="feedback_mitra" value="Menunggu Konfirmasi" />
+                            <input type="hidden" name="status_order" value="Diterima" />
                             <!--<p class="your-para">Nama :</p>
                             <input type="text" name="nama" value="<?= $pesan->name ?>"  readonly>-->
                             
@@ -162,13 +162,13 @@ if($this->input->post('is_submitted'))
                             <textarea cols="100" rows="10" name="wop" disabled><?= $pesan->wop ?></textarea>-->
 
 
-                            <div class="col-sm-1">
+                            <div class="col-sm-1" style="padding-left: 40%;">
                             </br>
                                 <div class="input-group">
-                                    <input type="text" name="is_submitted" value="1">
-                                    <button type="submit" class="btn btn-success">Lanjut</button>
+                                    <input type="hidden" name="is_submitted" value="1">
+                                    <button type="submit" class="btn btn-success" >Lanjut</button>
                                                                  
-                                    <?=  anchor('user/pesan','Cancel',['class'=>'btn btn-danger']) ?>
+                                    <?=  anchor('con_customer/pesan','Cancel',['class'=>'btn btn-danger']) ?>
                                 </div>
                                 </br></br>
                             </div>    

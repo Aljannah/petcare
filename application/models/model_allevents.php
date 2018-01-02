@@ -94,7 +94,19 @@ class Model_allevents extends CI_Model {
         return $query->result();      
 
      }
+     public function paket_kucing(){ 
+        //$this->load->library('session');
+        //$session_id = $this->session->userdata('username');        
+        $this->db->distinct();
+        $this->db->select('a.user_partners,email,partners_name,address,city,postal_code,wop,owner,file_gambar');
+        $this->db->from('partners a');
+        $this->db->join('petgrooming b','b.user_partners=a.user_partners', 'left');
+        $this->db->where('b.petcategory', 'Kucing');
+        $this->db->where('b.status', 'Konfirmasi');
+        $query = $this->db->get();
+        return $query->result();      
 
+     }
      public function lihat_paket($user_partners){ 
         //$this->load->library('session');
         //$session_id = $this->session->userdata('username');        
@@ -109,6 +121,20 @@ class Model_allevents extends CI_Model {
         return $query->result();      
 
      }
+        public function lihat_paketcat($user_partners){ 
+            //$this->load->library('session');
+            //$session_id = $this->session->userdata('username');        
+
+            $this->db->select('id_petgrooming,price,description,package_name,petcategory,partners_name,status');
+            $this->db->from('petgrooming a');
+            $this->db->join('partners b','b.user_partners=a.user_partners', 'left');
+            $this->db->where('a.user_partners', $user_partners);
+            $this->db->where('a.status', 'Konfirmasi');
+            $this->db->where('a.petcategory', 'Kucing');
+            $query = $this->db->get();
+            return $query->result();      
+
+         }
      public function lihat_detail_paket($id_petgrooming){ 
         //$this->load->library('session');
         //$session_id = $this->session->userdata('username');        

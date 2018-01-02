@@ -83,6 +83,14 @@ class Con_customer extends CI_Controller {
 		$data['pesan'] = $this->model_allevents->paket_anjing();	
 		$this->load->view('customer/lihat_paket_anjing',$data);
 	}
+    public function mitracat()
+	{	
+		
+		//$user='username';
+		//$data['tampiluser'] = $this->model_login->datauser($user,$data['username']);
+		$data['pesan'] = $this->model_allevents->paket_kucing();	
+		$this->load->view('customer/lihat_paket_kucing',$data);
+	}
 	public function lihat_paket($user_partners)
 	{	
 		
@@ -91,12 +99,25 @@ class Con_customer extends CI_Controller {
 		$data['pesan'] = $this->model_allevents->lihat_paket($user_partners);	
 		$this->load->view('customer/lihat_paket',$data);
 	}
+    public function lihat_paket_detail($user_partners)
+	{	
+		
+		//$user='username';
+		$data['pesan'] = $this->model_allpenggunas->lihat_profile_customer();
+		$data['pesan'] = $this->model_allevents->lihat_paketcat($user_partners);	
+		$this->load->view('customer/lihat_paket_detail',$data);
+	}
 	public function lihat_detail_paket_anjing($id_petgrooming)
 	{	
 		$table = 'order_det';
+        $this->form_validation->set_error_delimiters('<div style="color:red; margin-bottom: 5px">', '</div>');
         $data['detor'] = $this->model_detor->getdetor($table);
 		//$this->form_validation->set_rules('jumlah_hewan','jumlah hewan','required');
 		$this->form_validation->set_rules('grooming_date','tanggal grooming','required');
+		$this->form_validation->set_rules('jumlah_hewan','jumlah hewan','required');
+		$this->form_validation->set_rules('time_hour','Jam Grooming','required');
+		$this->form_validation->set_rules('mnt_hour','Menit Grooming','required');
+		$this->form_validation->set_rules('day_hour','Waktu Grooming','required');
 		
 		
 		if ($this->form_validation->run() == FALSE)	{
