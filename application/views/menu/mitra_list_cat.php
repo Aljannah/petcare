@@ -1,9 +1,9 @@
- <?php $this->load->view('layout/headeruser_customer')?> 
+ <?php $this->load->view('layout/header')?> 
                     <!--/.span3-->
                     <!-- START MAIN -->
     <!-- START MAIN -->
 <div class="span9">
-    <div class="content">
+    <div class="content" style="padding-left: 107px;">
      <div class="module" style="width: fit-content">                       
        <div class="module-body table">
         <div id="main">
@@ -18,8 +18,8 @@
                             <div class="col s12 m12 l12">
                                 <h5 class="breadcrumbs-title">Pilih Mitra yang menyediakan Paket Grooming Kucing</h5>
                                 <ol class="breadcrumb">
-                                    <li><a href="<?php echo base_url("index.php/con_customer/pesan")?>">Jenis Hewan </a></li>
-                                    <li class="active">>> Kucing</li>
+                                    <li><a href="<?php echo base_url("index.php/con_home/Our_product")?>">Jenis Hewan </a></li>
+                                    <li class="active"> Kucing</li>
                                 </ol>
                             </div>
                         </div>
@@ -38,7 +38,7 @@
 
                                         <ul id="profile-page-about-details" class="collection z-depth-1">
                                             <li class="collection-item">
-                                                <button onclick="location.href='<?php echo base_url("index.php/con_customer/lihat_paket_detail/".$pesan -> user_partners)?>';" type="button" class="btn btn-cart">
+                                                <button onclick="location.href='<?php echo base_url("index.php/con_home/paket_kucing/".$pesan -> user_partners)?>';" type="button" class="btn btn-cart">
                                                     Pilih
                                                 </button>
                                             </li>
@@ -98,8 +98,11 @@
         </div>
         <!-- END MAIN -->
         </div>
+       
     </div>
-       <?php $this->load->view('layout/footeruser')?>
+    </div>
+        <div>
+       <?php $this->load->view('layout/footer')?>
    </div>
 </div>
 
@@ -360,4 +363,4 @@
         margin-left: 100%; } }
 
 
-    </style>
+    </style> 

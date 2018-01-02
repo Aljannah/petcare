@@ -1,4 +1,4 @@
- <?php $this->load->view('layout/headeruser_customer')?> 
+ <?php $this->load->view('layout/header')?> 
                     <!--/.span3-->
                     <!-- START MAIN -->
     <!-- START MAIN -->
@@ -16,15 +16,26 @@
                     <div class="container">
                         <div class="row">
                             <div class="col s12 m12 l12">
-                                <h5 class="breadcrumbs-title">Pilih Mitra yang menyediakan Paket Grooming Kucing</h5>
+                                <h5 class="breadcrumbs-title">Pilih Mitra yang menyediakan Paket Grooming Anjing</h5>
                                 <ol class="breadcrumb">
                                     <li><a href="<?php echo base_url("index.php/con_customer/pesan")?>">Jenis Hewan </a></li>
-                                    <li class="active">>> Kucing</li>
+                                    <li class="active">>> Anjing</li>
                                 </ol>
                             </div>
                         </div>
                         <hr>
-<!-- -->
+<!--                        <form action="<?php echo base_url("index.php/category/matic")?>" method="POST">
+                            <div class="row" style="margin-left: 0px;">
+                                <div class="input-field col s3">
+                                    <input type="text" name="kota" class="form-control" required placeholder="Berdasarkan Kota" oninvalid="this.setCustomValidity('Tidak Boleh Kosong')"
+                                           oninput="setCustomValidity('')" >
+                                    <label for="first_name">Kota</label>
+                                </div>
+                                <br>
+                                <button type="submit"  name="submit" class="btn waves-effect waves-light  deep-purple">Terapkan</button>
+                            </div>
+                        </form>
+-->
                         <hr>
                         <div id="profile-page" class="section">
                             <!-- profile-page-header -->
@@ -38,7 +49,7 @@
 
                                         <ul id="profile-page-about-details" class="collection z-depth-1">
                                             <li class="collection-item">
-                                                <button onclick="location.href='<?php echo base_url("index.php/con_customer/lihat_paket_detail/".$pesan -> user_partners)?>';" type="button" class="btn btn-cart">
+                                                <button onclick="location.href='<?php echo base_url("index.php/con_customer/lihat_paket/".$pesan -> user_partners)?>';" type="button" class="btn btn-cart">
                                                     Pilih
                                                 </button>
                                             </li>
@@ -99,7 +110,7 @@
         <!-- END MAIN -->
         </div>
     </div>
-       <?php $this->load->view('layout/footeruser')?>
+       <?php $this->load->view('layout/footer')?>
    </div>
 </div>
 

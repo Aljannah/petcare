@@ -74,6 +74,11 @@ class Con_customer extends CI_Controller {
 		
 		redirect('customer/pesan');
 		
+	}public function pesan_tanpa_login()
+	{	
+		
+		redirect('customer/pesan_tanpa_login');
+		
 	}
 	public function mitradog()
 	{	

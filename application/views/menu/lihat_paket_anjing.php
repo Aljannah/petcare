@@ -1,30 +1,29 @@
- <?php $this->load->view('layout/headeruser_customer')?> 
+ <?php $this->load->view('layout/header')?> 
                     <!--/.span3-->
                     <!-- START MAIN -->
     <!-- START MAIN -->
 <div class="span9">
-    <div class="content">
+    <div class="content" style="padding-left: 107px;">
      <div class="module" style="width: fit-content">                       
        <div class="module-body table">
         <div id="main">
             <!-- START WRAPPER -->
             <div class="wrapper">
-
+              
                 <!-- START CONTENT -->
                 <section id="content">
                     <!--start container-->
                     <div class="container">
                         <div class="row">
                             <div class="col s12 m12 l12">
-                                <h5 class="breadcrumbs-title">Pilih Mitra yang menyediakan Paket Grooming Kucing</h5>
+                                <h5 class="breadcrumbs-title">Pilih Paket </h5>
                                 <ol class="breadcrumb">
-                                    <li><a href="<?php echo base_url("index.php/con_customer/pesan")?>">Jenis Hewan </a></li>
-                                    <li class="active">>> Kucing</li>
+                                    <li><a href="<?php echo base_url("index.php/con_home/mitra_list_dog")?>">Jenis Hewan >> Anjing </a></li>
+                                    <li class="active">>> Paket</li>
                                 </ol>
                             </div>
                         </div>
-                        <hr>
-<!-- -->
+                        
                         <hr>
                         <div id="profile-page" class="section">
                             <!-- profile-page-header -->
@@ -32,48 +31,46 @@
                                 <div id="profile-page-content" class="row">
                                     <!-- profile-page-sidebar-->
 
-                                    <?php $no=0; foreach($pesan as $pesan ): $no++;?>
+                        <?php $no=0; foreach($pesan as $pesan ): $no++;?>                      
                                     <div id="profile-page-sidebar" class="col s12 m3">
                                         <!-- Profile About Details  -->
 
                                         <ul id="profile-page-about-details" class="collection z-depth-1">
-                                            <li class="collection-item">
-                                                <button onclick="location.href='<?php echo base_url("index.php/con_customer/lihat_paket_detail/".$pesan -> user_partners)?>';" type="button" class="btn btn-cart">
+                                            <!--<li class="collection-item">
+                                               <button onclick="location.href='<?php echo base_url("index.php/con_customer/lihat_detail_paket_anjing/".$pesan -> id_petgrooming)?>';" type="button" class="btn btn-cart">
                                                     Pilih
                                                 </button>
-                                            </li>
+                                            </li>-->
 
                                             <li class="collection-item">
                                                 <div class="row" style="margin-left: 0px;">
-                                                    <div class="col s5 grey-text darken-1">Nama Mitra</div>
-                                                    <div class="col s7 grey-text text-darken-4 right-align"><?php echo  $pesan -> partners_name ?></div>
+                                                    <div class="col s5 grey-text darken-1">Nama Paket</div>
+                                                    <div class="col s7 grey-text text-darken-4 right-align"><?php echo  $pesan -> package_name ?></div>
                                                     <!--<div class="col s7 grey-text text-darken-4 right-align"><?php echo "Rp.".number_format($pesan -> partners_name,2,',','.') ?></div>-->
                                                 </div>
                                             </li>
                                             <li class="collection-item">
                                                 <div class="row">
-                                                    <div class="col s5 grey-text darken-1">Lokasi</div>
-                                                    <div class="col s7 grey-text text-darken-4 right-align"><?php echo  $pesan -> address ?></div>
-                                                </div>
-                                            </li>
-
-                                            <li class="collection-item">
-                                                <div class="row">
-                                                    <div class="col s5 grey-text darken-1">Kabupaten</div>
-                                                    <div class="col s7 grey-text text-darken-4 right-align"><?php echo  $pesan -> city ?></div>
-                                                </div>
-                                            </li>
-
-                                            <li class="collection-item">
-                                                <div class="row">
-                                                    <div class="col s5 grey-text darken-1">Waktu Operasional</div>
-                                                    <div class="col s7 grey-text text-darken-4 right-align"><?php echo  $pesan -> wop ?></div>
+                                                    <div class="col s5 grey-text darken-1">Deskripsi Paket</div>
+                                                    <div class="col s7 grey-text text-darken-4 right-align"><?php echo  $pesan -> description ?></div>
                                                 </div>
                                             </li>
                                             <li class="collection-item">
                                                 <div class="row">
-                                                    <div class="col s5 grey-text darken-1">Pemilik</div>
-                                                    <div class="col s7 grey-text text-darken-4 right-align"><?php echo $pesan -> owner ?></div>
+                                                    <div class="col s5 grey-text darken-1">Harga Per-Hewan</div>
+                                                    <div class="col s7 grey-text text-darken-4 right-align"><?php echo  $pesan -> price ?></div>
+                                                </div>
+                                            </li>
+                                            <li class="collection-item">
+                                                <div class="row">
+                                                    <div class="col s5 grey-text darken-1">Nama Mitra</div>
+                                                    <div class="col s7 grey-text text-darken-4 right-align"><?php echo  $pesan -> partners_name ?></div>
+                                                </div>
+                                            </li>
+                                            <li class="collection-item">
+                                                <div class="row">
+                                                    <div class="col s5 grey-text darken-1">Tipe Hewan</div>
+                                                    <div class="col s7 grey-text text-darken-4 right-align"><?php echo  $pesan -> petcategory ?></div>
                                                 </div>
                                             </li>
                                         </ul>
@@ -98,8 +95,11 @@
         </div>
         <!-- END MAIN -->
         </div>
+       
     </div>
-       <?php $this->load->view('layout/footeruser')?>
+    </div>
+        <div>
+       <?php $this->load->view('layout/footer')?>
    </div>
 </div>
 
