@@ -7,7 +7,7 @@
         <div class="module-body table">
             <div id="main">
                 <!-- START WRAPPER -->
-                <div class="wrapper">
+                <div class="wrapper" style="padding-top: 50px;padding-bottom: 65px; width: 950px;">
 
                     <!-- START CONTENT -->
                     <section id="content">
@@ -24,7 +24,7 @@
 
                             <br>
 
-                            <div id="container">
+                            <div id="container" style="width: 950px;">
                                 <h3>Pilih Jenis Hewan Peliharaan Anda :</h3>
                                 <a href="<?php echo site_url('con_customer/mitradog'); ?>">
                                     <figure>

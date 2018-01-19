@@ -7,7 +7,7 @@
         <div class="module-body table">
             <div id="main">
                 <!-- START WRAPPER -->
-                <div class="wrapper" style="padding-top: 50px;padding-bottom: 65px;">
+                <div class="wrapper" style="padding-top: 50px;padding-bottom: 65px; width: 1070px;">
 
                     <!-- START CONTENT -->
                     <section id="content" >
@@ -24,7 +24,7 @@
 
                             <br>
 
-                            <div id="container" >
+                            <div id="container" style="width: 1070px;">
                                 <h3>Pilih Jenis Hewan Peliharaan Anda :</h3>
                                 <a href="<?php echo site_url('con_home/Mitra_list_dog'); ?>">
                                     <figure>
