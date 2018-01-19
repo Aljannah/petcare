@@ -40,9 +40,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		   <div class ="col-md-4">
 		   	
 		   	<a class = 'navbar-brand' href="<?php echo base_url();?>index.php/">
-		   		<img src="<?php echo base_url();?>assets/images/petcare.png" style="padding-left: 30px; padding-top: 20px;" >
+		   		<img src="<?php echo base_url();?>assets/images/petcare.png" style="padding-left: 30px;padding-top: 0px; ">
 		   	</a>
-		   	<div class="sign_up" align="right" style="height: 121px;width: 1150px;padding-left: 0px;">
+		   	<div class="sign_up" align="right" style="height: 161px;width: 1150px;padding-left: 0px;">
 		   	<div align="right">
 		   	<font color ="red"><h2 color="red"><b>Daftar Sebagai User PetCare.id</b></h2></font>
 		   	<font color ="red"><h4></h4></font>
