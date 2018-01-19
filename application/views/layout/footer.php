@@ -1,6 +1,6 @@
 
 <!--/start-footer-section-->
-			<div class="footer-section">
+			<div class="footer-section" style="padding-bottom: 0px;">
 			   <div class="container">
 					<div class="footer-grids">
 						<div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 footer_logo" >
@@ -29,7 +29,7 @@
 			<!--/start-copyright-section-->
 
 				<div class="copyright">
-					<p>&copy; - <a href="http://localhost/index.php/about/">ABOUT US</a> |  <a  href="<?php echo base_url();?>index.php/con_home/kontak">CONTACT US</a> </p>
+					<p>&copy; -  2017 PETCARE </p>
 				</div>
 
 				<!--start-smoth-scrolling-->

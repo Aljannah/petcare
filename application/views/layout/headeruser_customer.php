@@ -17,7 +17,7 @@
             <div class="navbar-inner">
                 <div class="container">
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
-                        <i class="icon-reorder shaded"></i></a><a class="brand" href="index.html"><?php echo "Selamat datang di PetCare "; ?> </a>
+                        <i class="icon-reorder shaded"></i></a><a class="brand" href="<?php echo site_url('con_customer/pesan'); ?>"><?php echo "Selamat datang di PetCare "; ?> </a>
                     <div class="nav-collapse collapse navbar-inverse-collapse">
                         <ul class="nav nav-icons">
                             <li class="active"><a href="#"><i class="icon-envelope"></i></a></li>
@@ -48,15 +48,15 @@
             <!-- /navbar-inner -->
         </div>
         <!-- /navbar -->
-        <div class="wrapper">
+        <div class="wrapper" style="width: 1280px;">
             <div class="container" style="width: 1280px;">
-                <div class="row">
-                    <div class="span3">
-                        <div class="sidebar">                           
-                            <ul class="widget widget-menu unstyled">
-                                <li class="active"><a href="<?php echo site_url('con_customer/pesan'); ?>"><i class="menu-icon icon-inbox"></i>Pesan Paket Grooming</a></li>
-                                <li class="active"><a href="<?php echo site_url('con_customer/lihat_pesanan_customer'); ?>"><i class="menu-icon icon-inbox"></i>Lihat Transaksi</a></li>
-                                <li><a href="<?php echo site_url('con_user/logout'); ?>"><i class="menu-icon icon-signout"></i>Logout </a></li>
+                <div class="row" style="width: 1200px;">
+                    <div class="span3" style="width: 230px;">
+                        <div class="sidebar" style="width: 230px;">                           
+                            <ul class="widget widget-menu unstyled" style="width: 230px;">
+                                <li class="active" style="width: 230px;"><a href="<?php echo site_url('con_customer/pesan'); ?>" style="width: 200px;"><i class="menu-icon icon-inbox"></i>Pesan Paket Grooming</a></li>
+                                <li class="active" style="width: 230px;"><a href="<?php echo site_url('con_customer/lihat_pesanan_customer'); ?>" style="width: 200px;"><i class="menu-icon icon-inbox"></i>Lihat Transaksi</a></li>
+                                <li style="width: 230px;"><a href="<?php echo site_url('con_user/logout'); ?>" style="width: 200px;"><i class="menu-icon icon-signout"></i>Logout </a></li>
                             </ul>
                         </div>
                         <!--/.sidebar-->
