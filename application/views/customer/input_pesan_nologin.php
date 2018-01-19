@@ -7,7 +7,7 @@
         <div class="module-body table">
             <div id="main">
                 <!-- START WRAPPER -->
-                <div class="wrapper">
+                <div class="wrapper" style="padding-top: 50px;padding-bottom: 65px;">
 
                     <!-- START CONTENT -->
                     <section id="content" >
