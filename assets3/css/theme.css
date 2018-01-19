@@ -39,7 +39,7 @@ h6 {
 	font-size: 11px
 }
 strong, b {
-	color: #555
+	color: #000
 }
 a:hover, a:focus {
 	outline: 0
@@ -203,7 +203,7 @@ body [class^="icon-"], body [class*=" icon-"] {
 .navbar .nav>li>a {
 	padding: 20px 15px;
 	font-weight: bold;
-	color: #777
+	color: #000
 }
 .navbar .nav>li.active , .navbar .nav>li.active , .navbar .nav>li.active, .navbar .nav>li:hover  {
 	background: #f9f9f9;

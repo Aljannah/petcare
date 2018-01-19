@@ -5,7 +5,7 @@
 					<div class="footer-grids">
 						<div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 footer_logo" >
 								<center>
-									<a href="index.php"><img src="..//assets/images/pet.png" alt="Logo" ></a>
+									<a href="index.php"><img src="<?php echo base_url();?>assets/images/pecareid2.PNG" alt="Logo" ></a>
 									<h4><p>Menyayangi hewan peliharaan sepenuh hati.</p></h4>
 								</center>
 							</div> <!-- End of .footer_logo -->
