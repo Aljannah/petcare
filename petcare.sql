@@ -1,3 +1,21 @@
+-- phpMyAdmin SQL Dump
+-- version 4.6.5.2
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: 21 Jan 2018 pada 15.25
+-- Versi Server: 10.1.21-MariaDB
+-- PHP Version: 7.1.1
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
 --
 -- Database: `petcare`
 --
@@ -5,7 +23,7 @@
 -- --------------------------------------------------------
 
 --
--- Table structure for table `care_type`
+-- Struktur dari tabel `care_type`
 --
 
 CREATE TABLE `care_type` (
@@ -14,7 +32,7 @@ CREATE TABLE `care_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `care_type`
+-- Dumping data untuk tabel `care_type`
 --
 
 INSERT INTO `care_type` (`id_caretype`, `name_caretype`) VALUES
@@ -25,7 +43,7 @@ INSERT INTO `care_type` (`id_caretype`, `name_caretype`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customer`
+-- Struktur dari tabel `customer`
 --
 
 CREATE TABLE `customer` (
@@ -40,12 +58,13 @@ CREATE TABLE `customer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `customer`
+-- Dumping data untuk tabel `customer`
 --
 
 INSERT INTO `customer` (`username`, `password`, `name`, `email`, `address`, `city`, `postal_code`, `hp`) VALUES
 ('andoviz', 'andovi', 'Andovi Izkar Z', 'izkarvix@yahoo.com', 'Petukangan Utara', 'Jakarta Selatan', 12260, '081233390192'),
 ('arbi19', 'arbi19', 'Muhammad Arbi', 'marbi19@gmail.com', 'Jl. RS. Fatmawati', 'Jakarta Selatan', 12450, '08992817281'),
+('cobacoba', '1621a5dc746d5d19665ed742b2ef9736', 'coba', 'coba@gmail.com', 'cobacoba', 'Tangerang', 12457, '083781554433'),
 ('donimuh', 'doni123', 'Muhammad Doni Efrizal', 'mudon12@gmail.com', 'Cipayung', 'Jakarta Timur', 13890, '085678125439'),
 ('friz99', 'friz99', 'Fransisco Zayk', 'frizayk@gmail.com', 'Pademangan Barat', 'Jakarta Barat', 14420, '083878216573'),
 ('laramureff', 'latifah', 'Latifah Ramadhana M E', 'latifah_effendhi@yahoo.com', 'Komp. Kodam Jaya No. 5', 'Jakarta Timur', 13840, '085716179705'),
@@ -53,12 +72,14 @@ INSERT INTO `customer` (`username`, `password`, `name`, `email`, `address`, `cit
 ('maris1', 'maris1', 'Mari Sumirah', 'maris1@ymail.com', 'Rawa Badak Utara', 'Jakarta Utara', 14230, '087782911352'),
 ('meisu19', 'meisu19', 'Meiling Susil', 'meimei19@gmail.com', 'Mangga Dua ', 'Jakarta Pusat', 10730, '082182566418'),
 ('mujahid18595', 'Syuhada18', 'Nanang', 'k.rezkananang@gmail.com', 'Cipete', 'Jaksel', NULL, '083891664433'),
+('nanang', '89375ad4aa7969d2c6dc13b9d3f52bbf', 'Nanang', 'k.rezkananang@gmail.com', 'Karawang', 'Jakarta Selatan', 17710, '087825149023'),
+('smile182', 'dd56c79463d6386abcfed1892c8d3ee1', 'Smile', 'smile@gmail.com', 'Bekasi', 'Jakarta Pusat', 17710, '3234343434'),
 ('tia21', 'tia21', 'Tiara Mutmainah', 'titia21@yahoo.co.id', 'Muara Gembong', 'Bekasi Barat', 17730, '087818872912');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `invoice`
+-- Struktur dari tabel `invoice`
 --
 
 CREATE TABLE `invoice` (
@@ -82,7 +103,7 @@ CREATE TABLE `invoice` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `invoice_det`
+-- Struktur dari tabel `invoice_det`
 --
 
 CREATE TABLE `invoice_det` (
@@ -96,7 +117,7 @@ CREATE TABLE `invoice_det` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orders`
+-- Struktur dari tabel `orders`
 --
 
 CREATE TABLE `orders` (
@@ -114,7 +135,7 @@ CREATE TABLE `orders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `orders`
+-- Dumping data untuk tabel `orders`
 --
 
 INSERT INTO `orders` (`no_orders`, `no_orderdetail`, `total`, `order_date`, `grooming_date`, `grooming_time`, `shipping_fee`, `user_customer`, `status_order`, `feedback_mitra`, `feedback_user`) VALUES
@@ -123,7 +144,7 @@ INSERT INTO `orders` (`no_orders`, `no_orderdetail`, `total`, `order_date`, `gro
 -- --------------------------------------------------------
 
 --
--- Table structure for table `order_det`
+-- Struktur dari tabel `order_det`
 --
 
 CREATE TABLE `order_det` (
@@ -137,7 +158,7 @@ CREATE TABLE `order_det` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `order_det`
+-- Dumping data untuk tabel `order_det`
 --
 
 INSERT INTO `order_det` (`no_orderdetail`, `quantity`, `unit_price`, `category`, `id_petgrooming`, `user_partners`, `id_petshop`) VALUES
@@ -146,7 +167,7 @@ INSERT INTO `order_det` (`no_orderdetail`, `quantity`, `unit_price`, `category`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `partners`
+-- Struktur dari tabel `partners`
 --
 
 CREATE TABLE `partners` (
@@ -165,21 +186,25 @@ CREATE TABLE `partners` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `partners`
+-- Dumping data untuk tabel `partners`
 --
 
 INSERT INTO `partners` (`user_partners`, `password`, `email`, `hp`, `partners_name`, `address`, `city`, `postal_code`, `wop`, `owner`, `file_gambar`, `id_caretype`) VALUES
+('ani12345', 'e0222f780c477b5881b0258ced0043fd', 'ani@gmail.com', '087825149023', 'Ani corp', 'Karawang', 'Jakarta Selatan', '42210', '   Kamis   pukul 10:00 PM sampai 10:30 AM', 'Ani', '', NULL),
 ('drei', 'drei123', 'drei@gmail.com', '089666555444', 'Nanang Care', 'Jl. Dharma Wangsa, Cipete Utara, Kebayoran Baru, Jakarta Selatan.', 'Jakarta Selatan', '11540', 'Senin-Jumat, 09.00-17.00 WIB', 'Nanang', 'logo1.jpg', '2'),
 ('eins', 'ein123', 'eins@gmail.com', '089888777666', 'Estu Care', 'Jl. Damai Raya, Cipete Utara, Kebayoran Baru, Jakarta Selatan.', 'Jakarta Selatan', '10250', 'Senin-Jumat, 09.00-17.00 WIB', 'Estu', 'eurekapetgrooming.png', '3'),
 ('funf', 'funf123', 'funf@gmail.com', '08955544433', 'Trandy Care', 'Jl. Kirai, Cipete Utara, Kebayoran Baru, Jakarta Selatan.', 'Jakarta Selatan', '12810', 'Senin-Jumat, 09.00-17.00 WIB', 'Trandy', '', '3'),
 ('iqbal shop', '5c2fb951458b57e8e049d48a55cdddad', 'comp@yahoo.com', '085692288145', 'iqbal hua hua', 'Jalan Mampang prapatan 2 no.18 Rt.011 RW.005 Jakarta Selatan', 'Jakarta Selatan', '12790', 'Senin Selasa Rabu Kamis Jumat  pukul 10:00 AM sampai 12:00 PM', 'iqbal', '', NULL),
 ('jakpetz', 'jakpetz', NULL, '(021)71791363', 'Jakpetz', 'Jalan Kemang Selatan Raya No. 125, Bangka, Mampang Prapatan, RT11 / RW4, Ciandak Timur', 'Jakarta Selatan', '12730', '9 AM - 7 PM', NULL, '', '2'),
 ('mich123', 'bcadd0eea68edc705196e1f0b748801b', 'riefqayx@yahoo.com', '085692288145', 'Rifqi PetCare', 'Jalan Mampang Prapatan 2 no.18 rt 011, rw 05 jakarta selatan', 'Jakarta Selatan', '12790', 'Senin Selasa     Minggupukul 12:00 PM sampai 10:00', 'test', '', NULL),
+('mukti123', 'ad2512a09403babac72f95947bca42eb', 'mukti@gmail.com', '087825149023', 'Mukti care', 'Bekasi', 'Jakarta Selatan', '42210', 'Senin Selasa     pukul 08:00 AM sampai 05:00 PM', 'Mukti', '', NULL),
 ('oppipet25', 'oppipet1', NULL, '087889206888', 'Oppipet Salon & Grooming', 'Jl. Perumahan Green Garden, RT09/RW10, Kedoya Utara, Kebon Jeruk', 'Jakarta Barat', '11520', '9 AM - 6 PM', NULL, '', '2'),
 ('RDSM_14', 'bcadd0eea68edc705196e1f0b748801b', 'riefqayx@yahoo.com', '085692288145', 'Rifqi PetCare', 'Mampang Prapatan 2. No. 22, Rt.011 Rw.05 Jakarta Selatan', 'Jakarta Selatan', '12790', 'Setiap Hari Pukul 10.00-18.00', 'Rifqi Dhiyaulhaq Sami Miru', '', '3'),
 ('RDSM_14_13', 'bcadd0eea68edc705196e1f0b748801b', 'riefqayx@yahoo.com', '085692288145', 'Rifqi PetCare', 'Jalan Mampang Prapatan 2 no.18 rt 011, rw 05 jakarta selatan', 'Jakarta Selatan', '12790', 'Senin Selasa Rabu Kamis   pukul 08:00 AM sampai 08', 'Rifqi', '', NULL),
 ('rezka18', 'b9fb71328243dbc639f719740306f17b', 'rezka@gmail.com', '083891664433', 'Rezka Comp', 'rezka.comp@gmail.com', 'Jakarta Selatan', '12790', 'Setiap Hari Pukul 10.00-18.00', 'Rezka', '', '2'),
 ('rifqi1234', '3157cb760df14e9f8d366b326d8efc83', 'riefqayx@yahoo.com', '085692288145', 'Rifqi PetCare', 'rezka.comp@gmail.com', 'Jakarta Selatan', '12790', 'Senin Selasa Rabu Kamis   pukul 07:00 PM sampai 10:00 PM', 'Rifqi', '', NULL),
+('saya12345', '899bcbe98b29c79199d08394ef2118f0', 'saya@gmail.com', '0823283232332', 'saya', 'saya', 'Jakarta Timur', '12122', 'Senin      pukul 10:00 PM sampai 08:00 AM', 'saya', '', NULL),
+('shaleh123', 'f42466e789bdb0909ad1d01ef6f66e6e', 'shaleh@gmail.com', '087825149023', 'Shaleh Petcare', 'Bekasi', 'Jakarta Selatan', '42210', 'Senin Selasa Rabu Kamis Jumat  pukul 08:00 AM sampai 09:30 PM', 'Shaleh', '', NULL),
 ('test_123', 'cc03e747a6afbbcbf8be7668acfebee5', 'riefqayx@yahoo.com', '085692288145', 'tester123', 'Jalan Mampang Prapatan 2 no.18 rt 011, rw 05 jakarta selatan', 'Jakarta Selatan', '12790', ' Selasa Rabu Kamis Jumat  pukul 07:00 AM sampai 10:00 PM', 'test', '', NULL),
 ('vier', 'vier123', 'vier@gmail.com', '089555444333', 'Rifqi Care', 'Jl. Brawijaya, Cipete Utara, Kebayoran Baru, Jakarta Selatan.', 'Jakarta Selatan', '11560', 'Senin-Jumat, 09.00-17.00 WIB', 'Rifqi', 'petcareid.png', '1'),
 ('zwei', 'zwei123', 'zwei@gmail.com', '089777666555', 'Dzikri Care', 'Jl. Sawo Bawah, Cipete Utara, Kebayoran Baru, Jakarta Selatan.', 'Jakarta Selatan', '10550', 'Senin-Jumat, 09.00-17.00 WIB', 'Dzikri', '', '1');
@@ -187,7 +212,7 @@ INSERT INTO `partners` (`user_partners`, `password`, `email`, `hp`, `partners_na
 -- --------------------------------------------------------
 
 --
--- Table structure for table `petgrooming`
+-- Struktur dari tabel `petgrooming`
 --
 
 CREATE TABLE `petgrooming` (
@@ -195,26 +220,32 @@ CREATE TABLE `petgrooming` (
   `price` int(11) DEFAULT NULL,
   `description` varchar(200) DEFAULT NULL,
   `package_name` varchar(50) DEFAULT NULL,
-  `petcategory` varchar(10) NOT NULL,
+  `petcategory` varchar(15) NOT NULL,
   `user_partners` varchar(15) NOT NULL,
   `status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `petgrooming`
+-- Dumping data untuk tabel `petgrooming`
 --
 
 INSERT INTO `petgrooming` (`id_petgrooming`, `price`, `description`, `package_name`, `petcategory`, `user_partners`, `status`) VALUES
-('z1', 150000, 'Memandikan Anjing untuk menghilangkan kutu', 'Mandi Kutu', 'Anjing', 'drei', 'Belum Dikonfirmasi'),
-('z2', 100000, 'Memandikan Kucing', 'Mandi Biasa', 'Kucing', 'zwei', 'Konfirmasi'),
-('z3', 300000, 'Mandi dengan menggunakan shampoo khusus untuk menjaga kesehatan bulu dan kulit ', 'Mandi Sehat', 'Kucing', 'drei', 'Konfirmasi'),
+('z1', 150000, 'Memandikan Anjing untuk menghilangkan kutu', 'Mandi Kutu', 'Anjing', 'Ani', 'Belum Dikonfirmasi'),
+('z10', 50000, 'Menggunting kuku hewan peliharaan', 'Grooming Kuku', 'Anjing', 'Shaleh', 'Konfirmasi'),
+('z11', 50000, 'Membersihkan Telinga', 'Groomming Telinga', 'Kucing', 'Ani', 'Konfirmasi'),
+('z2', 100000, 'Memandikan Kucing', 'Mandi Biasa', 'Kucing', 'Shaleh', 'Konfirmasi'),
+('z3', 300000, 'Mandi dengan menggunakan shampoo khusus untuk menjaga kesehatan bulu dan kulit ', 'Mandi Sehat', 'Kucing', 'Ani', 'Konfirmasi'),
 ('z4', 250000, 'Paket Bersih bersih', 'Paket Bersih', 'Kucing', 'RDSM_14', 'Belum Dikonfirmasi'),
-('z5', 50000, 'Paket Mandi Alami', 'Paket Bersih', 'Anjing', 'RDSM_14', 'Belum Dikonfirmasi');
+('z5', 50000, 'Paket Mandi Alami', 'Paket Bersih', 'Anjing', 'RDSM_14', 'Belum Dikonfirmasi'),
+('z6', 50000, 'Sama dengan Paket Basic Grooming, tetapi menggunakan medicated shampoo', 'Mandi Obat / Obat Kutu', 'Anjing', 'Mukti', 'Konfirmasi'),
+('z7', 70000, 'Mencukur botak bulu kucing', 'Cukur Botak', 'Kucing', 'Mukti', 'Konfirmasi'),
+('z8', 80000, 'Membasmi kutu pada hewan peliharaan', 'Grooming Kutu', 'Kucing', 'Mukti', 'Konfirmasi'),
+('z9', 100000, 'Membersihkan Jamur', 'Grooming Jamur', 'Anjing', 'Shaleh', 'Konfirmasi');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `petshop`
+-- Struktur dari tabel `petshop`
 --
 
 CREATE TABLE `petshop` (
@@ -230,7 +261,7 @@ CREATE TABLE `petshop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `petshop`
+-- Dumping data untuk tabel `petshop`
 --
 
 INSERT INTO `petshop` (`id_petshop`, `price`, `availability`, `description`, `product_name`, `id_petcategory`, `user_partners`, `file_gambar`, `id_shopcategory`) VALUES
@@ -259,7 +290,7 @@ INSERT INTO `petshop` (`id_petshop`, `price`, `availability`, `description`, `pr
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pet_category`
+-- Struktur dari tabel `pet_category`
 --
 
 CREATE TABLE `pet_category` (
@@ -268,7 +299,7 @@ CREATE TABLE `pet_category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `pet_category`
+-- Dumping data untuk tabel `pet_category`
 --
 
 INSERT INTO `pet_category` (`id_petcategory`, `name_petcategory`) VALUES
@@ -279,7 +310,7 @@ INSERT INTO `pet_category` (`id_petcategory`, `name_petcategory`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `review`
+-- Struktur dari tabel `review`
 --
 
 CREATE TABLE `review` (
@@ -292,7 +323,7 @@ CREATE TABLE `review` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -303,7 +334,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `role`) VALUES
@@ -315,7 +346,14 @@ INSERT INTO `user` (`id`, `username`, `password`, `role`) VALUES
 (9, 'RDSM_14_13', 'bcadd0eea68edc705196e1f0b748801b', 3),
 (10, 'rifqi1234', '3157cb760df14e9f8d366b326d8efc83', 3),
 (11, 'iqbal shop', '5c2fb951458b57e8e049d48a55cdddad', 3),
-(12, 'test_123', 'cc03e747a6afbbcbf8be7668acfebee5', 3);
+(12, 'test_123', 'cc03e747a6afbbcbf8be7668acfebee5', 3),
+(13, 'nanang', '89375ad4aa7969d2c6dc13b9d3f52bbf', 2),
+(14, 'smile182', 'dd56c79463d6386abcfed1892c8d3ee1', 2),
+(15, 'saya12345', '899bcbe98b29c79199d08394ef2118f0', 3),
+(16, 'cobacoba', '1621a5dc746d5d19665ed742b2ef9736', 2),
+(17, 'ani12345', 'e0222f780c477b5881b0258ced0043fd', 3),
+(18, 'shaleh123', 'f42466e789bdb0909ad1d01ef6f66e6e', 3),
+(19, 'mukti123', 'ad2512a09403babac72f95947bca42eb', 3);
 
 --
 -- Indexes for dumped tables
@@ -433,44 +471,30 @@ ALTER TABLE `order_det`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `invoice`
+-- Ketidakleluasaan untuk tabel `invoice`
 --
 ALTER TABLE `invoice`
   ADD CONSTRAINT `invoice_ibfk_1` FOREIGN KEY (`no_orders`) REFERENCES `orders` (`no_orders`),
   ADD CONSTRAINT `invoice_ibfk_2` FOREIGN KEY (`no_invoicedetail`) REFERENCES `invoice_det` (`no_invoicedetail`);
 
 --
--- Constraints for table `order_det`
+-- Ketidakleluasaan untuk tabel `order_det`
 --
 ALTER TABLE `order_det`
   ADD CONSTRAINT `R_11` FOREIGN KEY (`id_petgrooming`,`user_partners`) REFERENCES `petgrooming` (`id_petgrooming`, `user_partners`),
   ADD CONSTRAINT `R_12` FOREIGN KEY (`id_petshop`,`user_partners`) REFERENCES `petshop` (`id_petshop`, `user_partners`);
 
 --
--- Constraints for table `partners`
+-- Ketidakleluasaan untuk tabel `partners`
 --
 ALTER TABLE `partners`
   ADD CONSTRAINT `R_18` FOREIGN KEY (`id_caretype`) REFERENCES `care_type` (`id_caretype`);
-
---
--- Constraints for table `petshop`
---
-ALTER TABLE `petshop`
-  ADD CONSTRAINT `R_13` FOREIGN KEY (`id_petcategory`) REFERENCES `pet_category` (`id_petcategory`),
-  ADD CONSTRAINT `R_14` FOREIGN KEY (`user_partners`) REFERENCES `partners` (`user_partners`),
-  ADD CONSTRAINT `R_16` FOREIGN KEY (`id_shopcategory`) REFERENCES `shop_category` (`id_shopcategory`);
-
---
--- Constraints for table `review`
---
-ALTER TABLE `review`
-  ADD CONSTRAINT `review_ibfk_1` FOREIGN KEY (`no_invoice`) REFERENCES `invoice` (`no_invoice`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
