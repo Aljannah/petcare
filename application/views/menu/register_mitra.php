@@ -128,13 +128,13 @@
 						<div class="address">
 							<?php echo form_error('wop'); ?>
 							<span>Waktu Operasional</span>
-							<input type="checkbox" name="wopsenin" value="Senin"><label>Senin</label>
-							<input type="checkbox" name="wopselasa" value="Selasa"><label>Selasa</label>
-							<input type="checkbox" name="woprabu" value="Rabu"><label>Rabu</label>
-							<input type="checkbox" name="wopkamis" value="Kamis"><label>Kamis</label>
-							<input type="checkbox" name="wopjumat" value="Jumat"><label>Jumat</label>
-							<input type="checkbox" name="wopsabtu" value="Sabtu"><label>Sabtu</label>
-							<input type="checkbox" name="wopminggu" value="Minggu"><label>Minggu</label>
+							<input type="checkbox" name="wopsenin" value="Senin"><span>Senin</span>
+							<input type="checkbox" name="wopselasa" value="Selasa"><span>Selasa</span>
+							<input type="checkbox" name="woprabu" value="Rabu"><span>Rabu</span>
+							<input type="checkbox" name="wopkamis" value="Kamis"><span>Kamis</span>
+							<input type="checkbox" name="wopjumat" value="Jumat"><span>Jumat</span>
+							<input type="checkbox" name="wopsabtu" value="Sabtu"><span>Sabtu</span>
+							<input type="checkbox" name="wopminggu" value="Minggu"><span>Minggu</span>
 							<!--<input type="text" placeholder="Masukkan waktu operasional perusahaan" name="wop[]" value="<?php echo set_value('wop', '') ?>">-->			
 						</div>
 					</div>
