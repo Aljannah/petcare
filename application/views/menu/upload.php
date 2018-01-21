@@ -51,7 +51,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	       <div class="account-bottom">
 			 <div class="col-md-6 contact-grid">
 						<?php echo form_open_multipart('con_upload/uploadevent1');?>
-							<input type="hidden" name="status_konfirm" value="Dikonfirmasi">
+							<input type="hidden" name="status_konfirm" value="Konfirmasi">
 							
 							<?php echo form_error('id_petgrooming'); ?>
 							<p class="your-para">Kode Paket PetGrooming:</p>
