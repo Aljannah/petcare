@@ -32,6 +32,7 @@
                                         <figcaption>Anjing</figcaption>
                                     </figure>
                                 </a>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                                 <a href="<?php echo site_url('con_home/Mitra_list_cat'); ?>">
                                     <figure>
                                         <img src="<?php echo base_url("./assets/images/cat.png")?>" width="100px" height="100px" />
