@@ -36,9 +36,9 @@ class Con_home extends CI_Controller {
 		$this->load->view('menu/login');
 	}
 
-	public function about(){
+	/*public function about(){
 		$this->load->view('menu/about');
-	}
+	}*/
 
 	public function Our_product()
 
@@ -57,7 +57,6 @@ class Con_home extends CI_Controller {
     public function Mitra_list_cat()
 
 	{ 
-        
         $data['pesan'] = $this->model_allevents->paket_kucing();	
 		$this->load->view('menu/mitra_list_cat',$data);
 
