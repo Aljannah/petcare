@@ -57,7 +57,7 @@ class Event extends CI_Controller {
 		$this->form_validation->set_rules('package_name','Nama Paket','required|max_length[50]');
 		$this->form_validation->set_rules('description','Deskripsi','required|max_length[50]');
 		$this->form_validation->set_rules('petcategory','Kategori PetGrooming','required|max_length[50]');
-		$this->form_validation->set_rules('status','Status','required|max_length[5000]');
+		
 		
 		if ($this->form_validation->run() == FALSE)	{
 				$data['events'] = $this->model_allevents->find($kode_event);
@@ -65,7 +65,7 @@ class Event extends CI_Controller {
 			} else {
 				if($_FILES['userfile']['name'] != ''){
 						
-						$this->load->view('menu/update_events',$data);
+						$this->load->view('menu/update_event',$data);
 						
 							$data_event = array(
 								'user_partners'              => set_value('username'),

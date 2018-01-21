@@ -25,7 +25,7 @@ class Con_registvalid extends CI_Controller {
 
 		$this->form_validation->set_rules('email','Email','required|valid_email');
 		$this->form_validation->set_rules('name', 'Nama Lengkap', 'required|min_length[3]|max_length[20]');
-		$this->form_validation->set_rules('username', 'Username', 'required|min_length[6]|max_length[15]|is_unique[user.username]');
+		$this->form_validation->set_rules('username', 'Username', 'required|min_length[6]|max_length[15]|is_unique[user.username]|alpha_numeric');
 		$this->form_validation->set_rules('password', 'Password', 'required|min_length[6]|max_length[20]');
 		$this->form_validation->set_rules('repass', 'Repassword', 'required|min_length[6]|matches[password]');
 		$this->form_validation->set_rules('address', 'Alamat', 'required|min_length[6]|max_length[100]');

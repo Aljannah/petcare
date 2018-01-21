@@ -9,7 +9,7 @@ class Model_allpenggunas extends CI_Model {
         $this->db->join('partners', 'user.username = partners.user_partners');
         $this->db->where('role', '3');
         $query = $this->db->get('');
-        return $query->result();      
+        return $query->result();        
      }
      public function lihat_profile(){ 
         $this->load->library('session');

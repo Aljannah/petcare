@@ -1,4 +1,4 @@
-﻿ <?php $this->load->view('layout/headeradmin')?> 
+ <?php $this->load->view('layout/headeradmin')?> 
                     <!--/.span3-->
                     <div class="span9">
                         <div class="content">

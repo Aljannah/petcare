@@ -70,10 +70,7 @@
                                                    <th>Waktu Operasional</th>
                                                    <td align="center"><textarea rows="10" disabled><?=  $profile->wop ?></textarea></td>
                                         </tr>
-                                        <tr>
-                                                   <th>Foto Perusahaan</th>
-                                                   <td align="center"><?=  $profile->file_gambar ?></td>
-                                        </tr>
+                                       
                                         <tr>
                                                    <td>
                                                             <?=  anchor('user/profile/edit_biodata/'.$profile->user_partners,'Edit',['class'=>'btn btn-success btn-xs']) ?>

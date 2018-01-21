@@ -35,14 +35,14 @@ class Con_registvalid_mitra extends CI_Controller {
 			$this->input->post('wop_time_close_hour').":".
 			$this->input->post('wop_time_close_mnt')." ".
 			$this->input->post('wop_time_close_day');
-		echo $wopnya;
+		
 		$role = $this->input->post('role');
 		$hp = $this->input->post('hp');
 
 		$this->form_validation->set_rules('email','Email','required|valid_email');
 		$this->form_validation->set_rules('nama_depan', 'Nama Pemilik Perusahaan', 'required|min_length[3]|max_length[50]');
 		$this->form_validation->set_rules('nama_petcare', 'Nama Perusahaan', 'required|min_length[3]|max_length[50]');
-		$this->form_validation->set_rules('username', 'Username', 'required|min_length[6]|max_length[12]|is_unique[user.username]');
+		$this->form_validation->set_rules('username', 'Username', 'required|min_length[6]|max_length[12]|is_unique[user.username]|alpha_numeric');
 		$this->form_validation->set_rules('password', 'Password', 'required|min_length[6]|max_length[20]');
 		$this->form_validation->set_rules('repass', 'Repassword', 'required|min_length[6]|matches[password]');
 		$this->form_validation->set_rules('alamat', 'Alamat', 'required|min_length[4]|max_length[100]');

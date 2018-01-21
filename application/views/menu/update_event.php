@@ -55,7 +55,7 @@ if($this->input->post('is_submitted'))
 
                             <div class="col-md-6 contact-grid" align="center">
                             <?php echo form_open_multipart('user/event/edit/'.$id_petgrooming,['class'=>'your-para']);?>
-                            <input type="hidden" name="status_konfirm" value="Belum Dikonfirmasi">
+                            <input type="hidden" name="status" value="<?= $status ?>">
                             
                             <?php echo form_error('id_petgrooming'); ?>
                             <p class="your-para">Kode Paket:</p>
@@ -90,15 +90,6 @@ if($this->input->post('is_submitted'))
                             </div>
                         
 
-                            <?php echo form_error('status'); ?>
-                            <p class="your-para">Status Konfirmasi :</p>
-                            <div class="controls">
-                            <select name="status" readonly>
-                              <option value="<?= $status ?>"><?= $status ?></option>
-                              <option value="Belum Dikonfirmasi">Belum Dikonfirmasi</option>
-                               <option value="Konfirmasi">Konfirmasi</option>
-                             </select>
-                            </div>
 
                             <div class="col-sm-1">
                             </br>
