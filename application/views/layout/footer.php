@@ -1,10 +1,5 @@
 
-<!--/start-footer-section--> 
-		<br>  
-		<br>
-		<center><iframe width="560" height="315" src="https://www.youtube.com/embed/GvNd0vFc7Cw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
-		<br>
-		<br>
+<!--/start-footer-section-->
 			<div class="footer-section" style="padding-bottom: 0px;">
                <h3 align="center">Cara Pesan</h3>
 
@@ -75,18 +70,14 @@
 								</center>
                         </div> <!-- End of .footer_logo -->
 					            <div class="col-md-4 footer-grid footer_contact pull-right">
-                                    <h4>Get In Touch</h4>
-                                    <ul class="list catagories">
-                                        <li><i class="fa fa-envelope"></i>  info.petcareid@gmail.com</li>
-                                        <li><i class="fa fa-phone"></i> (021) 791 81 567</li>
-                                        <i class="fa fa-home"></i>
-                                        <span> Universitas Al Azhar Indonesia, lt.5 <br>
-                                        Kompleks Masjid Agung Al Azhar, Jl. Sisingamangaraja, Kebayoran Baru, RT.2/RW.1, Selong, Kby. Baru, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12110</span>
-                                        </li>
-                                    </ul>
-                                    &nbsp
-                                    <h4>Jam Kerja</h4>
-                                        <p>Senin - Jum'at: 09.00am - 05.00pm <br>Minggu: <span>Tutup</span></p>
+                                    <h4>Kontak</h4>
+                                        <p class="sub"><span class="glyphicon glyphicon-map-marker icon aria-hidden="true""></span>&nbsp&nbspUniversitas Al Azhar Indonesia, lt.5 <br>
+                                        Kompleks Masjid Agung Al Azhar, Jl. Sisingamangaraja, Kebayoran Baru, RT.2/RW.1, Selong, Kby. Baru, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12110</p>
+                                        <p class="sub"><span class="glyphicon glyphicon-time icon" aria-hidden="true"></span>&nbsp&nbspSenin - Jum'at: 9am - 5pm. Sabtu : 9am - 1pm</p>
+                                        <p class="add"><span class="glyphicon glyphicon-earphone icon" aria-hidden="true"></span>&nbsp&nbsp<span>Telp:</span>
+                                        " 083891664433 "</p>
+                                        <p class="mail"><span class="glyphicon glyphicon-envelope icon" aria-hidden="true"></span>&nbsp&nbsp<span>Email:</span>
+                                        info.petcareid@gmail.com</p>
 					            </div> <!-- End of .footer_contact -->
 				</div>
 				</div>
