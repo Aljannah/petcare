@@ -76,7 +76,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<!--<li><a  href="<?php echo base_url();?>index.php/con_home/about" style="padding-left: 60px; padding-right: 60px;">ABOUT</a></li>	-->
 				     
 					<li><a href="<?php echo base_url();?>index.php/con_home/our_product" style="padding-left: 60px; padding-right: 60px;"> OUR SERVICES </a></li>
-					<li align="center"><a href="<?php echo base_url();?>index.php/con_login" style="padding-left: 60px; padding-right: 60px;">LOGIN / SIGN UP</a></li>
+					<li align="center"><a href="<?php echo base_url();?>index.php/con_login" style="padding-left: 60px; padding-right: 60px;">LOGIN</a></li>
 					<li align="center"><a href="<?php echo base_url();?>index.php/con_home/register_mitra" style="padding-left: 60px; padding-right: 60px;">SIGN UP Sebagai Mitra</a></li>
 				</ul>
 			</div>
