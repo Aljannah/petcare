@@ -25,7 +25,7 @@
 	 <div class="sign_main">
 			<h4 class="side">Login</h4>
 			<div class="sign_up" align="center">
-				<p class="sign">Login!</p>
+				<p class="sign">Login Sebagai Mitra atau Customer.</p>
 				<form method="post" action="<?php echo base_url();?>index.php/con_login/cek_login" onsubmit="return cekform();">
 					<input type="text" class="text" placeholder="Username" name="username" id="username" value="<?php echo set_value('username', '') ?>">
 					</br>
