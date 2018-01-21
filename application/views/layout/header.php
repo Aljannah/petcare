@@ -14,7 +14,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="<?php echo base_url();?>assets/css/style2.css" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url();?>assets/css/responsive.css" rel="stylesheet" type="text/css">
 <link type="text/css" href="<?php echo base_url();?>assets3/css/theme.css" rel="stylesheet">
+<link rel="icon" type="image/png" href="<?php echo base_url();?>assets/images/petcare.ico">
 <script src="<?php echo base_url();?>assets/js/jquery.min.js"> </script>
+<script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/move-top.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/easing.js"></script>
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/flexslider.css" type="text/css" media="screen" />
@@ -47,7 +49,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		   	<font color ="red"><h2 color="red"><b>Daftar Sebagai User PetCare.id</b></h2></font>
 		   	<font color ="red"><h4></h4></font>
 		   	</br>
-		   			<?=  anchor('con_home/register','Sign Up',['class'=>'btn btn-success']) ?>
+		   			<?=  anchor('con_home/register','Sign Up',['class'=>'btn btn-success btn-lg']) ?>
 		   			
 		   		</div>
 			</div>
@@ -58,7 +60,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span> 
+					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
