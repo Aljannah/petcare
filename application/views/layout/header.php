@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>PetCare.id</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PetCare</title>
+<meta name="viewport" content="width=device-width, initial-scale=0">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Motive Mag Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
@@ -71,7 +71,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li><a href="<?php echo base_url();?>" style="padding-left: 60px; padding-right: 60px;">HOME</a></li>
-					<li><a  href="<?php echo base_url();?>index.php/con_home/about" style="padding-left: 60px; padding-right: 60px;">ABOUT</a></li>	
+					<!--<li><a  href="<?php echo base_url();?>index.php/con_home/about" style="padding-left: 60px; padding-right: 60px;">ABOUT</a></li>	-->
 				     
 					<li><a href="<?php echo base_url();?>index.php/con_home/our_product" style="padding-left: 60px; padding-right: 60px;"> OUR SERVICES </a></li>
 					<li align="center"><a href="<?php echo base_url();?>index.php/con_login" style="padding-left: 60px; padding-right: 60px;">LOGIN / SIGN UP</a></li>

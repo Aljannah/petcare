@@ -58,7 +58,7 @@
                    </div> <!-- End of .footer_logo -->
 
 
-                   <br><br><br><br><br><br><br><br>
+                   <br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br>
 
                     <hr>
 					<div class="footer-grids">
