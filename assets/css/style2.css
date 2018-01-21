@@ -136,7 +136,7 @@ h4 {font-size: 24px;}
 h5 {font-size: 20px;}
 h6 {font-size: 18px;}
 ul {list-style-type: none;}
-p {font-family: 'Open Sans', sans-serif; font-size: 14px; color:#000000; line-height: 26px; font-weight: 400;}
+p {font-family: 'Open Sans', sans-serif; font-size: 14px; color:#ffffff; line-height: 26px; font-weight: 400;}
 a {text-decoration: none; display: inline-block; color:#9c9c9c; outline: none;}
 a:hover,a:focus,a:visited {text-decoration: none; outline: none;}
 img {max-width: 100%; display: block;}
