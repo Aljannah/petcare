@@ -11,11 +11,13 @@
 
          <div class="container">
                    <br><br><br>
-                   <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 footer_logo" >
-                       <figure>
-                           <img src="<?php echo base_url("icon/if_notepad_1291737.png")?>" width="100px" height="100px">
-                           <figcaption>Lakukan registrasi akun</figcaption>
-                       </figure>
+                   <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer_logo" >
+						<center>
+						   <figure>
+							   <img src="<?php echo base_url("icon/if_notepad_1291737.png")?>" width="100px" height="100px">
+							   <figcaption>Lakukan registrasi akun</figcaption>
+						   </figure>
+						</center>
                    </div> <!-- End of .footer_logo -->
 
                    <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 footer_logo" >
@@ -36,16 +38,7 @@
                        </center>
                    </div> <!-- End of .footer_logo -->
 
-                   <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 footer_logo" >
-                       <center>
-                           <figure>
-                               <img src="<?php echo base_url("icon/if_map_1291745.png")?>" width="100px" height="100px">
-                               <figcaption>Cantumkan alamat jelas</figcaption>
-                           </figure>
-                       </center>
-                   </div> <!-- End of .footer_logo -->
-
-                   <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 footer_logo" >
+                   <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer_logo" >
                        <center>
                            <figure>
                                <img src="<?php echo base_url("icon/if_waiting_room_41994.png")?>" width="100px" height="100px">
