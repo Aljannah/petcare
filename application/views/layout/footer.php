@@ -1,14 +1,13 @@
-
 <!--/start-footer-section-->
-		<br>
-		<br>
-		<center><iframe width="560" height="315" src="https://www.youtube.com/embed/GvNd0vFc7Cw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
-		<br>
-		<br>
-			<div class="footer-section" style="padding-bottom: 0px;">
+    <br>
+    <br>
+    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/GvNd0vFc7Cw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+    <br>
+    <br>
+      <div class="footer-section" style="padding-bottom: 0px;">
                <h3 align="center">Cara Pesan</h3>
 
-			   <div class="container">
+         <div class="container">
                    <br><br><br>
                    <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 footer_logo" >
                        <figure>
@@ -66,15 +65,15 @@
                    <br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br>
 
                     <hr>
-					<div class="footer-grids">
+          <div class="footer-grids">
 
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 footer_logo" >
-								<center>
-									<a href="index.php"><img src="<?php echo base_url();?>assets/images/petcare.png" alt="Logo" ></a>
-									<h4><p>Menyayangi hewan peliharaan sepenuh hati.</p></h4>
-								</center>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 footer_logo" >
+                <center>
+                  <a href="index.php"><img src="<?php echo base_url();?>assets/images/petcare.png" alt="Logo" ></a>
+                  <h4><p>Menyayangi hewan peliharaan sepenuh hati.</p></h4>
+                </center>
                         </div> <!-- End of .footer_logo -->
-					            <div class="col-md-4 footer-grid footer_contact pull-right">
+                      <div class="col-md-4 footer-grid footer_contact pull-right">
                                     <h4>Kontak</h4>
                                         <p class="sub"><span class="glyphicon glyphicon-map-marker icon aria-hidden="true""></span>&nbsp&nbspUniversitas Al Azhar Indonesia, lt.5 <br>
                                         Kompleks Masjid Agung Al Azhar, Jl. Sisingamangaraja, Kebayoran Baru, RT.2/RW.1, Selong, Kby. Baru, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12110</p>
@@ -83,35 +82,35 @@
                                         " 083891664433 "</p>
                                         <p class="mail"><span class="glyphicon glyphicon-envelope icon" aria-hidden="true"></span>&nbsp&nbsp<span>Email:</span>
                                         info.petcareid@gmail.com</p>
-					            </div> <!-- End of .footer_contact -->
-				</div>
-				</div>
+                      </div> <!-- End of .footer_contact -->
+        </div>
+        </div>
                 <br>
             </div>
-	<!--//end-footer-section-->
-			<!--/start-copyright-section-->
+  <!--//end-footer-section-->
+      <!--/start-copyright-section-->
 
-				<div class="copyright">
-					<p>&copy; -  2017 PETCARE </p>
-				</div>
+        <div class="copyright">
+          <p>&copy; -  2017 PETCARE </p>
+        </div>
 
-				<!--start-smoth-scrolling-->
-						<script type="text/javascript">
-									$(document).ready(function() {
-										/*
-										var defaults = {
-								  			containerID: 'toTop', // fading element id
-											containerHoverID: 'toTopHover', // fading element hover id
-											scrollSpeed: 1200,
-											easingType: 'linear' 
-								 		};
-										*/
-										
-										$().UItoTop({ easingType: 'easeOutQuart' });
-										
-									});
-								</script>
-		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+        <!--start-smoth-scrolling-->
+            <script type="text/javascript">
+                  $(document).ready(function() {
+                    /*
+                    var defaults = {
+                        containerID: 'toTop', // fading element id
+                      containerHoverID: 'toTopHover', // fading element hover id
+                      scrollSpeed: 1200,
+                      easingType: 'linear' 
+                    };
+                    */
+                    
+                    $().UItoTop({ easingType: 'easeOutQuart' });
+                    
+                  });
+                </script>
+    <a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
 
 <!--JS-->
