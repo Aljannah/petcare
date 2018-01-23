@@ -8,6 +8,7 @@
         <link type="text/css" href="<?php echo base_url();?>assets3/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link type="text/css" href="<?php echo base_url();?>assets3/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
         <link type="text/css" href="<?php echo base_url();?>assets3/css/theme.css" rel="stylesheet">
+        <link rel="icon" type="image/png" href="<?php echo base_url();?>assets/images/petcare.ico">
         <link type="text/css" href="<?php echo base_url();?>assets3/images/icons/css/font-awesome.css" rel="stylesheet">
         <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600'
             rel='stylesheet'>
@@ -17,13 +18,8 @@
             <div class="navbar-inner">
                 <div class="container">
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
-                        <i class="icon-reorder shaded"></i></a><a class="brand" href="index.html"><?php echo "Selamat datang di PetCare "; ?> </a>
+                        <i class="icon-reorder shaded"></i></a><a class="brand" href="<?php echo site_url('con_customer'); ?>"><?php echo "Selamat datang di PetCare "; ?> </a>
                     <div class="nav-collapse collapse navbar-inverse-collapse">
-                        <ul class="nav nav-icons">
-                            <li class="active"><a href="#"><i class="icon-envelope"></i></a></li>
-                            <li><a href="#"><i class="icon-eye-open"></i></a></li>
-                            <li><a href="#"><i class="icon-bar-chart"></i></a></li>
-                        </ul>
                         <form class="navbar-search pull-left input-append" action="#">
                         <input type="text" class="span3">
                         <button class="btn" type="button">

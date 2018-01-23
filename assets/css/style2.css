@@ -141,7 +141,7 @@ a {text-decoration: none; display: inline-block; color:#9c9c9c; outline: none;}
 a:hover,a:focus,a:visited {text-decoration: none; outline: none;}
 img {max-width: 100%; display: block;}
 
-button {border:none; outline:none; box-shadow: none; display: block; padding: 0; background: transparent;}
+button {border:none; outline:none; box-shadow: none; display: block; padding: 0; background: #ffffff;}
 input,textarea {display: block; outline: none; box-shadow: none;-webkit-transition: all 0.3s ease-in-out;transition: all 0.3s ease-in-out;}
 
 .clear_fix { clear:both;}

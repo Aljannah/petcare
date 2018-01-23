@@ -4,7 +4,7 @@
                         <div class="content" style="width: 1010px;">
                             
                             <!--/.module-->
-                            <div class="module" style="width: 1250px" align="center">
+                            <div class="module" style="width: 989px;" align="center">
                                 <div class="module-head">
                                     <h3>
                                         Dashboard</h3>

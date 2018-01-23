@@ -124,7 +124,7 @@
   overflow: hidden;
   position: relative; }
   .collection .collection-item {
-    background-color: #fff;
+    background-color: #e87009;
     line-height: 1.5rem;
     padding: 10px 20px;
     margin: 0;

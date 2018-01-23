@@ -165,7 +165,7 @@ if($this->input->post('is_submitted'))
                             <div class="col-sm-1" style="padding-left: 40%;">
                             </br>
                                 <div class="input-group">
-                                    <input type="hidden" name="is_submitted" value="1">
+                                    <input type='hidden' name="is_submitted" value="1">
                                     <button type="submit" class="btn btn-success" >Lanjut</button>
                                                                  
                                     <?=  anchor('con_customer/pesan','Cancel',['class'=>'btn btn-danger']) ?>
