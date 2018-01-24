@@ -11,7 +11,7 @@
                                 </div>
                                 
                                 <div class="module-body table">
-                                    <h1>Welcome to PetCare.id</h1>
+                                    <h4>Welcome to PetCare.id</h4>
                                 </div>
 
 

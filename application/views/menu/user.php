@@ -11,8 +11,8 @@
                                         Dashboard</h3>
                                 </div>
                                 
-                                <div class="module-body table">
-                                    <h1>Welcome to PetCare.id</h1>
+                                <div class="module-body table" style="height: 159px;margin-bottom: 0px;padding-bottom: 0px;">
+                                    <h4>Welcome to PetCare.id</h4>
                                 </div>
 
 

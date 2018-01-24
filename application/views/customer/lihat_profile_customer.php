@@ -5,10 +5,6 @@
                             
                             <!--/.module-->
                             <div class="module hide">
-                                <div class="module-head">
-                                    <h3>
-                                        Adjust Budget Range</h3>
-                                </div>
                                 <div class="module-body">
                                     <div class="form-inline clearfix">
                                         <a href="#" class="btn pull-right"> </a>
@@ -24,7 +20,7 @@
                             </div>
                             <div class="module" style="width: fit-content">
                                 <div class="module-head">
-                                    <h2 align = "center">your Profile</h2>
+                                    <h2 align = "center">Profil Saya</h2>
                                     <h5></h5>
                                 </div>
                                 <div class="module-body table">
@@ -51,7 +47,7 @@
                                                     <td align="center"><textarea rows="10" disabled><?=  $profile->address  ?></textarea></td>
                                         </tr>
                                         <tr>
-                                                   <th>kabupaten/kota</th>
+                                                   <th>Kabupaten/kota</th>
                                                    <td align="center"><?=  $profile->city ?></td>
                                         </tr>
                                         <tr>

@@ -57,8 +57,8 @@ if($this->input->post('is_submitted'))
                             </div>
                             <div class="module" style="width: 700px">
                                 <div class="module-head">
-                                    <h2 align = "center">Your Profile</h2>
-                                    <h5>Edit Your Profile</h5>
+                                    <h2 align = "center">Profil Saya</h2>
+                                    <h5>Edit Profil Saya</h5>
                                 </div>
                                 
 

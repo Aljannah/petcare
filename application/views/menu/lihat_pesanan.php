@@ -23,15 +23,15 @@
                                 </div>
                             </div>
                             <div class="module" style="width: fit-content">
-                                <div class="module-head">
-                                    <h2 align = "center">List Pesanan Anda</h2>
+                                <div class="module-head" style="width: 1015px;">
+                                    <h4 align = "center">List Pesanan Anda</h4>
                                     <h5>Daftar Seluruh Pemesan Paket Anda</h5>
                                 </div>
-                                <div class="module-body table">
-                                    <table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped  display"
+                                <div class="module-body table" style="width: 1015px;">
+                                    <table class="datatable-1 table table-bordered table-striped  display"
                                         width="100%">
                                         <thead>
-                                            <tr>
+                                            <tr align="center">
                                                     <th>No</th>
                                                     <th>Nomor Pemesanan</th>
                                                     <th>Nama Pemesan</th>

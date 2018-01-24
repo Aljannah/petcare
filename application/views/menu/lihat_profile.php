@@ -24,7 +24,7 @@
                             </div>
                             <div class="module" style="width: fit-content">
                                 <div class="module-head">
-                                    <h2 align = "center">your Profile</h2>
+                                    <h2 align = "center">Profil Saya</h2>
                                     <h5></h5>
                                 </div>
                                 <div class="module-body table">
@@ -51,11 +51,11 @@
                                                     <td align="center"><textarea rows="10" disabled><?=  $profile->address  ?></textarea></td>
                                         </tr>
                                         <tr>
-                                                   <th>kabupaten/kota</th>
+                                                   <th>Kabupaten/kota</th>
                                                    <td align="center"><?=  $profile->city ?></td>
                                         </tr>
                                         <tr>
-                                                   <th>email</th>
+                                                   <th>Email</th>
                                                    <td align="center"><?=  $profile->email ?></td>
                                         </tr>
                                         <tr>

@@ -24,7 +24,7 @@
                             </div>
                             <div class="module" style="width: fit-content">
                                 <div class="module-head">
-                                    <h2 align = "center">Detail Pesanan</h2>
+                                    <h4 align = "center">Detail Pesanan</h4>
                                     <h5></h5>
                                 </div>
                                 <div class="module-body table">
@@ -47,7 +47,7 @@
                                                     <td align="center"><textarea rows="10" disabled><?=  $pesanan->address  ?></textarea></td>
                                         </tr>
                                         <tr>
-                                                   <th>kabupaten/kota</th>
+                                                   <th>Kabupaten/kota</th>
                                                    <td align="center"><?=  $pesanan->city ?></td>
                                         </tr>
                                         <tr>

@@ -1,4 +1,4 @@
- <div class="footer-section" style="padding-bottom: 0px;">
+ <div class="footer-section" style="padding-bottom: 0px; width: 1350px;">
                <h4 align="center">Cara Pesan</h4>
 
          <div class="container">
@@ -49,8 +49,7 @@
                    </div> <!-- End of .footer_logo -->
 
 
-                   <br><br><br><br><br><br><br><br>
-
+                   <br><br><br><br><br><br><br><br> 
                     <hr>
           <div class="footer-grids">
 
@@ -77,7 +76,7 @@
   <!--//end-footer-section-->
       <!--/start-copyright-section-->
 
-        <div class="copyright">
+        <div class="copyright" style="width: 1350px;">
           <p>&copy; -  2017 PETCARE </p>
         </div>
 
