@@ -1612,7 +1612,7 @@ p.your-para {
 }
 .contact-grid input[type="text"], .contact-grid textarea, .contact-grid select {
   width: 100%;
-  padding:0.8em;
+  padding:0;
   margin: 0 0 0.8em 0;
   color: #737171;
   background: #fff;

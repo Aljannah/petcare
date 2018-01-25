@@ -6,15 +6,15 @@ class Model_detor extends CI_Model {
 		$this->db->insert('orders',$data_event);
 	}
 	public function getdetor($table) { 
-        $q = $this->db->query("SELECT MAX(RIGHT(no_orderdetail ,1)) AS idmax FROM ".$table);
+        $q = $this->db->query("SELECT MAX(RIGHT(no_orderdetail ,3)) AS idmax FROM ".$table);
         //$kd = ""; //kode awal
         if($q->num_rows()>0){ //jika data ada
             foreach($q->result() as $k){
                 $tmp = ((int)$k->idmax)+1; //string kode diset ke integer dan ditambahkan 1 dari kode terakhir
-                $kd = sprintf("%s",$tmp); //kode ambil 4 karakter terakhir
+                $kd = sprintf("%03s",$tmp); //kode ambil 4 karakter terakhir
             }
         }else{ //jika data kosong diset ke kode awal
-            $kd = "1";
+            $kd = "001";
         }
         $kar = "od"; //karakter depan kodenya
         //gabungkan string dengan kode yang telah dibuat tadi

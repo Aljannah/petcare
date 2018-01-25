@@ -11,10 +11,10 @@ class Model_event extends CI_Model {
         if($q->num_rows()>0){ //jika data ada
             foreach($q->result() as $k){
                 $tmp = ((int)$k->idmax)+1; //string kode diset ke integer dan ditambahkan 1 dari kode terakhir
-                $kd = sprintf("%s",$tmp); //kode ambil 4 karakter terakhir
+                $kd = sprintf("%02s",$tmp); //kode ambil 4 karakter terakhir
             }
         }else{ //jika data kosong diset ke kode awal
-            $kd = "1";
+            $kd = "01";
         }
         $kar = "z"; //karakter depan kodenya
         //gabungkan string dengan kode yang telah dibuat tadi
