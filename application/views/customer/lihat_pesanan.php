@@ -24,7 +24,7 @@
                             </div>
                             <div class="module" style="width: fit-content">
                                 <div class="module-head">
-                                    <h2 align = "center">List Pesanan Anda</h2>
+                                    <h4 align = "center">List Pesanan Anda</h4>
                                     <h5>Daftar Seluruh Paket yang Anda pesan</h5>
                                 </div>
                                 <div class="module-body table">

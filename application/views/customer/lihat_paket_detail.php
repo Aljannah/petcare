@@ -2,8 +2,6 @@
                     <!--/.span3-->
                     <!-- START MAIN -->
     <!-- START MAIN -->
-<div class="span9">
-    <div class="content">
      <div class="module" style="width: fit-content">                       
        <div class="module-body table">
         <div id="main">
@@ -96,9 +94,10 @@
         <!-- END MAIN -->
         </div>
     </div>
-       <?php $this->load->view('layout/footeruser')?>
+       
    </div>
 </div>
+<?php $this->load->view('layout/footeruserpesan')?>
 
 <style>.collection {
   margin: 0.5rem 0 1rem 0;

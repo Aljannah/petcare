@@ -1,13 +1,12 @@
  <?php $this->load->view('layout/headeruser_customer')?> 
                     <!--/.span3-->
                     <!-- START MAIN -->
-<div class="span9">
     <div class="content">
      <div class="module" style="width: fit-content">                       
         <div class="module-body table">
-            <div id="main">
+            <div id="main" style="width: 1279px;">
                 <!-- START WRAPPER -->
-                <div class="wrapper" style="padding-top: 50px;padding-bottom: 65px; width: 950px;">
+                <div class="wrapper" style="padding-top: 50px;padding-bottom: 65px; width: 1279px;">
 
                     <!-- START CONTENT -->
                     <section id="content">
@@ -24,7 +23,7 @@
 
                             <br>
 
-                            <div id="container" style="width: 950px;">
+                            <div id="container" style="width: 1279px;">
                                 <h3>Pilih Jenis Hewan Peliharaan Anda :</h3>
                                 <a href="<?php echo site_url('con_customer/mitradog'); ?>">
                                     <figure>
@@ -55,10 +54,8 @@
                         }
                         figcaption {
                             margin: 10px 0 0 0;
-                            font-variant: small-caps;
-                            font-family: Arial;
-                            font-weight: bold;
-                            color: #bb3333;
+                            font-family: 'Roboto', sans-serifl;
+                            color: #272727;
                         }
                         figure {
                             padding: 5px;
@@ -93,8 +90,6 @@
             </div>
         </div>
     </div>
-    
-       <?php $this->load->view('layout/footeruser')?>
     </div>
-
+<?php $this->load->view('layout/footeruserpesan')?>
 </div>

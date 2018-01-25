@@ -2,8 +2,6 @@
                     <!--/.span3-->
                     <!-- START MAIN -->
     <!-- START MAIN -->
-<div class="span9">
-    <div class="content">
      <div class="module" style="width: fit-content">                       
        <div class="module-body table">
         <div id="main">
@@ -16,7 +14,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col s12 m12 l12">
-                                <h5 class="breadcrumbs-title">Pilih Mitra yang menyediakan Paket Grooming Kucing</h5>
+                                <h5 class="breadcrumbs-title"><br>Pilih Mitra yang menyediakan Paket Grooming Kucing</h5>
                                 <ol class="breadcrumb">
                                     <li><a href="<?php echo base_url("index.php/con_customer/pesan")?>">Jenis Hewan </a></li>
                                     <li class="active">>> Kucing</li>
@@ -99,9 +97,11 @@
         <!-- END MAIN -->
         </div>
     </div>
-       <?php $this->load->view('layout/footeruser')?>
+      
    </div>
+
 </div>
+<?php $this->load->view('layout/footeruserpesan')?>
 
 <style>.collection {
   margin: 0.5rem 0 1rem 0;

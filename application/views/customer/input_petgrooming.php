@@ -66,12 +66,12 @@ if($this->input->post('is_submitted'))
                             </div>
                             <div class="module" style="width: 700px">
                                 <div class="module-head">
-                                    <h2 align = "center">Detail Pemesanan</h2>
+                                    <h4 align = "center">Detail Pemesanan</h4>
                                     <h5>Konfirmasi Pesanan Anda</h5>
                                 </div>
                                 
 
-
+<br>
                             <div class="col-md-6 contact-grid" align="center">
                             <?php echo form_open_multipart('con_customer/lihat_detail_paket_anjing/'.$id_petgrooming,['class'=>'your-para']);?>
                             <input type="hidden" name="no_orderdetail" value="<?=$detor?>" readonly>
@@ -142,7 +142,7 @@ if($this->input->post('is_submitted'))
                                 </select>:
                                 <?php echo form_error('mnt_hour'); ?>
                                 <select name="mnt_hour" style="max-width: 20%;">
-                                          <option value="">Pilih Menit</option>
+                                          <option value="">Pilih Menit:</option>
                                           <option value="00">00</option>
                                           <option value="30">30</option>
                                 </select>

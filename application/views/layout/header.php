@@ -46,7 +46,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		   	</a>
 		   	<div class="sign_up" align="right" style="height: 161px;width: 1150px;padding-left: 0px;">
 		   	<div align="right">
-		   	<font color ="red"><h2 color="red"><b>Daftar Sebagai User PetCare.id</b></h2></font>
+		   	<font color ="red"><h3 color="red"><b>Daftar Sebagai User</b></h3></font>
 		   	<font color ="red"><h4></h4></font>
 		   	</br>
 		   			<?=  anchor('con_home/register','Sign Up',['class'=>'btn btn-success btn-lg']) ?>
