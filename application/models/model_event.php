@@ -6,7 +6,7 @@ class Model_event extends CI_Model {
 		$this->db->insert('petgrooming',$data_event);
 	}
 	public function getkodeunik($table) { 
-        $q = $this->db->query("SELECT MAX(RIGHT(id_petgrooming ,1)) AS idmax FROM ".$table);
+        $q = $this->db->query("SELECT MAX(RIGHT(id_petgrooming ,2)) AS idmax FROM ".$table);
         //$kd = ""; //kode awal
         if($q->num_rows()>0){ //jika data ada
             foreach($q->result() as $k){
